@@ -55,6 +55,18 @@ Other options include using the container services that most cloud services prov
 
 We are going to use the first approach, creating a virtual machine in a cloud service and after installing docker and docker-compose, deploy our containers there using GitHub Actions and SSH.
 
+## Participantes
+
+El proyecto `wiq_es04c` es el resultado del trabajo en equipo de los siguientes participantes:
+
+- **Zohaib Akhtar Kausar** ([@Verzidee](https://github.com/Verzidee)) 
+- **Sara Lamuño Garcia** ([@Etihw32](https://github.com/Etihw32))
+- **Yago Navajas González** ([@yagonavajas](https://github.com/yagonavajas))
+- **Santiago López Laso** ([@Santiago21112001](https://github.com/Santiago21112001))
+- **David Alvarez Diaz** ([@bidof](https://github.com/bidof))
+
+
+
 ### Machine requirements for deployment
 
 The machine for deployment can be created in services like Microsoft Azure or Amazon AWS. These are in general the settings that it must have:
