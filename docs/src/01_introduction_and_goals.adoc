@@ -3,6 +3,9 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-introduction-and-goals]]
 == Introduction and Goals (wiq_es04c)
 
+Trabajo realizado por David Alvarez, Zohaib Akhtar Kausar, Sara Lamuño Garcia, Yago Navajas Gonzalez y Santiago Lopez Laso.
+
+
 [role="arc42help"]
 ****
 Describes the relevant requirements and the driving forces that software architects and development team must consider. 
