@@ -7,8 +7,6 @@ function Messages() {
         .then(res => res.json())
         .then(
           (result) => {
-            console.log('called get items')
-            console.log(result)
             setItems(result);
           }
         )
@@ -18,8 +16,8 @@ function Messages() {
         <h1>Here's Your messages</h1>
          <ul>
           {items && items.map(item => (
-            <div key={item.name}>
-             <h3>Hi {item.name},  {item.content}</h3>  
+            <div key={item.content}>
+             <h3>{item.content}</h3>  
          
             </div>
           ))}
