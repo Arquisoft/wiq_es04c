@@ -13,6 +13,7 @@ const AddUser = () => {
 
   const addUser = async () => {
     try {
+      // Esto manda una petición post adduser al gateway, que se lo reenvía a userservice
       await axios.post(`${apiEndpoint}/adduser`, { username, password });
       setOpenSnackbar(true);
     } catch (error) {
