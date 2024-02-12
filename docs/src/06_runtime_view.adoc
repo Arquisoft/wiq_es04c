@@ -60,6 +60,6 @@ Alice <-- Bob: another authentication Response
 
 === <Runtime Scenario 2>
 
-=== ...
+image::Digrama de secuencia Juego de preguntas.jpg["Diagrama de secuencia"]
 
 === <Runtime Scenario n>
