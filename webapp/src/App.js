@@ -52,7 +52,7 @@ import Login from './components/Login';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-
+import Footer from './components/Footer';
 function App() {
   return (
 
@@ -64,6 +64,8 @@ function App() {
       {/* Aquí se muestra el componente GenerateQuestion */}
       
       <GenerateQuestion />
+
+      <Footer> </Footer>
     </Container>
   );
 }

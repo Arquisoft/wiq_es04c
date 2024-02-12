@@ -12,7 +12,7 @@ root.render(
   <React.StrictMode>
     <Navbar></Navbar>
     
-     <App />
+    <App />
     
   </React.StrictMode>
 );
