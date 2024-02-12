@@ -5,7 +5,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 nombre_del_proyecto es un proyecto desarrollado en la asignatura  Arquitectura del Software. Consiste en la creacion de una aplicacion web al estilo "Saber y Ganar". Es decir, es un juego de preguntas de cultura general.
 
-Los desarrolladores de la aplicacion son por David Alvarez, Zohaib Akhtar Kausar, Sara Lamuño Garcia, Yago Navajas Gonzalez y Santiago Lopez Laso.
+Los desarrolladores de la aplicacion son por David Álvarez Díaz, Zohaib Akhtar Kausar, Sara Lamuño García, Yago Navajas González y Santiago López Laso.
 
 
 [role="arc42help"]
@@ -91,9 +91,9 @@ Table with role names, person names, and their expectations with respect to the 
 |===
 |Role/Name|Contact|Expectations
 | Equipo de Desarrollo | Yago Navajas Gonzalez -> UO287746@uniovi.es +
-David Alvarez -> UOxxxxxx@uniovi.es +
+David Álvarez Díaz -> UO283196@uniovi.es +
 Zohaib Akhtar Kausar -> UOxxxxxx@uniovi.es +
-Sara Lamuño Garcia -> UOxxxxxx@uniovi.es +
-Santiago Lopez Laso -> UOxxxxxx@uniovi.es | Los estudiantes que llevaran a cabo el desarrollo de la aplicacion
+Sara Lamuño García -> UO283706@uniovi.es +
+Santiago Lopez Laso -> UOxxxxxx@uniovi.es | Los estudiantes que llevarán a cabo el desarrollo de la aplicación
 | Profesores | _<Contact-2>_ | Supervisores de los avances y encargados de evaluar la aplicacion final
 |===
