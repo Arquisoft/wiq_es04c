@@ -92,8 +92,8 @@ Table with role names, person names, and their expectations with respect to the 
 |Role/Name|Contact|Expectations
 | Equipo de Desarrollo | Yago Navajas Gonzalez -> UO287746@uniovi.es +
 David Álvarez Díaz -> UO283196@uniovi.es +
-Zohaib Akhtar Kausar -> UOxxxxxx@uniovi.es +
+Zohaib Akhtar Kausar -> UO291060@uniovi.es +
 Sara Lamuño García -> UO283706@uniovi.es +
-Santiago Lopez Laso -> UOxxxxxx@uniovi.es | Los estudiantes que llevarán a cabo el desarrollo de la aplicación
+Santiago Lopez Laso -> UO277369@uniovi.es | Los estudiantes que llevarán a cabo el desarrollo de la aplicación
 | Profesores | _<Contact-2>_ | Supervisores de los avances y encargados de evaluar la aplicacion final
 |===
