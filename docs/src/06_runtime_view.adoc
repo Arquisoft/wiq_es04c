@@ -59,9 +59,26 @@ Alice <-- Bob: another authentication Response
 ----
 
 === <Runtime Scenario 2>
-
+-------------------------------------------------------------------------------------------------------------------------------------
+| -> Diagrama de secuencia                                                                                                          |
+| -> Descripción: diagrama de los usos básicos en la aplicación, como inicio de sesión, empezar a jugar y contestar las preguntas.  |
+| -> Aspectos notables:                                                                                                             |
+|    - El usuario tiene que estar autentificado en la aplicación para poder entrar al juego.                                        |
+|    - Los usuarios estarán en una base de datos para recoger los datos de manera más sencilla.                                     |
+|    - En el diagrama se pone la opción de respuesta correcta, pero si fuera incorrecta también se seguiría jugando.                |
+-------------------------------------------------------------------------------------------------------------------------------------
 image::Digrama de secuencia Juego de preguntas.jpg["Diagrama de secuencia"]
 
 === <Runtime Scenario 3>
+--------------------------------------------------------------------------------------------------------------------------------------
+| -> Diagrama de casos de uso                                                                                                        |
+| -> Descripción: diagrama básico de los distintos casos de uso que hay en el proyecto                                               |
+| -> Aspectos notables:                                                                                                              |
+|    - El caso de uso de iniciar sesión del usuario está relacionado con el caso de uso de autentificar sesión del sistema,          |
+|    - ya que para que el usuario pueda iniciar sesión debe de estar autentificado.                                                  |
+|    - Lo mismo ocurre con el caso de uso de contestar preguntas del usuario con el caso de uso de verificar respuestas del sistema, | 
+|    - ya que para que el usuario pueda contestar preguntas, el sistema primero debe de verificar si dicha respuesta es correcta     |
+|    - o no para pasar a la siguiente pregunta.                                                                                      |
+--------------------------------------------------------------------------------------------------------------------------------------
 
 image::Diagrama de casos de uso para el juego de palabras.jpg["Diagrama de caso de uso"]
