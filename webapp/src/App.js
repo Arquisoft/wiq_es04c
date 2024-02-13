@@ -48,19 +48,24 @@ function App() {
 export default App; */
 import React from 'react';
 import GenerateQuestion from './components/GenerateQuestion'; // Asegúrate de importar GenerateQuestion correctamente
+import Login from './components/Login';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-
+import Footer from './components/Footer';
 function App() {
   return (
-    <Container component="main" maxWidth="xs">
+
+  <Container component="main" maxWidth="xs">
       <CssBaseline />
       <Typography component="h1" variant="h5" align="center" sx={{ marginTop: 2 }}>
         Welcome to the 2024 edition of the Software Architecture course
       </Typography>
       {/* Aquí se muestra el componente GenerateQuestion */}
+      
       <GenerateQuestion />
+
+      <Footer> </Footer>
     </Container>
   );
 }
