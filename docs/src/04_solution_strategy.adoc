@@ -25,6 +25,24 @@ based upon problem statement, quality goals and key constraints.
 Refer to details in the following sections.
 
 
+Decisiones organizativas
+
+En la primera semana nos hemos dividido en dos equipos con el objetivo de tocar todas las partes del proyecto. La estructura de los equipos es la siguiente:
+
+----
+-> Equipo documentación
+     Sara Lamuño García -> UO283706@uniovi.es 
+     Yago Navajas Gonzalez -> UO287746@uniovi.es
+-> Equipo desarrollo del proyecto
+     David Álvarez Díaz -> UO283196@uniovi.es
+     Zohaib Akhtar Kausar -> UO291060@uniovi.es
+     Santiago Lopez Laso -> UO277369@uniovi.es
+----
+
+La realización de las actas de las reuniones diarias se le ha asignado la tarea a Sara Lamuño García.
+
+En las siguientes semanas habrá rotación o cambio de miembros en ambos equipos.
+
 .Further Information
 
 See https://docs.arc42.org/section-4/[Solution Strategy] in the arc42 documentation.
