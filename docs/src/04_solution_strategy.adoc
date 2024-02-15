@@ -43,6 +43,26 @@ La realización de las actas de las reuniones diarias se le ha asignado la tarea
 
 En las siguientes semanas habrá rotación o cambio de miembros en ambos equipos.
 
+En la segunda semana hemos decidido ponernos de manera más profunda con la documentación, asignando diferentes apartados de esta a cada miembro del equipo:
+
+[options="header",cols="1,2"]
+|===
+| Miembro
+| Documentación
+| Sara Lamuño García
+| 4, 6, 12
+| Yago Navajas Gonzalez
+| 1
+| David Álvarez Díaz
+| 
+| Zohaib Akhtar Kausar
+| 10, 11
+| Santiago Lopez Laso
+| 2, 3
+|===
+
+Se han creado el mismo número de Issues como apartados de la documentación hay para asignarla a cada miembro.
+
 .Further Information
 
 See https://docs.arc42.org/section-4/[Solution Strategy] in the arc42 documentation.
