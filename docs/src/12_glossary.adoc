@@ -65,3 +65,7 @@ curiosidad de este tipo de archivo es que no tiene un tipo de MIME definido, mie
 |Docker
 |Aplicación que realiza el despliegue de cualquier aplicación en formato de contenedores, similares a los contenedores que tienen los barcos. Es open-source y permite que el proceso de desplegar una aplicación sea bastante más fácil y ordenado. 
 
+|GitHub Actions
+|Plataforma que ayuda a automatizar los proyectos, haciendo posible el despliegue de estos desde el mismo Github. Soporta una gran variedad de lenguajes de 
+programación y sistemas operativos.
+
