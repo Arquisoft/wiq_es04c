@@ -12,7 +12,7 @@ El árbol de calidad se organiza con "calidad" como raíz, desglosándose en var
 - *Mantenibilidad* 🔧: Se refiere a la facilidad con la que un sistema puede ser modificado para corregir fallos, mejorar su funcionamiento o adaptarse a un entorno cambiante. Una alta mantenibilidad facilita las actualizaciones y reduce los costos a largo plazo.
 - *Portabilidad 🌍*: La capacidad de un sistema para ser utilizado en diferentes entornos operativos con mínimas modificaciones. La portabilidad permite que el software sea compatible con diversos dispositivos, sistemas operativos o navegadores web.
 
-image::Arbol de calidad.jpg[Árbol de Calidad,align="center"]
+image::10_Arbol_de_calidad.jpg[Árbol de Calidad,align="center"]
 
 == Escenarios de Calidad
 
