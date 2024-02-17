@@ -13,3 +13,29 @@ El árbol de calidad se organiza con "calidad" como raíz, desglosándose en var
 - *Portabilidad 🌍*: La capacidad de un sistema para ser utilizado en diferentes entornos operativos con mínimas modificaciones. La portabilidad permite que el software sea compatible con diversos dispositivos, sistemas operativos o navegadores web.
 
 image::Arbol de calidad.jpg[Árbol de Calidad,align="center"]
+
+== Escenarios de Calidad
+
+=== Usabilidad 💡
+
+- *Escenario*: Un nuevo usuario puede registrarse e iniciar a jugar en menos de 5 minutos después de su primer acceso al sitio web. La interfaz intuitiva y la guía de inicio rápido facilitan este proceso. 🚀
+
+=== Rendimiento ⚡
+
+- *Escenario*: El sistema responde a las solicitudes de los usuarios en menos de 2 segundos bajo condiciones normales de carga, asegurando una experiencia de juego fluida. 🏎️
+
+=== Seguridad 🔒
+
+- *Escenario*: Todos los datos personales de los usuarios están cifrados tanto en tránsito como en reposo, utilizando estándares de seguridad actuales para prevenir accesos no autorizados. 🔐
+
+=== Mantenibilidad 🔧
+
+- *Escenario*: El sistema permite la adición de nuevas funcionalidades (como tipos de preguntas o temáticas) sin necesidad de una reestructuración mayor, promoviendo una arquitectura modular. 🛠️
+
+=== Fiabilidad 🛡️
+
+- *Escenario*: En caso de fallo del sistema, este debe ser capaz de recuperarse y volver a estar operativo en menos de 5 minutos, garantizando una alta disponibilidad. 🔄
+
+=== Portabilidad 🌍
+
+- *Escenario*: La aplicación web es compatible con los navegadores web más utilizados (Chrome, Firefox, Safari, Edge) en sus últimas dos versiones principales, asegurando un amplio acceso. 🌐
