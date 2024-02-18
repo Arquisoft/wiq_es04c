@@ -24,6 +24,46 @@ Motivate what was decided and why it was decided that way,
 based upon problem statement, quality goals and key constraints.
 Refer to details in the following sections.
 
+Decisiones tecnológicas
+
+Hemos decidido realizar la parte de Front-End con React y la parte de Back-End con la estructura de los microservicios. 
+El despliegue se realizará a través de una máquina virtual de Azure, con ayuda de Docker y GitHub Actions.
+
+[options="header",cols="1,2"]
+|===
+|Aplicación
+|Breve explicación
+|React
+|Biblioteca de JavaScript que nos servirá para realizar las interfaces de usuario necesarias para el Front-End.
+|Microservicios
+|Aquí es donde se unirá el uso de la API (Application Programming Interface) de WikiData, la cual nos sacará los datos para las preguntas y las respuestas
+de la aplicación con el proyecto en sí.
+|Azure
+|Plataforma para la creación de la máquina virtual que servirá para desplegar la aplicación.
+|Docker
+|Encargado de dividir el contenido del proyecto en diversos contenedores (en nuestro caso 4) y sea más fácil de manipular el contenido de dicho proyecto.
+|GitHub Actions
+|Nos servirá para el despliegue del proyecto, pero de forma automática en vez de desplegarlo todo a mano. Cabe a destacar que también están implementados
+unos test para asegurar el correcto despliegue del proyecto.
+|===
+
+Decisiones de cómo llegar a las metas principales (En desarrollo):
+[options="header",cols="1,2"]
+|===
+|Usabilidad
+|
+|Privacidad
+|
+|Mantenibilidad
+|
+|Eficiciencia
+|
+|Fiabilidad
+|
+
+|===
+
+
 
 Decisiones organizativas
 
@@ -52,9 +92,9 @@ En la segunda semana hemos decidido ponernos de manera más profunda con la docu
 | Sara Lamuño García
 | 4, 6, 12
 | Yago Navajas Gonzalez
-| 1
+| 1, 8, 9
 | David Álvarez Díaz
-| 
+| 5, 7
 | Zohaib Akhtar Kausar
 | 10, 11
 | Santiago Lopez Laso
@@ -62,6 +102,9 @@ En la segunda semana hemos decidido ponernos de manera más profunda con la docu
 |===
 
 Se han creado el mismo número de Issues como apartados de la documentación hay para asignarla a cada miembro.
+
+En cuanto al despliegue de la aplicación se van a arreglar los errores que salen en los test al intentar desplegarla, ya que se han cambiado
+algunos valores predefinidos, por lo que los test también predefinidos fallarán.
 
 .Further Information
 
