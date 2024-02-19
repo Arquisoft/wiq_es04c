@@ -3,22 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-/*funcion q representa la barra de navegacion superior*/
-import Navbar from './components/NavBar';
-import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
 root.render(
-  
   <React.StrictMode>
-    <Navbar></Navbar>
-    
     <App />
-    
-
-    <Footer> </Footer>
-
   </React.StrictMode>
 );
 

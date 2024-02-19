@@ -15,11 +15,10 @@ const Login = () => {
 
   const loginUser = async () => {
     try {
-      // Esto manda una petición post login al gateway, que se lo reenvía a authservice
       const response = await axios.post(`${apiEndpoint}/login`, { username, password });
 
       // Extract data from the response
-      const userCreatedAt = response.data.createdAt;
+      const { createdAt: userCreatedAt } = response.data;
 
       setCreatedAt(userCreatedAt);
       setLoginSuccess(true);
