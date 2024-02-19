@@ -444,18 +444,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#section-introduction-and-goals">1. Introduction and Goals (wiq_es04c)</a>
+<li><a href="#section-introduction-and-goals">1. Introducción y Ojetivos (wiq_es04c)</a>
 <ul class="sectlevel2">
-<li><a href="#_requirements_overview">1.1. Requirements Overview</a></li>
-<li><a href="#_quality_goals">1.2. Quality Goals</a></li>
+<li><a href="#_requisitos_funcionales">1.1. Requisitos Funcionales</a></li>
+<li><a href="#_atributos_de_calidad">1.2. Atributos de Calidad</a></li>
 <li><a href="#_stakeholders">1.3. Stakeholders</a></li>
 </ul>
 </li>
-<li><a href="#section-architecture-constraints">2. Architecture Constraints</a></li>
+<li><a href="#section-architecture-constraints">2. Restricciones de arquitectura</a></li>
 <li><a href="#section-system-scope-and-context">3. System Scope and Context</a>
 <ul class="sectlevel2">
-<li><a href="#_business_context">3.1. Business Context</a></li>
-<li><a href="#_technical_context">3.2. Technical Context</a></li>
+<li><a href="#_contexto_de_negocio">3.1. Contexto de negocio</a></li>
+<li><a href="#_contexto_técnico">3.2. Contexto técnico</a></li>
 </ul>
 </li>
 <li><a href="#section-solution-strategy">4. Solution Strategy</a></li>
@@ -470,8 +470,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_runtime_scenario_1">6.1. &lt;Runtime Scenario 1&gt;</a></li>
 <li><a href="#_runtime_scenario_2">6.2. &lt;Runtime Scenario 2&gt;</a></li>
-<li><a href="#">6.3. &#8230;&#8203;</a></li>
-<li><a href="#_runtime_scenario_n">6.4. &lt;Runtime Scenario n&gt;</a></li>
+<li><a href="#_runtime_scenario_3">6.3. &lt;Runtime Scenario 3&gt;</a></li>
 </ul>
 </li>
 <li><a href="#section-deployment-view">7. Deployment View</a>
@@ -480,22 +479,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_infrastructure_level_2">7.2. Infrastructure Level 2</a></li>
 </ul>
 </li>
-<li><a href="#section-concepts">8. Cross-cutting Concepts</a>
+<li><a href="#section-concepts">8. Conceptos Transversales</a>
 <ul class="sectlevel2">
-<li><a href="#_concept_1">8.1. <em>&lt;Concept 1&gt;</em></a></li>
-<li><a href="#_concept_2">8.2. <em>&lt;Concept 2&gt;</em></a></li>
-<li><a href="#_concept_n">8.3. <em>&lt;Concept n&gt;</em></a></li>
+<li><a href="#_modelo_de_dominio">8.1. Modelo de Dominio</a></li>
+<li><a href="#_experiencia_de_usuario">8.2. Experiencia de Usuario</a></li>
+<li><a href="#_seguridad">8.3. Seguridad</a></li>
+<li><a href="#_arquitectura_y_patrones_de_diseño">8.4. Arquitectura y Patrones de Diseño</a></li>
+<li><a href="#_desarrollo">8.5. Desarrollo</a></li>
+<li><a href="#_operaciones">8.6. Operaciones</a></li>
 </ul>
 </li>
-<li><a href="#section-design-decisions">9. Architecture Decisions</a></li>
-<li><a href="#section-quality-scenarios">10. Quality Requirements</a>
+<li><a href="#section-design-decisions">9. Decisiones de Arquitectura</a></li>
+<li><a href="#_requisitos_de_calidad">Requisitos de Calidad 🌟</a>
+<ul class="sectlevel1">
+<li><a href="#_árbol_de_calidad">1. Árbol de Calidad 🌳</a></li>
+<li><a href="#_escenarios_de_calidad">2. Escenarios de Calidad</a>
 <ul class="sectlevel2">
-<li><a href="#_quality_tree">10.1. Quality Tree</a></li>
-<li><a href="#_quality_scenarios">10.2. Quality Scenarios</a></li>
+<li><a href="#_usabilidad">2.1. Usabilidad 💡</a></li>
+<li><a href="#_rendimiento">2.2. Rendimiento ⚡</a></li>
+<li><a href="#_seguridad_2">2.3. Seguridad 🔒</a></li>
+<li><a href="#_mantenibilidad">2.4. Mantenibilidad 🔧</a></li>
+<li><a href="#_fiabilidad_️">2.5. Fiabilidad 🛡️</a></li>
+<li><a href="#_portabilidad">2.6. Portabilidad 🌍</a></li>
 </ul>
 </li>
-<li><a href="#section-technical-risks">11. Risks and Technical Debts</a></li>
-<li><a href="#section-glossary">12. Glossary</a></li>
+</ul>
+</li>
+<li><a href="#_risks_and_technical_debts">Risks and Technical Debts 🚀</a>
+<ul class="sectlevel1">
+<li><a href="#section-glossary">1. Glossary</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -549,138 +563,89 @@ For documentation of your own system you use better the <em>plain</em> version.<
 </div>
 </div>
 <div class="sect1">
-<h2 id="section-introduction-and-goals">1. Introduction and Goals (wiq_es04c)</h2>
+<h2 id="section-introduction-and-goals">1. Introducción y Ojetivos (wiq_es04c)</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Trabajo realizado por David Alvarez, Zohaib Akhtar Kausar, Sara Lamuño Garcia, Yago Navajas Gonzalez y Santiago Lopez Laso.</p>
+<p>nombre_del_proyecto es un proyecto desarrollado en la asignatura  Arquitectura del Software. Consiste en la creacion de una aplicacion web al estilo "Saber y Ganar". Es decir, es un juego de preguntas de cultura general.</p>
 </div>
-<div class="sidebarblock arc42help">
-<div class="content">
 <div class="paragraph">
-<p>Describes the relevant requirements and the driving forces that software architects and development team must consider.
-These include</p>
+<p>Los desarrolladores de la aplicacion son por David Álvarez Díaz, Zohaib Akhtar Kausar, Sara Lamuño García, Yago Navajas González y Santiago López Laso.</p>
 </div>
+<div class="paragraph">
+<p>La aplicacion tendra su base para las preguntas y las respuestas en Wikidata , la base de conocimiento editada en colaboracion.</p>
+</div>
+<div class="sect2">
+<h3 id="_requisitos_funcionales">1.1. Requisitos Funcionales</h3>
+<div class="sidebarblock">
+<div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>underlying business goals,</p>
+<p>Los usuarios se deberan loggear en la pagina, esto servira para tener registro de unas serie de parametros, como puede ser las veces que se ha jugado.</p>
 </li>
 <li>
-<p>essential features,</p>
+<p>Se podran responder preguntas autogeneradas y ver si han acertado fallado asi como la respuesta correcta.</p>
 </li>
 <li>
-<p>essential functional requirements,</p>
+<p>Las preguntas deberan ser respondidas en un tiempo limite.</p>
 </li>
 <li>
-<p>quality goals for the architecture and</p>
+<p>Las preguntas seran seguiran la misma estructura: 1 pregunta correcta y 3 incorrectas, generadas automaticamente.</p>
 </li>
 <li>
-<p>relevant stakeholders and their expectations</p>
+<p>Los usuarios prodran consultar datos sobre su cuentan, como pueden ser las veces que han jugado o el numero de preguntas que han acertadoo fallado.</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_requirements_overview">1.1. Requirements Overview</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Contents</div>
-<p>Short description of the functional requirements, driving forces, extract (or abstract)
-of requirements. Link to (hopefully existing) requirements documents
-(with version number and information where to find it).</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>From the point of view of the end users a system is created or modified to
-improve support of a business activity and/or improve the quality.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Short textual description, probably in tabular use-case format.
-If requirements documents exist this overview should refer to these documents.</p>
-</div>
-<div class="paragraph">
-<p>Keep these excerpts as short as possible. Balance readability of this document with potential redundancy w.r.t to requirements documents.</p>
-</div>
-<div class="paragraph">
-<div class="title">Further Information</div>
-<p>See <a href="https://docs.arc42.org/section-1/">Introduction and Goals</a> in the arc42 documentation.</p>
-</div>
-</div>
-</div>
 </div>
 <div class="sect2">
-<h3 id="_quality_goals">1.2. Quality Goals</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Contents</div>
-<p>The top three (max five) quality goals for the architecture whose fulfillment is of highest importance to the major stakeholders.
-We really mean quality goals for the architecture. Don&#8217;t confuse them with project goals.
-They are not necessarily identical.</p>
-</div>
-<div class="paragraph">
-<p>Consider this overview of potential topics (based upon the ISO 25010 standard):</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="./images/01_2_iso-25010-topics-EN.drawio.png" alt="Categories of Quality Requirements">
-</div>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>You should know the quality goals of your most important stakeholders, since they will influence fundamental architectural decisions.
-Make sure to be very concrete about these qualities, avoid buzzwords.
-If you as an architect do not know how the quality of your work will be judged&#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>A table with quality goals and concrete scenarios, ordered by priorities</p>
-</div>
-</div>
-</div>
+<h3 id="_atributos_de_calidad">1.2. Atributos de Calidad</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Prioridad</th>
+<th class="tableblock halign-left valign-top">Objetivo</th>
+<th class="tableblock halign-left valign-top">Descripcion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Usabilidad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Todos los usuarios deben poder usar la aplicacion sin tener en cuenta sus limitaciones.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Privacidad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Los datos sensibles de los usuarios deben estar restingidos al mismo usuario.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mantenibilidad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">El código y documentación de la aplicación ha de estar conformado de tal forma que sea factible hacer cambios y ampliaciones en la aplicación.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eficiciencia</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Los tiempos entre operaciones han de ser asumibles.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fiabilidad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Los datos usados en la aplicación deben ser los correctos.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_stakeholders">1.3. Stakeholders</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Contents</div>
-<p>Explicit overview of stakeholders of the system, i.e. all person, roles or organizations that</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>should know the architecture</p>
-</li>
-<li>
-<p>have to be convinced of the architecture</p>
-</li>
-<li>
-<p>have to work with the architecture or with code</p>
-</li>
-<li>
-<p>need the documentation of the architecture for their work</p>
-</li>
-<li>
-<p>have to come up with decisions about the system or its development</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>You should know all parties involved in development of the system or affected by the system.
-Otherwise, you may get nasty surprises later in the development process.
-These stakeholders determine the extent and the level of detail of your work and its results.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Table with role names, person names, and their expectations with respect to the architecture and its documentation.</p>
-</div>
-</div>
-</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 20%;">
@@ -696,14 +661,18 @@ These stakeholders determine the extent and the level of detail of your work and
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Role-1&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Contact-1&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Expectation-1&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equipo de Desarrollo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yago Navajas Gonzalez &#8594; <a href="mailto:UO287746@uniovi.es">UO287746@uniovi.es</a><br>
+David Álvarez Díaz &#8594; <a href="mailto:UO283196@uniovi.es">UO283196@uniovi.es</a><br>
+Zohaib Akhtar Kausar &#8594; <a href="mailto:UO291060@uniovi.es">UO291060@uniovi.es</a><br>
+Sara Lamuño García &#8594; <a href="mailto:UO283706@uniovi.es">UO283706@uniovi.es</a><br>
+Santiago Lopez Laso &#8594; <a href="mailto:UO277369@uniovi.es">UO277369@uniovi.es</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Los estudiantes que llevarán a cabo el desarrollo de la aplicación. Seran los encargados de la arquitectura, la documentación y la codificación.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Role-2&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Contact-2&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Expectation-2&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Profesores</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="mailto:labra@uniovi.es">labra@uniovi.es</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supervisores de los avances y encargados de evaluar la aplicacion final y el desarrollo de la misma.</p></td>
 </tr>
 </tbody>
 </table>
@@ -712,129 +681,79 @@ These stakeholders determine the extent and the level of detail of your work and
 </div>
 </div>
 <div class="sect1">
-<h2 id="section-architecture-constraints">2. Architecture Constraints</h2>
+<h2 id="section-architecture-constraints">2. Restricciones de arquitectura</h2>
 <div class="sectionbody">
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Contents</div>
-<p>Any requirement that constraints software architects in their freedom of design and implementation decisions or decision about the development process. These constraints sometimes go beyond individual systems and are valid for whole organizations and companies.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Architects should know exactly where they are free in their design decisions and where they must adhere to constraints.
-Constraints must always be dealt with; they may be negotiable, though.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Simple tables of constraints with explanations.
-If needed you can subdivide them into
-technical constraints, organizational and political constraints and
-conventions (e.g. programming or versioning guidelines, documentation or naming conventions)</p>
-</div>
-<div class="paragraph">
-<div class="title">Further Information</div>
-<p>See <a href="https://docs.arc42.org/section-2/">Architecture Constraints</a> in the arc42 documentation.</p>
-</div>
-</div>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Restricciones</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Restricción</th>
+<th class="tableblock halign-left valign-top">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wikidata</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Se usará la API de WIkidata para generar las preguntas automáticamente.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Git</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Control de versiones del proyecto.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GitHub</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Portal donde se guardará el código fuente del proyecto.</p></td>
+</tr>
+</tbody>
+</table>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="section-system-scope-and-context">3. System Scope and Context</h2>
 <div class="sectionbody">
-<div class="sidebarblock arc42help">
-<div class="content">
+<div class="sect2">
+<h3 id="_contexto_de_negocio">3.1. Contexto de negocio</h3>
 <div class="paragraph">
-<div class="title">Contents</div>
-<p>System scope and context - as the name suggests - delimits your system (i.e. your scope) from all its communication partners
-(neighboring systems and users, i.e. the context of your system). It thereby specifies the external interfaces.</p>
+<p>En esta tabla se muestra el contexto de negocio de la aplicación. Las entradas son los mensajes que van desde el agente externo hacia la aplicación, y las salidas son los mensajes que van desde la aplicación hacia al agente externo.</p>
 </div>
-<div class="paragraph">
-<p>If necessary, differentiate the business context (domain specific inputs and outputs) from the technical context (channels, protocols, hardware).</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>The domain interfaces and technical interfaces to communication partners are among your system&#8217;s most critical aspects. Make sure that you completely understand them.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Various options:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Context diagrams</p>
-</li>
-<li>
-<p>Lists of communication partners and their interfaces.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Further Information</div>
-<p>See <a href="https://docs.arc42.org/section-3/">Context and Scope</a> in the arc42 documentation.</p>
-</div>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 33.3333%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Agente externo</th>
+<th class="tableblock halign-left valign-top">Entradas</th>
+<th class="tableblock halign-left valign-top">Salidas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Usuario</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Datos registro, datos login, respuesta a cada pregunta</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preguntas, histórico</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wikidata</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ítems(elementos) de Wikidata</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Petición a la API de Wikidata</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
-<h3 id="_business_context">3.1. Business Context</h3>
-<div class="sidebarblock arc42help">
+<h3 id="_contexto_técnico">3.2. Contexto técnico</h3>
+<div class="imageblock">
 <div class="content">
-<div class="paragraph">
-<div class="title">Contents</div>
-<p>Specification of <strong>all</strong> communication partners (users, IT-systems, &#8230;&#8203;) with explanations of domain specific inputs and outputs or interfaces.
-Optionally you can add domain specific formats or communication protocols.</p>
+<img src="./images/diagrama_contexto_tecnico.drawio.png" alt="Diagrama de contexto técnico">
 </div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>All stakeholders should understand which data are exchanged with the environment of the system.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>All kinds of diagrams that show the system as a black box and specify the domain interfaces to communication partners.</p>
-</div>
-<div class="paragraph">
-<p>Alternatively (or additionally) you can use a table.
-The title of the table is the name of your system, the three columns contain the name of the communication partner, the inputs, and the outputs.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>&lt;Diagram or Table&gt;</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>&lt;optionally: Explanation of external domain interfaces&gt;</strong></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_technical_context">3.2. Technical Context</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Contents</div>
-<p>Technical interfaces (channels and transmission media) linking your system to its environment. In addition a mapping of domain specific input/output to the channels, i.e. an explanation which I/O uses which channel.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Many stakeholders make architectural decision based on the technical interfaces between the system and its context. Especially infrastructure or hardware designers decide these technical interfaces.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>E.g. UML deployment diagram describing channels to neighboring systems,
-together with a mapping table showing the relationships between channels and input/output.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><strong>&lt;Diagram or Table&gt;</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>&lt;optionally: Explanation of technical interfaces&gt;</strong></p>
-</div>
-<div class="paragraph">
-<p><strong>&lt;Mapping Input/Output to Channels&gt;</strong></p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -877,6 +796,149 @@ together with a mapping table showing the relationships between channels and inp
 <p>Motivate what was decided and why it was decided that way,
 based upon problem statement, quality goals and key constraints.
 Refer to details in the following sections.</p>
+</div>
+<div class="paragraph">
+<p>Decisiones tecnológicas</p>
+</div>
+<div class="paragraph">
+<p>Hemos decidido realizar la parte de Front-End con React y la parte de Back-End con la estructura de los microservicios.
+El despliegue se realizará a través de una máquina virtual de Azure, con ayuda de Docker y GitHub Actions.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Aplicación</th>
+<th class="tableblock halign-left valign-top">Breve explicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">React</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Biblioteca de JavaScript que nos servirá para realizar las interfaces de usuario necesarias para el Front-End.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microservicios</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aquí es donde se unirá el uso de la API (Application Programming Interface) de WikiData, la cual nos sacará los datos para las preguntas y las respuestas
+de la aplicación con el proyecto en sí.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Azure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Plataforma para la creación de la máquina virtual que servirá para desplegar la aplicación.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Docker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Encargado de dividir el contenido del proyecto en diversos contenedores (en nuestro caso 4) y sea más fácil de manipular el contenido de dicho proyecto.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GitHub Actions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nos servirá para el despliegue del proyecto, pero de forma automática en vez de desplegarlo todo a mano. Cabe a destacar que también están implementados
+unos test para asegurar el correcto despliegue del proyecto.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Decisiones de cómo llegar a las metas principales (En desarrollo):</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Usabilidad</th>
+<th class="tableblock halign-left valign-top"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Privacidad</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mantenibilidad</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eficiciencia</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fiabilidad</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Decisiones organizativas</p>
+</div>
+<div class="paragraph">
+<p>En la primera semana nos hemos dividido en dos equipos con el objetivo de tocar todas las partes del proyecto. La estructura de los equipos es la siguiente:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>-&gt; Equipo documentación
+     Sara Lamuño García -&gt; UO283706@uniovi.es
+     Yago Navajas Gonzalez -&gt; UO287746@uniovi.es
+-&gt; Equipo desarrollo del proyecto
+     David Álvarez Díaz -&gt; UO283196@uniovi.es
+     Zohaib Akhtar Kausar -&gt; UO291060@uniovi.es
+     Santiago Lopez Laso -&gt; UO277369@uniovi.es</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>La realización de las actas de las reuniones diarias se le ha asignado la tarea a Sara Lamuño García.</p>
+</div>
+<div class="paragraph">
+<p>En las siguientes semanas habrá rotación o cambio de miembros en ambos equipos.</p>
+</div>
+<div class="paragraph">
+<p>En la segunda semana hemos decidido ponernos de manera más profunda con la documentación, asignando diferentes apartados de esta a cada miembro del equipo:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Miembro</th>
+<th class="tableblock halign-left valign-top">Documentación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sara Lamuño García</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4, 6, 12</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yago Navajas Gonzalez</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1, 8, 9</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">David Álvarez Díaz</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5, 7</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zohaib Akhtar Kausar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10, 11</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Santiago Lopez Laso</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2, 3</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Se han creado el mismo número de Issues como apartados de la documentación hay para asignarla a cada miembro.</p>
+</div>
+<div class="paragraph">
+<p>En cuanto al despliegue de la aplicación se van a arreglar los errores que salen en los test al intentar desplegarla, ya que se han cambiado
+algunos valores predefinidos, por lo que los test también predefinidos fallarán.</p>
 </div>
 <div class="paragraph">
 <div class="title">Further Information</div>
@@ -1270,17 +1332,70 @@ building block instances depicted in this diagram.&gt;</em></p>
 <img src="./images/Sequence%20diagram.png" alt="Sequence diagram" width="332" height="335">
 </div>
 </div>
+<div class="paragraph">
+<p>Diagrama de secuencia con plantuml (se contempla sólo el uso correcto de la aplicación)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>actor usuario
+actor system
+database bbdd as "bbdd"
+actor juego
+usuario -&gt; system: inicio sesión
+system --&gt; usuario: pedir nombre/contraseña
+usuario -&gt; system: dar nombre/contraseña
+system -&gt; bbdd: verificar usuario
+bbdd --&gt; system: verificación correcta
+system --&gt; usuario: inicio sesión correcto
+usuario -&gt; system: acceder al juego
+system -&gt; juego: iniciar juego
+juego --&gt; system: generar pregunta/respuestas
+system --&gt; usuario: mostrar pregunta/respuestas
+usuario -&gt; system: responder
+system -&gt; juego: verificar respuesta
+juego --&gt; system: respuesta correcta
+system --&gt; usuario: correcta
+system -&gt; juego: generar siguiente pregunta/respuestas</pre>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_runtime_scenario_2">6.2. &lt;Runtime Scenario 2&gt;</h3>
-
+<div class="listingblock">
+<div class="content">
+<pre>| -&gt; Diagrama de secuencia                                                                                                          |
+| -&gt; Descripción: diagrama de los usos básicos en la aplicación, como inicio de sesión, empezar a jugar y contestar las preguntas.  |
+| -&gt; Aspectos notables:                                                                                                             |
+|    - El usuario tiene que estar autentificado en la aplicación para poder entrar al juego.                                        |
+|    - Los usuarios estarán en una base de datos para recoger los datos de manera más sencilla.                                     |
+|    - En el diagrama se pone la opción de respuesta correcta, pero si fuera incorrecta también se seguiría jugando.                |</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/Digrama%20de%20secuencia%20Juego%20de%20preguntas.jpg" alt="Diagrama de secuencia">
+</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="">6.3. &#8230;&#8203;</h3>
-
+<h3 id="_runtime_scenario_3">6.3. &lt;Runtime Scenario 3&gt;</h3>
+<div class="listingblock">
+<div class="content">
+<pre>| -&gt; Diagrama de casos de uso                                                                                                        |
+| -&gt; Descripción: diagrama básico de los distintos casos de uso que hay en el proyecto                                               |
+| -&gt; Aspectos notables:                                                                                                              |
+|    - El caso de uso de iniciar sesión del usuario está relacionado con el caso de uso de autentificar sesión del sistema,          |
+|    - ya que para que el usuario pueda iniciar sesión debe de estar autentificado.                                                  |
+|    - Lo mismo ocurre con el caso de uso de contestar preguntas del usuario con el caso de uso de verificar respuestas del sistema, |
+|    - ya que para que el usuario pueda contestar preguntas, el sistema primero debe de verificar si dicha respuesta es correcta     |
+|    - o no para pasar a la siguiente pregunta.                                                                                      |</pre>
 </div>
-<div class="sect2">
-<h3 id="_runtime_scenario_n">6.4. &lt;Runtime Scenario n&gt;</h3>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="./images/Diagrama%20de%20casos%20de%20uso%20para%20el%20juego%20de%20palabras.jpg" alt="Diagrama de caso de uso">
+</div>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
@@ -1453,124 +1568,48 @@ ESTO SE HARA MAS ADELANTE</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="section-concepts">8. Cross-cutting Concepts</h2>
+<h2 id="section-concepts">8. Conceptos Transversales</h2>
 <div class="sectionbody">
-<div class="sidebarblock arc42help">
-<div class="content">
 <div class="paragraph">
-<div class="title">Content</div>
-<p>This section describes overall, principal regulations and solution ideas that are relevant in multiple parts (= cross-cutting) of your system.
-Such concepts are often related to multiple building blocks.
-They can include many different topics, such as</p>
+<p>Estos conceptos todavia no han sido aprobados ni implemenmtados pero dan una idea general al proyecto.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>models, especially domain models</p>
-</li>
-<li>
-<p>architecture or design patterns</p>
-</li>
-<li>
-<p>rules for using specific technology</p>
-</li>
-<li>
-<p>principal, often technical decisions of an overarching (= cross-cutting) nature</p>
-</li>
-<li>
-<p>implementation rules</p>
-</li>
-</ul>
-</div>
+<div class="sect2">
+<h3 id="_modelo_de_dominio">8.1. Modelo de Dominio</h3>
 <div class="paragraph">
-<div class="title">Motivation</div>
-<p>Concepts form the basis for <em>conceptual integrity</em> (consistency, homogeneity) of the architecture.
-Thus, they are an important contribution to achieve inner qualities of your system.</p>
+<p>Esta es una primera version del modelo del dominio muy simple para hacerse una idea como funcionara la aplicacion.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_experiencia_de_usuario">8.2. Experiencia de Usuario</h3>
 <div class="paragraph">
-<p>Some of these concepts cannot be assigned to individual building blocks, e.g. security or safety.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>The form can be varied:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>concept papers with any kind of structure</p>
-</li>
-<li>
-<p>cross-cutting model excerpts or scenarios using notations of the architecture views</p>
-</li>
-<li>
-<p>sample implementations, especially for technical concepts</p>
-</li>
-<li>
-<p>reference to typical usage of standard frameworks (e.g. using Hibernate for object/relational mapping)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Structure</div>
-<p>A potential (but not mandatory) structure for this section could be:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Domain concepts</p>
-</li>
-<li>
-<p>User Experience concepts (UX)</p>
-</li>
-<li>
-<p>Safety and security concepts</p>
-</li>
-<li>
-<p>Architecture and design patterns</p>
-</li>
-<li>
-<p>"Under-the-hood"</p>
-</li>
-<li>
-<p>development concepts</p>
-</li>
-<li>
-<p>operational concepts</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Note: it might be difficult to assign individual concepts to one specific topic
-on this list.</p>
+<p>El usuario sera capaz de interactura con una aplicacion web donde se podra registrar y jugar al juego de manera sencilla.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="./images/08-Crosscutting-Concepts-Structure-EN.png" alt="Possible topics for crosscutting concepts">
-</div>
-</div>
-<div class="paragraph">
-<div class="title">Further Information</div>
-<p>See <a href="https://docs.arc42.org/section-8/">Concepts</a> in the arc42 documentation.</p>
+<img src="./images/08_diagrama_modelo_dominio.png" alt="Modelo de dominio simple provisional">
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_concept_1">8.1. <em>&lt;Concept 1&gt;</em></h3>
+<h3 id="_seguridad">8.3. Seguridad</h3>
 <div class="paragraph">
 <p><em>&lt;explanation&gt;</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_concept_2">8.2. <em>&lt;Concept 2&gt;</em></h3>
+<h3 id="_arquitectura_y_patrones_de_diseño">8.4. Arquitectura y Patrones de Diseño</h3>
 <div class="paragraph">
 <p><em>&lt;explanation&gt;</em></p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_desarrollo">8.5. Desarrollo</h3>
 <div class="paragraph">
-<p>&#8230;&#8203;</p>
+<p><em>&lt;explanation&gt;</em></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_concept_n">8.3. <em>&lt;Concept n&gt;</em></h3>
+<h3 id="_operaciones">8.6. Operaciones</h3>
 <div class="paragraph">
 <p><em>&lt;explanation&gt;</em></p>
 </div>
@@ -1579,187 +1618,192 @@ on this list.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="section-design-decisions">9. Architecture Decisions</h2>
+<h2 id="section-design-decisions">9. Decisiones de Arquitectura</h2>
 <div class="sectionbody">
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Contents</div>
-<p>Important, expensive, large scale or risky architecture decisions including rationales.
-With "decisions" we mean selecting one alternative based on given criteria.</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decisión</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ventajas</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inconvenientes</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JavaScript / React</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">La base de la aplicación ya esta creada con este lenguaje y lo para la creación de sitios web es un versatil.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">La baja o nula esperiencia con el lenguaje de algunos integrantes del grupo asi como sus limitaciones tecninas.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Microservicios</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">La aplicacion se podra dividir en problemas que se podran solucionar dandole diferentes enfoques con diferentes lenguajes y metodologias.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AL igual que el primer punto, la baja experiencia con esta forma de trabajo al cual se tendra que adaptar el grupo.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MongoDB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parte de la implementacion ya está hecha. Por otra parte es de uso libre y existe bastante documentacion online para usarse correctamente</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Al igual que los dos puntos anteriores, el grupo cuenta con poca experiencia usando esta tecnología y no somos concientes de todas sus limitaciones y fortalezas.</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
 </div>
-<div class="paragraph">
-<p>Please use your judgement to decide whether an architectural decision should be documented
-here in this central section or whether you better document it locally
-(e.g. within the white box template of one building block).</p>
 </div>
+<h1 id="_requisitos_de_calidad" class="sect0">Requisitos de Calidad 🌟</h1>
+<div class="sect1">
+<h2 id="_árbol_de_calidad">1. Árbol de Calidad 🌳</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Avoid redundancy.
-Refer to section 4, where you already captured the most important decisions of your architecture.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Stakeholders of your system should be able to comprehend and retrace your decisions.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Various options:</p>
+<p>El árbol de calidad se organiza con "calidad" como raíz, desglosándose en varias ramas principales que representan categorías de calidad relevantes para el proyecto WIQ. Estas ramas incluyen:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>ADR (<a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions">Documenting Architecture Decisions</a>) for every important decision</p>
+<p><strong>Usabilidad</strong> 💡: Se refiere a la facilidad con la que los usuarios pueden utilizar un sistema para alcanzar sus objetivos de manera eficiente y satisfactoria. La usabilidad implica interfaces intuitivas, accesibilidad y una experiencia de usuario agradable.</p>
 </li>
 <li>
-<p>List or table, ordered by importance and consequences or:</p>
+<p><strong>Rendimiento</strong> ⚡: Evalúa la eficiencia del sistema en términos de velocidad de respuesta, consumo de recursos y escalabilidad. Un buen rendimiento asegura que el sistema puede manejar cargas de trabajo elevadas con tiempos de respuesta rápidos.</p>
 </li>
 <li>
-<p>more detailed in form of separate sections per decision</p>
+<p><strong>Seguridad</strong> 🔒: Implica proteger la información y los sistemas contra accesos no autorizados, divulgación, alteración o destrucción, garantizando la confidencialidad, integridad y disponibilidad de los datos.</p>
+</li>
+<li>
+<p><strong>Fiabilidad</strong> 🛡️: La capacidad del sistema de funcionar correctamente y sin fallos durante un período determinado bajo condiciones específicas. La fiabilidad se centra en la consistencia del rendimiento y la prevención de fallos.</p>
+</li>
+<li>
+<p><strong>Mantenibilidad</strong> 🔧: Se refiere a la facilidad con la que un sistema puede ser modificado para corregir fallos, mejorar su funcionamiento o adaptarse a un entorno cambiante. Una alta mantenibilidad facilita las actualizaciones y reduce los costos a largo plazo.</p>
+</li>
+<li>
+<p><strong>Portabilidad 🌍</strong>: La capacidad de un sistema para ser utilizado en diferentes entornos operativos con mínimas modificaciones. La portabilidad permite que el software sea compatible con diversos dispositivos, sistemas operativos o navegadores web.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<div class="title">Further Information</div>
-<p>See <a href="https://docs.arc42.org/section-9/">Architecture Decisions</a> in the arc42 documentation.
-There you will find links and examples about ADR.</p>
+<div class="imageblock text-center">
+<div class="content">
+<img src="./images/10_Arbol_de_calidad.jpg" alt="Árbol de Calidad">
 </div>
 </div>
-</div>
-<div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="section-quality-scenarios">10. Quality Requirements</h2>
+<h2 id="_escenarios_de_calidad">2. Escenarios de Calidad</h2>
 <div class="sectionbody">
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Content</div>
-<p>This section contains all quality requirements as quality tree with scenarios. The most important ones have already been described in section 1.2. (quality goals)</p>
-</div>
-<div class="paragraph">
-<p>Here you can also capture quality requirements with lesser priority,
-which will not create high risks when they are not fully achieved.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Since quality requirements will have a lot of influence on architectural
-decisions you should know for every stakeholder what is really important to them,
-concrete and measurable.</p>
-</div>
-<div class="paragraph">
-<div class="title">Further Information</div>
-<p>See <a href="https://docs.arc42.org/section-10/">Quality Requirements</a> in the arc42 documentation.</p>
-</div>
+<div class="sect2">
+<h3 id="_usabilidad">2.1. Usabilidad 💡</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Escenario</strong>: Un nuevo usuario puede registrarse e iniciar a jugar en menos de 5 minutos después de su primer acceso al sitio web. La interfaz intuitiva y la guía de inicio rápido facilitan este proceso. 🚀</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_quality_tree">10.1. Quality Tree</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Content</div>
-<p>The quality tree (as defined in ATAM – Architecture Tradeoff Analysis Method) with quality/evaluation scenarios as leafs.</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>The tree structure with priorities provides an overview for a sometimes large number of quality requirements.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>The quality tree is a high-level overview of the quality goals and requirements:</p>
-</div>
+<h3 id="_rendimiento">2.2. Rendimiento ⚡</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>tree-like refinement of the term "quality". Use "quality" or "usefulness" as a root</p>
-</li>
-<li>
-<p>a mind map with quality categories as main branches</p>
+<p><strong>Escenario</strong>: El sistema responde a las solicitudes de los usuarios en menos de 2 segundos bajo condiciones normales de carga, asegurando una experiencia de juego fluida. 🏎️</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>In any case the tree should include links to the scenarios of the following section.</p>
-</div>
-</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_quality_scenarios">10.2. Quality Scenarios</h3>
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Contents</div>
-<p>Concretization of (sometimes vague or implicit) quality requirements using (quality) scenarios.</p>
-</div>
-<div class="paragraph">
-<p>These scenarios describe what should happen when a stimulus arrives at the system.</p>
-</div>
-<div class="paragraph">
-<p>For architects, two kinds of scenarios are important:</p>
-</div>
+<h3 id="_seguridad_2">2.3. Seguridad 🔒</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Usage scenarios (also called application scenarios or use case scenarios) describe the system’s runtime reaction to a certain stimulus. This also includes scenarios that describe the system’s efficiency or performance. Example: The system reacts to a user’s request within one second.</p>
-</li>
-<li>
-<p>Change scenarios describe a modification of the system or of its immediate environment. Example: Additional functionality is implemented or requirements for a quality attribute change.</p>
+<p><strong>Escenario</strong>: Todos los datos personales de los usuarios están cifrados tanto en tránsito como en reposo, utilizando estándares de seguridad actuales para prevenir accesos no autorizados. 🔐</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>Scenarios make quality requirements concrete and allow to
-more easily measure or decide whether they are fulfilled.</p>
 </div>
-<div class="paragraph">
-<p>Especially when you want to assess your architecture using methods like
-ATAM you need to describe your quality goals (from section 1.2)
-more precisely down to a level of scenarios that can be discussed and evaluated.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>Tabular or free form text.</p>
+<div class="sect2">
+<h3 id="_mantenibilidad">2.4. Mantenibilidad 🔧</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Escenario</strong>: El sistema permite la adición de nuevas funcionalidades (como tipos de preguntas o temáticas) sin necesidad de una reestructuración mayor, promoviendo una arquitectura modular. 🛠️</p>
+</li>
+</ul>
 </div>
 </div>
-</div>
-<div style="page-break-after: always;"></div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="section-technical-risks">11. Risks and Technical Debts</h2>
-<div class="sectionbody">
-<div class="sidebarblock arc42help">
-<div class="content">
-<div class="paragraph">
-<div class="title">Contents</div>
-<p>A list of identified technical risks or technical debts, ordered by priority</p>
-</div>
-<div class="paragraph">
-<div class="title">Motivation</div>
-<p>“Risk management is project management for grown-ups” (Tim Lister, Atlantic Systems Guild.)</p>
-</div>
-<div class="paragraph">
-<p>This should be your motto for systematic detection and evaluation of risks and technical debts in the architecture, which will be needed by management stakeholders (e.g. project managers, product owners) as part of the overall risk analysis and measurement planning.</p>
-</div>
-<div class="paragraph">
-<div class="title">Form</div>
-<p>List of risks and/or technical debts, probably including suggested measures to minimize, mitigate or avoid risks or reduce technical debts.</p>
-</div>
-<div class="paragraph">
-<div class="title">Further Information</div>
-<p>See <a href="https://docs.arc42.org/section-11/">Risks and Technical Debt</a> in the arc42 documentation.</p>
+<div class="sect2">
+<h3 id="_fiabilidad_️">2.5. Fiabilidad 🛡️</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Escenario</strong>: En caso de fallo del sistema, este debe ser capaz de recuperarse y volver a estar operativo en menos de 5 minutos, garantizando una alta disponibilidad. 🔄</p>
+</li>
+</ul>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_portabilidad">2.6. Portabilidad 🌍</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Escenario</strong>: La aplicación web es compatible con los navegadores web más utilizados (Chrome, Firefox, Safari, Edge) en sus últimas dos versiones principales, asegurando un amplio acceso. 🌐</p>
+</li>
+</ul>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
+</div>
+<h1 id="_risks_and_technical_debts" class="sect0">Risks and Technical Debts 🚀</h1>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top">Riesgo</th>
+<th class="tableblock halign-center valign-top">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Tiempo de entrega ⏳</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Estamos limitados por el plazo de entrega y también por el tiempo que dedicaremos a trabajar en otras asignaturas.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Proyecto grande y equipo grande 👥</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">La coordinación y comunicación en un equipo grande pueden ser desafiantes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Diseño inadecuado o enfoque incorrecto 🎨</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">La presencia de errores en etapas tempranas puede ser devastadora, ya que estas son cruciales. Un mal diseño detectado en etapas avanzadas podría ser irreparable, subrayando la importancia de una planificación y visión previsoras.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Falta de familiaridad con las tecnologías 🔧</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">El equipo comienza con conocimiento limitado sobre las herramientas necesarias, lo que puede resultar en un uso subóptimo de estas.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Errores de implementación 🚨</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Errores no críticos en la lógica de negocio pueden permanecer ocultos por largo tiempo, afectando la calidad del sistema.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Comunicación deficiente entre miembros 📢</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Las diferencias y desacuerdos pueden obstaculizar la colaboración efectiva, esencial para el éxito del equipo.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Distribución desigual del trabajo ⚖️</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Una asignación desequilibrada puede sobrecargar a algunos miembros mientras deja a otros con menos responsabilidades.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">Reducción del tamaño del equipo 👥</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock">La salida inesperada de miembros puede desafiar la continuidad y el avance del proyecto, requiriendo adaptaciones rápidas y eficientes.</p></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
 <div class="sect1">
-<h2 id="section-glossary">12. Glossary</h2>
+<h2 id="section-glossary">1. Glossary</h2>
 <div class="sectionbody">
 <div class="sidebarblock arc42help">
 <div class="content">
@@ -1810,12 +1854,48 @@ more precisely down to a level of scenarios that can be discussed and evaluated.
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Term-1&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;definition-1&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>React</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Biblioteca de Javascript que se encarga en la creación de interfaces de usuario de una manera fácil. Es eficiente y se puede incorporar
+al código de una forma sencilla.</em></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;Term-2&gt;</em></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><em>&lt;definition-2&gt;</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Node.js</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Entorno que usa Javascript, donde destaca en la creación de servidores web. Su programación es dirigida por eventos, es multi-plataforma, open-source
+y soporta la concurrencia.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Microservicio</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Enfoque arquitectónico, donde el software se va a dividir en servicios de tamaño pequeño, que estarán unidos por la intervención de API&#8217;s
+(en nuestro caso Wikidata). Son rápidos, sencillos a la hora de su desarrollo y autonómos cuando estos están en ejecución.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>API</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>O también Application Programming Interface, es un intermediario que ayuda a las diferentes aplicaciones del proyecto a posibilitar la comunicación
+entre ellas. Favorece a la eficiencia y agilidad del funcionamiento de dichas aplicaciones.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>MongoDB</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Es uno de los tantos tipos de bases de datos, como MariaDB. Usa NoSQL, soporta múltiples lenguajes de programación y también soporta su funcionamiento en
+gran variedad de sistemas operativos. Algo a tener en cuenta es que MongoDB realiza el guardado de datos de una forma distinta a la de las bases de datos de
+tipo relacional, con tablas de datos, este lo guarda en archivos BSON, que es un derivado de JSON.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>BSON</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>O Binary JSON, son los archivos que usa la base de datos MongoDB para almacenar los datos de una manera más ágil y sencilla que con las tablas. Una
+curiosidad de este tipo de archivo es que no tiene un tipo de MIME definido, mientras que JSON sí que lo tiene.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Mongoose</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Biblioteca que es encargada de crear una conexión con la base de datos MongoDB con el entorno de Node.js. Hace que el acceso y creación de los datos de MongoDB sea más fácil de realizar que con MongoDB en sí.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Docker</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Aplicación que realiza el despliegue de cualquier aplicación en formato de contenedores, similares a los contenedores que tienen los barcos. Es open-source y permite que el proceso de desplegar una aplicación sea bastante más fácil y ordenado.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>GitHub Actions</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Plataforma que ayuda a automatizar los proyectos, haciendo posible el despliegue de estos desde el mismo Github. Soporta una gran variedad de lenguajes de
+programación y sistemas operativos.</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -1825,7 +1905,7 @@ more precisely down to a level of scenarios that can be discussed and evaluated.
 <div id="footer">
 <div id="footer-text">
 Version 8.2 EN<br>
-Last updated 2024-02-19 17:41:48 +0100
+Last updated 2024-02-19 23:00:34 +0100
 </div>
 </div>
 </body>
