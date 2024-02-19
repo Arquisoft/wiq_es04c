@@ -68,4 +68,4 @@ curiosidad de este tipo de archivo es que no tiene un tipo de MIME definido, mie
 |GitHub Actions
 |Plataforma que ayuda a automatizar los proyectos, haciendo posible el despliegue de estos desde el mismo Github. Soporta una gran variedad de lenguajes de 
 programación y sistemas operativos.
-
+|===
