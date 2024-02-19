@@ -1,4 +1,5 @@
 ifndef::imagesdir[:imagesdir: ../images]
+[[section-quality-scenarios]]
 == Requisitos de Calidad 🌟
 
 === Árbol de Calidad 🌳
