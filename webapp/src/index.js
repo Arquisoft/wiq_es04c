@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 /*funcion q representa la barra de navegacion superior*/
+import Footer from './components/Footer';
 import Navbar from './components/NavBar';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -14,6 +15,7 @@ root.render(
     
     <App />
     
+    <Footer></Footer>
   </React.StrictMode>
 );
 
