@@ -3,7 +3,8 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-building-block-view]]
 
 
-== Building Block View
+== Building Block View  EN desarollo 
+image::whiteBoxGeneral.png[]
 
 [role="arc42help"]
 ****
@@ -40,43 +41,29 @@ See https://docs.arc42.org/section-5/[Building Block View] in the arc42 document
 
 ****
 
-=== Whitebox Overall System  EN desarollo 
+=== Whitebox Overall System
+image::whiteLevel1.png[]
 
 [role="arc42help"]
-****
-Here you describe the decomposition of the overall system using the following white box template. It contains
-
- * an overview diagram
- * a motivation for the decomposition
- * black box descriptions of the contained building blocks. For these we offer you alternatives:
-
-   ** use _one_ table for a short and pragmatic overview of all contained building blocks and their interfaces
-   ** use a list of black box descriptions of the building blocks according to the black box template (see below).
-   Depending on your choice of tool this list could be sub-chapters (in text files), sub-pages (in a Wiki) or nested elements (in a modeling tool).
-
-
- * (optional:) important interfaces, that are not explained in the black box templates of a building block, but are very important for understanding the white box.
-Since there are so many ways to specify interfaces why do not provide a specific template for them.
- In the worst case you have to specify and describe syntax, semantics, protocols, error handling,
- restrictions, versions, qualities, necessary compatibilities and many things more.
-In the best case you will get away with examples or simple signatures.
-
-****
-Este diagrama del sistema general muestra una descrpicion del sistema con los componentes basicos 
-image::whiteBoxGeneral.png[width=500]
-
-_**<Overview Diagram>**_
 
 Motivation::
 
-_<text explanation>_
+Este diagrama del sistema general muestra una descrpicion del sistema con los componentes basicos 
 
 
 Contained Building Blocks::
-_<Description of contained building block (black boxes)>_
+User Interface (Frontend)
+
+Logica de Negocio(Backend)
+
+Base datos
+
+
+API Preguntas 
+
 
 Important Interfaces::
-_<Description of important interfaces>_
+
 
 [role="arc42help"]
 ****
@@ -99,7 +86,7 @@ Its headline is the name of the black box.
 ****
 
 
-==== <Name black box 1>
+==== <Interfaz Grafica>
 
 [role="arc42help"]
 ****
@@ -116,35 +103,37 @@ according the the following black box template:
 ****
 
 _<Purpose/Responsibility>_
-
+La Interfaz de Usuario (UI) - Black Box 1 es responsable de proporcionar una interfaz interactiva y amigable para los usuarios finales. Sirve como el punto principal de interacción entre la aplicación y los usuarios, y facilita  la experiencia general del usuario.
 _<Interface(s)>_
-
-_<(Optional) Quality/Performance Characteristics>_
-
-_<(Optional) Directory/File Location>_
-
-_<(Optional) Fulfilled Requirements>_
-
-_<(optional) Open Issues/Problems/Risks>_
+Interfaz de Entrada del Usuario: Acepta la entrada del usuario a través de varios controles, como botones, formularios y campos de entrada.
+Interfaz de Visualización: Renderiza y muestra información al usuario, incluyendo datos, mensajes y elementos visuales.
+_<Quality/Performance Characteristics>_
+Capacidad de Respuesta: La UI debe responder de manera rápida a las interacciones del usuario para garantizar una experiencia fluida y eficiente.
+Accesibilidad: Adhiere a los estándares de accesibilidad para proporcionar una experiencia inclusiva para los usuarios.
 
 
 
+==== <Loggin>
+_<Purpose/Responsibility>_
 
-==== <Name black box 2>
-
-_<black box template>_
-
-==== <Name black box n>
+Su función principal es permitir el acceso a los usuarios a la aplicacion , y guardar los resultados de estos.
 
 _<black box template>_
 
+==== <Api de preguntas>
+_<Purpose/Responsibility>_
+Su proposito es proporcionar preguntas de manera dinamica al usuario.
 
-==== <Name interface 1>
 
-...
+_<black box template>_
 
-==== <Name interface m>
+==== <Logica de negocio >
+_<Purpose/Responsibility>_
+Se encargara de gestionar toda la programacion necesaria de cara a la logica 
 
+==== <Base de datos>
+_<Purpose/Responsibility>_
+Dara almacenamiento al sistema de manera persistente y a los records de los usuarios.
 
 
 === Level 2
@@ -158,26 +147,31 @@ Please prefer relevance over completeness. Specify important, surprising, risky,
 Leave out normal, simple, boring or standardized parts of your system
 ****
 
-==== White Box _<building block 1>_
+==== White Box _<Interfaz de usuario>_
 
 [role="arc42help"]
 ****
 ...describes the internal structure of _building block 1_.
 ****
 
-_<white box template>_
+_<white box Interfaz Usuario>_
+image::uiLevel2.png[]
+==== White Box _<Login>_
 
-==== White Box _<building block 2>_
+image::loginLevel2.png[]
 
 
-_<white box template>_
 
 ...
 
-==== White Box _<building block m>_
+==== White Box _<Api preguntas>_
 
 
-_<white box template>_
+En desarollo
+
+==== White Box _<Logica de negocio >_
+
+image::bdLevel2.png[]
 
 
 
