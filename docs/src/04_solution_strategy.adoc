@@ -23,7 +23,9 @@ Keep the explanations of such key decisions short.
 Motivate what was decided and why it was decided that way,
 based upon problem statement, quality goals and key constraints.
 Refer to details in the following sections.
+****
 
+****
 Decisiones tecnológicas
 
 Hemos decidido realizar la parte de Front-End con React y la parte de Back-End con la estructura de los microservicios. 
