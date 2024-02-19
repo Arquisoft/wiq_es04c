@@ -57,16 +57,29 @@ For multiple environments or alternative deployments please copy and adapt this 
 ****
 
 _**<Overview Diagram>**_
+ESTO SE HARA MAS ADELANTE 
 
 Motivation::
 
-_<explanation in text form>_
+1. Disponibilidad: se busca una aplicacion que sea capaz de prestar servicio de manera continuada, con resistencia a fallos.
+2. Eficiencia:Se busca una aplicacion que ofreza un rendimiento optimo para la generacion de preguntas desde dispositivos con pocas capacidades.
+3. Cumplimiento de Requisitos Regulatorios:El uso de Wikidata como fuente de datos en nuestra aplicación está respaldado por la necesidad de cumplir con requisitos regulatorios y normativos específicos. Esta elección se basa en las siguientes consideraciones:
+
+
 
 Quality and/or Performance Features::
 
-_<explanation in text form>_
+1.Rencimiento:se busca que la aplicacion tenga un rendimiento optimo en dispositivos mobiles y tablets.
+2.Adaptabilidad: la aplicacion tiene que ser adaptable en diferentes dispositivos para asi poder garantizar su uso .
+
+
+
+
+Se hara mas adelante 
 
 Mapping of Building Blocks to Infrastructure::
+
+SE HARA MAS ADELANTE 
 _<description of the mapping>_
 
 
@@ -78,6 +91,9 @@ Here you can include the internal structure of (some) infrastructure elements fr
 
 Please copy the structure from level 1 for each selected element.
 ****
+
+SE HARA MAS ADELANTE 
+
 
 ==== _<Infrastructure Element 1>_
 
