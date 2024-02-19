@@ -40,7 +40,7 @@ See https://docs.arc42.org/section-5/[Building Block View] in the arc42 document
 
 ****
 
-=== Whitebox Overall System
+=== Whitebox Overall System  EN desarollo 
 
 [role="arc42help"]
 ****
@@ -62,6 +62,8 @@ Since there are so many ways to specify interfaces why do not provide a specific
 In the best case you will get away with examples or simple signatures.
 
 ****
+Este diagrama del sistema general muestra una descrpicion del sistema con los componentes basicos 
+image::whiteBoxGeneral.png[width=500]
 
 _**<Overview Diagram>**_
 
