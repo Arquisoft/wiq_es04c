@@ -3,21 +3,21 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-introduction-and-goals]]
 == Introducción y Ojetivos (wiq_es04c)
 
-nombre_del_proyecto es un proyecto desarrollado en la asignatura  Arquitectura del Software. Consiste en la creacion de una aplicacion web al estilo "Saber y Ganar". Es decir, es un juego de preguntas de cultura general.
+El proyecto de wiq_es04c es un proyecto desarrollado en la asignatura  Arquitectura del Software. Consiste en la creacion de una aplicacion web al estilo "Saber y Ganar". Es decir, es un juego de preguntas de cultura general.
 
 Los desarrolladores de la aplicacion son por David Álvarez Díaz, Zohaib Akhtar Kausar, Sara Lamuño García, Yago Navajas González y Santiago López Laso.
 
-La aplicacion tendra su base para las preguntas y las respuestas en Wikidata , la base de conocimiento editada en colaboracion.
+La aplicación tendra su base para las preguntas y las respuestas en Wikidata , la base de conocimiento editada en colaboracion.
 
 
 === Requisitos Funcionales
 
 ****
-* Los usuarios se deberan loggear en la pagina, esto servira para tener registro de unas serie de parametros, como puede ser las veces que se ha jugado. 
-* Se podran responder preguntas autogeneradas y ver si han acertado fallado asi como la respuesta correcta.
-* Las preguntas deberan ser respondidas en un tiempo limite.
-* Las preguntas seran seguiran la misma estructura: 1 pregunta correcta y 3 incorrectas, generadas automaticamente.
-* Los usuarios prodran consultar datos sobre su cuentan, como pueden ser las veces que han jugado o el numero de preguntas que han acertadoo fallado. 
+* Los usuarios se deberan loggear en la página, esto servirá para tener registro de unas serie de parámetros, como puede ser las veces que se ha jugado. 
+* Se podrán responder preguntas autogeneradas y ver si han acertado fallado, así como la respuesta correcta.
+* Las preguntas deberán ser respondidas en un tiempo límite.
+* Las preguntas seguirán la misma estructura: 1 pregunta correcta y 3 incorrectas, generadas automáticamente.
+* Los usuarios podrán consultar datos sobre su cuentas, como pueden ser las veces que han jugado o el número de preguntas que han acertado o fallado. 
 
 
 ****
@@ -26,10 +26,10 @@ La aplicacion tendra su base para las preguntas y las respuestas en Wikidata , l
 
 [options="header",cols="1,2,2"]
 |===
-|Prioridad | Objetivo | Descripcion
-| 1 | Usabilidad | Todos los usuarios deben poder usar la aplicacion sin tener en cuenta sus limitaciones.
-| 2 | Privacidad |  Los datos sensibles de los usuarios deben estar restingidos al mismo usuario.
-| 3 |Mantenibilidad | El código y documentación de la aplicación ha de estar conformado de tal forma que sea factible hacer cambios y ampliaciones en la aplicación.
+| Prioridad | Objetivo | Descripción
+| 1 | Usabilidad | Todos los usuarios deben poder usar la aplicación sin tener en cuenta sus limitaciones.
+| 2 | Privacidad |  Los datos sensibles de los usuarios deben estar restringidos al mismo usuario.
+| 3 | Mantenibilidad | El código y documentación de la aplicación ha de estar conformado de tal forma que sea factible hacer cambios y ampliaciones en la aplicación.
 | 4 | Eficiciencia | Los tiempos entre operaciones han de ser asumibles.
 | 5 | Fiabilidad | Los datos usados en la aplicación deben ser los correctos.
 |===
@@ -44,6 +44,7 @@ La aplicacion tendra su base para las preguntas y las respuestas en Wikidata , l
 David Álvarez Díaz -> UO283196@uniovi.es +
 Zohaib Akhtar Kausar -> UO291060@uniovi.es +
 Sara Lamuño García -> UO283706@uniovi.es +
-Santiago Lopez Laso -> UO277369@uniovi.es | Los estudiantes que llevarán a cabo el desarrollo de la aplicación. Seran los encargados de la arquitectura, la documentación y la codificación.
-| Profesores | labra@uniovi.es | Supervisores de los avances y encargados de evaluar la aplicacion final y el desarrollo de la misma.
+Santiago Lopez Laso -> UO277369@uniovi.es | Los estudiantes que llevarán a cabo el desarrollo de la aplicación. Serán los encargados de la arquitectura, la documentación y la codificación.
+| Profesores | Jose Emilio Labra Gayo | Supervisores de los avances y encargados de evaluar la aplicacion final y el desarrollo de la misma.
+| Usuario | Jugador de la aplicación | Personas que puedan interactuar tanto con el registro de usuarios como con el juego en sí y pueda completar correctamente una partida.
 |===
