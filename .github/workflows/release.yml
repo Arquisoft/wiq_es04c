@@ -111,7 +111,7 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
         registry: ghcr.io
-        workdir: gatewayservice
+        workdir: ./gatewayservice
   docker-push-questionservice:
     name: Push question service Docker Image to GitHub Packages
     runs-on: ubuntu-latest
