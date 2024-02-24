@@ -144,5 +144,6 @@ jobs:
         command: |
           wget https://raw.githubusercontent.com/arquisoft/wiq_es04c/master/docker-compose.yml -O docker-compose.yml
           wget https://raw.githubusercontent.com/arquisoft/wiq_es04c/master/.env -O .env
+          wget https://github.com/Arquisoft/wiq_es04c.git
           docker compose --profile prod down
           docker compose --profile prod up -d
