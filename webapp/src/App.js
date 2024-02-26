@@ -16,10 +16,7 @@ function App() {
   return (
     <Container component="main" maxWidth="xs">
     
-      <CssBaseline />
-      <Typography component="h1" variant="h5" align="center" sx={{ marginTop: 2 }}>
-       Bienvenidos a la edición 2024 del curso de Arquitectura de Software
-      </Typography>
+   
 
       {/*showLogin ? <Login /> : <AddUser />
       <Typography component="div" align="center" sx={{ marginTop: 2 }}>
