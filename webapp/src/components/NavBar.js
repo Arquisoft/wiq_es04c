@@ -2,11 +2,11 @@ import React ,{useContext} from 'react';
 import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
 import { AuthContext } from './authcontext';
-
+import { Dropdown, Nav } from 'react-bootstrap';
 
 const Navbar = () => {
   //sacar el valor para ver si esta logeado o no 
-  const { isLoggedIn } = useContext(AuthContext);
+  const { isLoggedIn, username } = useContext(AuthContext); // Obtiene username del contexto
 
   return(
   <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -35,19 +35,22 @@ const Navbar = () => {
             </>
           ) : (
             <>
-            <li className="nav-item">
-              <Link to="/logout" className="nav-link">
-                <i className="fas fa-sign-in-alt" style={{ fontSize: '16px' }}></i>
-                <span>logout</span>
-              </Link>
-            </li>
+            <Dropdown as={Nav.Item}>
+              <Dropdown.Toggle as={Nav.Link}>
+                <i className="fas fa-user"></i> // Icono de usuario
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item disabled>{username}</Dropdown.Item> // Nombre de usuario como texto no editable
+                <Dropdown.Item href="/logout">Logout</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
             <li className="nav-item">
               <Link to="/history" className="nav-link">
                 <i className="fas fa-sign-in-alt" style={{ fontSize: '16px' }}></i>
-                <span>historial</span>
+                <span>Historial</span>
               </Link>
             </li>
-            </>
+          </>
 
             
           )}
