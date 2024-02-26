@@ -18,9 +18,10 @@ function App() {
     
       <CssBaseline />
       <Typography component="h1" variant="h5" align="center" sx={{ marginTop: 2 }}>
-        Welcome to the 2024 edition of the Software Architecture course
+       Bienvenidos a la edición 2024 del curso de Arquitectura de Software
       </Typography>
-      {showLogin ? <Login /> : <AddUser />}
+
+      {/*showLogin ? <Login /> : <AddUser />
       <Typography component="div" align="center" sx={{ marginTop: 2 }}>
         {showLogin ? (
           <Link name="gotoregister" component="button" variant="body2" onClick={handleToggleView}>
@@ -32,6 +33,7 @@ function App() {
           </Link>
         )}
       </Typography>
+        */}
       
     </Container>
   );

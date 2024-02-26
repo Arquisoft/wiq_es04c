@@ -6,11 +6,23 @@ import reportWebVitals from './reportWebVitals';
 /*funcion q representa la barra de navegacion superior*/
 import Footer from './components/Footer';
 import Navbar from './components/NavBar';
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <Navbar></Navbar>
+import AddUser from './components/AddUser';
+import Login from './components/Login';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+  
+  <React.StrictMode>
+    {/** manjear la direccion a los componentes que hace navBar de register y login */}
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/addUser" element={<AddUser />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
     <App />
     
     <Footer></Footer>
