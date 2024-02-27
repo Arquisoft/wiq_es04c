@@ -53,8 +53,18 @@ services:
     networks:
       - mynetwork
     environment:
+      GENERATE_SERVICE_URL: http://questionservice:8003
       AUTH_SERVICE_URL: http://authservice:8002
       USER_SERVICE_URL: http://userservice:8001
+
+
+  questionservice:
+    container_name: questionservice-${teamname:-defaultASW}
+    build: ./questionservice
+    ports:
+      - "8003:8003"
+    networks:
+      - mynetwork
 
   webapp:
     container_name: webapp-${teamname:-defaultASW}
