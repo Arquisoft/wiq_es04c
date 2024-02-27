@@ -42,7 +42,7 @@ app.post('/adduser', async (req, res) => {
   }
 });
 
-app.post('/getquestion', async(req,res)=> {
+app.get('/getquestion', async(req,res)=> {
   try{
     // Redirige la solicitud al servicio de generación de preguntas sin enviar un cuerpo de solicitud.
     const response = await axios.post(`${generateServiceURL}/getquestion`);
