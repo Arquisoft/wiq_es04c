@@ -1,10 +1,10 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-runtime-view]]
-== Runtime View
+== Runtime View 📽️
 
 
-=== <Runtime Scenario 1>
+=== <Runtime Scenario 1> 1️⃣
 
 [plantuml,"Sequence diagram",png]
 ----
@@ -32,7 +32,7 @@ system -> juego: generar siguiente pregunta/respuestas
 Diagrama de secuencia con plantuml (se contempla sólo el uso correcto de la aplicación)
 
 
-=== <Runtime Scenario 2>
+=== <Runtime Scenario 2> 2️⃣
 
  -> Diagrama de secuencia                                                                                                          
  -> Descripción: diagrama de los usos básicos en la aplicación, como inicio de sesión, empezar a jugar y contestar las preguntas.  
@@ -43,7 +43,7 @@ Diagrama de secuencia con plantuml (se contempla sólo el uso correcto de la apl
 
 image::Digrama de secuencia Juego de preguntas.jpg["Diagrama de secuencia"]
 
-=== <Runtime Scenario 3>
+=== <Runtime Scenario 3> 3️⃣
 
  -> Diagrama de casos de uso                                                                                                        
  -> Descripción: diagrama básico de los distintos casos de uso que hay en el proyecto                                               
