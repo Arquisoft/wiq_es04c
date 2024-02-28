@@ -1,7 +1,7 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-design-decisions]]
-== Decisiones de Arquitectura
+== Decisiones de Arquitectura 🗣️
 
 |===
 | Decisión | Ventajas | Inconvenientes
