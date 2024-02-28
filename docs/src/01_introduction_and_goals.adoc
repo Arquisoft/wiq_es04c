@@ -1,20 +1,20 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-introduction-and-goals]]
-== Introducción y Ojetivos (wiq_es04c)
+== Introducción y Objetivos (wiq_es04c) 🎇
 
-El proyecto de wiq_es04c es un proyecto desarrollado en la asignatura  Arquitectura del Software. Consiste en la creacion de una aplicacion web al estilo "Saber y Ganar". Es decir, es un juego de preguntas de cultura general.
+El proyecto de wiq_es04c es un proyecto desarrollado en la asignatura Arquitectura del Software. Consiste en la creación de una aplicación web al estilo "Saber y Ganar". Es decir, es un juego de preguntas de cultura general.
 
 Los desarrolladores de la aplicacion son por David Álvarez Díaz, Zohaib Akhtar Kausar, Sara Lamuño García, Yago Navajas González y Santiago López Laso.
 
-La aplicación tendra su base para las preguntas y las respuestas en Wikidata , la base de conocimiento editada en colaboracion.
+La aplicación tendrá su base para las preguntas y las respuestas en Wikidata, la base de conocimiento editada en colaboración.
 
 
-=== Requisitos Funcionales
+=== Requisitos Funcionales 🛠️
 
 ****
-* Los usuarios se deberan loggear en la página, esto servirá para tener registro de unas serie de parámetros, como puede ser las veces que se ha jugado. 
-* Se podrán responder preguntas autogeneradas y ver si han acertado fallado, así como la respuesta correcta.
+* Los usuarios se deberán loggearse en la página; esto servirá para tener registro de una serie de parámetros, como puede ser las veces que se ha jugado. 
+* Se podrán responder preguntas autogeneradas y se verá si han acertado o fallado, así como la respuesta correcta.
 * Las preguntas deberán ser respondidas en un tiempo límite.
 * Las preguntas seguirán la misma estructura: 1 pregunta correcta y 3 incorrectas, generadas automáticamente.
 * Los usuarios podrán consultar datos sobre su cuentas, como pueden ser las veces que han jugado o el número de preguntas que han acertado o fallado. 
@@ -22,7 +22,7 @@ La aplicación tendra su base para las preguntas y las respuestas en Wikidata , 
 
 ****
 
-=== Atributos de Calidad
+=== Atributos de Calidad 👑
 
 [options="header",cols="1,2,2"]
 |===
@@ -35,7 +35,7 @@ La aplicación tendra su base para las preguntas y las respuestas en Wikidata , 
 |===
 
 
-=== Stakeholders
+=== Stakeholders 👨‍👩‍👦‍👦
 
 [options="header",cols="1,2,2"]
 |===
@@ -45,6 +45,6 @@ David Álvarez Díaz -> UO283196@uniovi.es +
 Zohaib Akhtar Kausar -> UO291060@uniovi.es +
 Sara Lamuño García -> UO283706@uniovi.es +
 Santiago Lopez Laso -> UO277369@uniovi.es | Los estudiantes que llevarán a cabo el desarrollo de la aplicación. Serán los encargados de la arquitectura, la documentación y la codificación.
-| Profesores | Jose Emilio Labra Gayo | Supervisores de los avances y encargados de evaluar la aplicacion final y el desarrollo de la misma.
+| Profesores | Jose Emilio Labra Gayo | Supervisores de los avances y encargados de evaluar la aplicación final y el desarrollo de la misma.
 | Usuario | Jugador de la aplicación | Personas que puedan interactuar tanto con el registro de usuarios como con el juego en sí y pueda completar correctamente una partida.
 |===
