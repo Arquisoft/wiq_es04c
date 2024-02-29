@@ -2,10 +2,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-design-decisions]]
 == Decisiones de Arquitectura 🗣️
+Los enlaces proporcionan las decisiones de aquitectura via GitHub.
 
-|===
-| Decisión | Ventajas | Inconvenientes
-| JavaScript / React | La base de la aplicación ya esta creada con este lenguaje y lo para la creación de sitios web es un versatil. | La baja o nula esperiencia con el lenguaje de algunos integrantes del grupo asi como sus limitaciones tecninas.
-| Microservicios | La aplicacion se podra dividir en problemas que se podran solucionar dandole diferentes enfoques con diferentes lenguajes y metodologias. | AL igual que el primer punto, la baja experiencia con esta forma de trabajo al cual se tendra que adaptar el grupo.
-| MongoDB | Parte de la implementacion ya está hecha. Por otra parte es de uso libre y existe bastante documentacion online para usarse correctamente | Al igual que los dos puntos anteriores, el grupo cuenta con poca experiencia usando esta tecnología y no somos concientes de todas sus limitaciones y fortalezas.
-|===
+* Enlace: Decision...
+* Enlace: Decision...
