@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, Typography, TextField, Button, Snackbar } from '@mui/material';
 
-const apiEndpoint = process.env.API_URI || 'http://error no se cargo bien la apiURI de docker';
+const apiEndpoint = process.env.API_URI || 'http://localhost:8000';
 
 const AddUser = () => {
   const [username, setUsername] = useState('');
