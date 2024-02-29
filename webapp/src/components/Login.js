@@ -11,7 +11,7 @@ const Login = () => {
   const [createdAt, setCreatedAt] = useState('');
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
-  const apiEndpoint = process.env.REACT_APP_API_ENDPOINT || 'http://localhost:8000';
+  const apiEndpoint = process.env.API_URI ||'http://Error no se cargo bien la apiURI de docker';
 
   const loginUser = async () => {
     try {
