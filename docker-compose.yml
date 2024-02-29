@@ -59,6 +59,8 @@ services:
 
   questionservice:
     container_name: questionservice-${teamname:-defaultASW}
+    image: ghcr.io/arquisoft/wiq_es04c/questionservice:latest
+
     build: ./questionservice
     ports:
       - "8003:8003"

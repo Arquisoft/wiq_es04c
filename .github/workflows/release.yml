@@ -142,6 +142,9 @@ jobs:
         user: ${{ secrets.DEPLOY_USER }}
         key: ${{ secrets.DEPLOY_KEY }}
         command: |
+          pwd
+          ls -la
+          cd wiq_es04c
           wget https://raw.githubusercontent.com/arquisoft/wiq_es04c/releases/docker-compose.yml -O docker-compose.yml
           wget https://raw.githubusercontent.com/arquisoft/wiq_es04c/releases/.env -O .env
           docker compose down
