@@ -12,6 +12,7 @@ const Game = () => {
 
     const [question, setQuestion] = useState('');
     const [answers, setAnswers] = useState([]);
+    const [loadingMessage, setLoadingMessage] = useState('');
     const [snackbarOpen, setSnackbarOpen] = useState(false);
     const [snackbarMessage, setSnackbarMessage] = useState('');
     const [snackbarSeverity, setSnackbarSeverity] = useState('success');
@@ -26,6 +27,9 @@ const Game = () => {
         if (correct) {
             setSnackbarMessage('Respuesta correcta');
             setSnackbarSeverity('success');
+            setQuestion('');
+            setAnswers([]);
+            setLoadingMessage('Generando próxima pregunta');
             fetchQuestionAndAnswers();
         } else {
             setSnackbarMessage('Respuesta incorrecta');
@@ -41,6 +45,7 @@ const Game = () => {
             // Almacena la pregunta y las respuestas en los estado.
             setQuestion(response.data.question);
             setAnswers(response.data.answers);
+            setLoadingMessage('');
             // setQuestion(exampleData.question);
             // setAnswers(exampleData.answers);
         } catch (error) {
@@ -60,6 +65,7 @@ const Game = () => {
                     Generate Question
                 </Button>
             </Box>
+            {loadingMessage && (<Typography variant="h2">{loadingMessage}</Typography>)}
             {/* Muestra la pregunta y las respuesta si existen */}
             {question && (
                 <Paper elevation={3} sx={{ p: 2, mb: 2 }}>
