@@ -1,12 +1,12 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-architecture-constraints]]
-== Restricciones de arquitectura
+== Restricciones de arquitectura ⛔
 .Restricciones
 [options="header",cols="1,2"]
 |===
 |Restricción|Descripción
-|Wikidata|Se usará la API de WIkidata para generar las preguntas automáticamente.
+|Wikidata|Se usará la API de Wikidata para generar las preguntas automáticamente.
 |Git|Control de versiones del proyecto. 
 |GitHub|Portal donde se guardará el código fuente del proyecto.
 |===

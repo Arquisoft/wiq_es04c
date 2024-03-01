@@ -1,32 +1,32 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-concepts]]
-== Conceptos Transversales
-Estos conceptos todavia no han sido aprobados ni implemenmtados pero dan una idea general al proyecto.
+== Conceptos Transversales 🧭
+Estos conceptos todavía no han sido aprobados ni implementados, pero dan una idea general del proyecto.
 
-=== Modelo de Dominio
-Esta es una primera version del modelo del dominio muy simple para hacerse una idea como funcionara la aplicacion.
+=== Modelo de Dominio 🗺️
+Esta es una primera versión del modelo de dominio muy simple, para hacerse una idea como funcionará la aplicación.
+
+image::Diagrama de clases juego de preguntas.jpg["Modelo de dominio simple provisional"]
 
 
+=== Experiencia de Usuario 👨‍🦰
 
-=== Experiencia de Usuario
+El usuario será capaz de interactuar con una aplicación web, donde se podrá registrar y jugar al juego de manera sencilla.
 
-El usuario sera capaz de interactura con una aplicacion web donde se podra registrar y jugar al juego de manera sencilla.
 
-image::08_diagrama_modelo_dominio.png["Modelo de dominio simple provisional"]
-
-=== Seguridad
-
-_<explanation>_
-
-=== Arquitectura y Patrones de Diseño
+=== Seguridad 🔒
 
 _<explanation>_
 
-=== Desarrollo
+=== Arquitectura y Patrones de Diseño 📒
 
 _<explanation>_
 
-=== Operaciones
+=== Desarrollo ⚙️
+
+_<explanation>_
+
+=== Operaciones 🔢
 
 _<explanation>_
