@@ -10,7 +10,7 @@ CREATE TABLE Categoria (
 
 CREATE TABLE Pregunta (
     id_pregunta INT PRIMARY KEY,
-    pregunta TEXT UNIQUE NOT NULL ,
+    pregunta VARCHAR(255) UNIQUE NOT NULL ,
     respuesta_correcta TEXT NOT NULL,
     id_categoria INT,
     FOREIGN KEY (id_categoria) REFERENCES Categoria(id_categoria)
@@ -18,7 +18,7 @@ CREATE TABLE Pregunta (
 
 CREATE TABLE Distractor (
     id_distractor INT PRIMARY KEY,
-    distractor TEXT UNIQUE NOT NULL 
+    distractor VARCHAR(255) UNIQUE NOT NULL 
 );
 
 CREATE TABLE DistractorPregunta (
