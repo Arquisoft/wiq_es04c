@@ -38,32 +38,44 @@ async connect() {
     // Aqui se haran validaciones mas adelante en el 1 protopipo ns que poner 
   }
 
-  //este metodo recibe una pregunta la respuesta correcta los disctractores y el tipo de pregunta y lo inserta todo en la bd 
-  async addQuestion(question, correctAnswer, distractors, questionType) {
+  async addQuestion(question, correctAnswer, distractors, questionType,questionCategory) {
     try {
-      // Comenzamos la transacción para que si da errores se vuelva atras 
+      // Comenzamos la transacción para que si da errores se vuelva atrás
       await this.connection.beginTransaction();
-
+      //PRIMERO COMPRUEBAS SI ESTAS CREANDO UNA CATEGORIA O SI YA EXISTE
+      const categoryId = await this.ensureCategoryExists(questionCategory);
       // Insertar la pregunta
       const [questionResult] = await this.connection.execute(
-        'INSERT INTO Preguntas (pregunta_texto, respuesta_correcta, tipo_pregunta) VALUES (?, ?, ?)',
+        'INSERT INTO Pregunta (pregunta, respuesta_correcta, id_categoria) VALUES (?, ?, ?)',
         [question, correctAnswer, questionType]
       );
-
+  
       const questionId = questionResult.insertId;
-
-
+  
       // Insertar los distractores
       for (const distractor of distractors) {
         await this.connection.execute(
-          'INSERT INTO Distractores (texto, preguntado_por) VALUES (?, ?)',
-          [distractor, questionType]
+          'INSERT INTO Distractor (distractor) VALUES (?)',
+          [distractor]
+        );
+  
+        // Obtener el ID del distractor recién insertado
+        const [distractorResult] = await this.connection.execute(
+          'SELECT id_distractor FROM Distractor WHERE distractor = ?',
+          [distractor]
+        );
+        const distractorId = distractorResult[0].id_distractor;
+  
+        // Relacionar el distractor con la pregunta en la tabla de asociación
+        await this.connection.execute(
+          'INSERT INTO DistractorPregunta (id_pregunta, id_distractor, tipo) VALUES (?, ?, ?)',
+          [questionId, distractorId, questionType]
         );
       }
-
+  
       // Hacer commit para confirmar la transacción
       await this.connection.commit();
-
+  
       console.log('Question added successfully. ID:', questionId);
     } catch (error) {
       // Si hay un error, realizar rollback para deshacer la transacción
@@ -71,4 +83,21 @@ async connect() {
       console.error('Error adding question:', error.message);
     }
   }
+  //COMPRUEBA SI EXISTE LA CATEGORIA 
+  async ensureCategoryExists(categoryName) {
+    // Verificar si la categoría existe, y si no, insertarla
+    const [categoryResult] = await this.connection.execute(
+      'INSERT IGNORE INTO Categoria (nombre_categoria) VALUES (?)',
+      [categoryName]
+    );
+  
+    // Obtener o establecer el ID de la categoría
+    return categoryResult.insertId || (
+      await this.connection.execute(
+        'SELECT id_categoria FROM Categoria WHERE nombre_categoria = ?',
+        [categoryName]
+      )
+    )[0].id_categoria;
+  }
+  
 }
