@@ -47,15 +47,17 @@ async connect() {
       // Insertar la pregunta
       const [questionResult] = await this.connection.execute(
         'INSERT INTO Pregunta (pregunta, respuesta_correcta, id_categoria) VALUES (?, ?, ?)',
-        [question, correctAnswer, questionType]
+        [question, correctAnswer, categoryId]
       );
   
       const questionId = questionResult.insertId;
   
       // Insertar los distractores
+      //agregada la clausula ignore para que en caso de que existan no se aborte la transaccion 
+
       for (const distractor of distractors) {
         await this.connection.execute(
-          'INSERT INTO Distractor (distractor) VALUES (?)',
+          'INSERT IGNORE INTO Distractor (distractor) VALUES (?)',
           [distractor]
         );
   

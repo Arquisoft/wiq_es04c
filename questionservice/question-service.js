@@ -18,12 +18,13 @@ app.post('/getquestion', async (req, res) => {
             const correctAnswer = questionAndAnswer.answers.find(answer => answer.correct).answer;
             // Obtener los distractores (todas las respuestas excepto la correcta)
             const distractors = questionAndAnswer.answers.filter(answer => answer.answer !== correctAnswer).map(answer => answer.answer);
-            
+
             await questionService.addQuestion(
                 questionAndAnswer.question,
                 correctAnswer,
                 distractors,
-                questionAndAnswer.questionType
+                questionAndAnswer.questionType,
+                questionAndAnswer.questionCategory
               );
             //res.json(questionAndAnswer); //Devolvemos a la gateway el json
         } else {
