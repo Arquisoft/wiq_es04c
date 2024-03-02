@@ -12,13 +12,17 @@ app.use(express.json());
 app.post('/getquestion', async (req, res) => {
     try {
         const questionAndAnswer = await getQuestionTemplate(); // Obtenemos el json de pregunta y sus respuestas
-        // la guardamos en la bd 
+        
+        //la insertamos en bd 
         if (questionAndAnswer) {
+            const correctAnswer = questionAndAnswer.answers.find(answer => answer.correct).answer;
+            // Obtener los distractores (todas las respuestas excepto la correcta)
+            const distractors = questionAndAnswer.answers.filter(answer => answer.answer !== correctAnswer).map(answer => answer.answer);
+            
             await questionService.addQuestion(
                 questionAndAnswer.question,
-                questionAndAnswer.answers.find(answer => answer.correct).answer, // Obtenemos la respuesta correcta
-
-                questionAndAnswer.distractors,
+                correctAnswer,
+                distractors,
                 questionAndAnswer.questionType
               );
             //res.json(questionAndAnswer); //Devolvemos a la gateway el json
