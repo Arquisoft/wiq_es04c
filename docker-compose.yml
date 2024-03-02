@@ -10,6 +10,16 @@ services:
       - "27017:27017"
     networks:
       - mynetwork
+  # Servicio de MySQL
+  questionservice-mysql:
+    image: mysql:latest
+    container_name: questionservice-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: tu_contraseña
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
 
   authservice:
     container_name: authservice-${teamname:-defaultASW}
@@ -61,6 +71,8 @@ services:
   questionservice:
     container_name: questionservice-${teamname:-defaultASW}
     build: ./questionservice
+    depends_on:
+      - questionservice-mysql
     ports:
       - "8003:8003"
     networks:
@@ -114,6 +126,8 @@ volumes:
   mongodb_data:
   prometheus_data: 
   grafana_data: 
+  mysql-data:
+
 
 networks:
   mynetwork:
