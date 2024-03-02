@@ -19,7 +19,6 @@ services:
       MYSQL_USER: bidoff  # Nuevo usuario
       MYSQL_PASSWORD: wiq04  # Contraseña del nuevo usuario
       MYSQL_DATABASE: questions_db  # Nombre de la base de datos
-      CREATE_DB: "true"  # Variable de entorno para indicar si se debe crear la base de datos\
     ports:
       - "3306:3306"
     volumes:

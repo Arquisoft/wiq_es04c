@@ -16,7 +16,7 @@ const templates = [
         return {
             question: `¿Cuál es la capital de ${country.name}?`,
             answers: shuffledAnswers,
-            questionCategory: cateogria,
+           questionCategory: cateogria,
             questionType:type
         };
     },

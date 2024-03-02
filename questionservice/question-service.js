@@ -5,7 +5,8 @@ const port = 8003;
 // Importamos la función desde questionTemplates.js
 const getQuestionTemplate = require('./questionTemplates');
 //agregar el servicio de guardarlas en bd 
-const QuestionService = require('./saveQuestions'); 
+const DatabaseManager  = require('./DataBaseManager'); 
+const questionService = new DatabaseManager();
 
 app.use(express.json());
 
@@ -15,9 +16,16 @@ app.post('/getquestion', async (req, res) => {
         
         //la insertamos en bd 
         if (questionAndAnswer) {
+           // console.log("empiza la depuracion");
             const correctAnswer = questionAndAnswer.answers.find(answer => answer.correct).answer;
+            //console.log(correctAnswer);
+
             // Obtener los distractores (todas las respuestas excepto la correcta)
             const distractors = questionAndAnswer.answers.filter(answer => answer.answer !== correctAnswer).map(answer => answer.answer);
+           //console.log("distractores"+distractors);
+           //console.log("preguntas"+questionAndAnswer.question);
+            //console.log("tipo"+questionAndAnswer.questionType);
+            //console.log("categoria"+questionAndAnswer.questionCategory);
 
             await questionService.addQuestion(
                 questionAndAnswer.question,
@@ -26,7 +34,7 @@ app.post('/getquestion', async (req, res) => {
                 questionAndAnswer.questionType,
                 questionAndAnswer.questionCategory
               );
-            //res.json(questionAndAnswer); //Devolvemos a la gateway el json
+            res.json(questionAndAnswer); //Devolvemos a la gateway el json
         } else {
             // Si no se obtuvo una pregunta por alguna razón, enviamos un error genérico
             res.status(500).json({ error: "Could not get a question and answers" });
