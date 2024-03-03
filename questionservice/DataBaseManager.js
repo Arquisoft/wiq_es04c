@@ -4,9 +4,9 @@ const mysql = require('mysql2/promise');
 
 const dbConfig = {
   host: process.env.DB_HOST || 'localhost',
-  user: process.env.MYSQL_USER || 'root',
-  password: process.env.MYSQL_PASSWORD || 'wiq04ADM',
-  database: process.env.MYSQL_DATABASE || 'questions_db',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || 'wiq04ADM',
+  database: process.env.DB_NAME || 'questions_db',
 };
 
 //clae encargada de agregar datos a la bd 
