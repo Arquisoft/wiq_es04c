@@ -13,7 +13,7 @@ services:
   # Servicio de MySQL
   questionservice-mysql:
     image: mysql:latest
-    container_name: questionservice-mysql
+    container_name: questionservice-mysql-${teamname:-defaultASW}
     environment:
       MYSQL_ROOT_PASSWORD: wiq04ADM  # Contraseña para el usuario root
       MYSQL_USER: bidoff  # Nuevo usuario
