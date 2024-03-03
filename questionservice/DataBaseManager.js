@@ -11,6 +11,7 @@ const dbConfig = {
 
 //clae encargada de agregar datos a la bd 
 class DatabaseManager {
+  config = dbConfig
     constructor() {
       this.connection = null;
     }
@@ -39,7 +40,9 @@ async connect() {
 
   async addQuestion(question, correctAnswer, distractors, questionType,questionCategory) {
     try {
+      
       // Comenzamos la transacción para que si da errores se vuelva atrás
+      await this.connect();
       await this.connection.beginTransaction();
       //PRIMERO COMPRUEBAS SI ESTAS CREANDO UNA CATEGORIA O SI YA EXISTE
       const categoryId = await this.ensureCategoryExists(questionCategory);
@@ -81,6 +84,7 @@ async connect() {
     } catch (error) {
       // Si hay un error, realizar rollback para deshacer la transacción
       await this.connection.rollback();
+      await this.disconnect();
       console.error('Error adding question:', error.message);
     }
   }
