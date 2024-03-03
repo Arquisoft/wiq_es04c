@@ -3,10 +3,11 @@ require('dotenv').config();//usado apra que al crear el .env te lo saque del ent
 const mysql = require('mysql2/promise');
 
 const dbConfig = {
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || 'wiq04ADM',
-  database: process.env.DB_NAME || 'questions_db',
+  host:  'localhost:3306',
+  user:  'bidoff',
+  password:  'wiq04',
+  database: 'questions_db',
+ 
 };
 
 //clae encargada de agregar datos a la bd 
@@ -14,6 +15,7 @@ class DatabaseManager {
   config = dbConfig
     constructor() {
       this.connection = null;
+      
     }
 
 
