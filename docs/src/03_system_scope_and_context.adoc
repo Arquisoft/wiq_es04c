@@ -14,4 +14,4 @@ En esta tabla se muestra el contexto de negocio de la aplicación. Las entradas 
 
 === Contexto técnico 🔧
 
-image::diagrama_contexto_tecnico.drawio.png["Diagrama de contexto técnico"]
+image::Diagrama de contexto técnico.jpg["Diagrama de contexto técnico"]
