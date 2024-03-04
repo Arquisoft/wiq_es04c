@@ -4,6 +4,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 == System Scope and Context 💭
 
 === Contexto de negocio 💰
+image::Diagrama de contexto de negocio.jpg["Diagrama de contexto de negocio"]
 En esta tabla se muestra el contexto de negocio de la aplicación. Las entradas son los mensajes que van desde el agente externo hacia la aplicación, y las salidas son los mensajes que van desde la aplicación hacia al agente externo.
 [options="header",cols="1,2,3"]
 |===
