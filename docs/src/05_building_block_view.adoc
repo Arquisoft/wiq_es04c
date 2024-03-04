@@ -3,18 +3,18 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-building-block-view]]
 
 
-== Building Block View  EN desarollo 🗳️
-image::whiteBoxGeneral.png[]
+=== Building Block View  EN desarollo 🗳️
+image::Building Block View.jpg["Building Block View"]
 
 
 === Whitebox Overall System 📏
-image::whiteLevel1.png[]
+image::Whitebox Overall System.jpg["Whitebox Overall System"]
 
 [role="arc42help"]
 
 Motivation::
 
-Este diagrama del sistema general muestra una descrpicion del sistema con los componentes basicos 
+Este diagrama del sistema general muestra una descripción del sistema con los componentes básicos. 
 
 
 Contained Building Blocks::
@@ -31,133 +31,75 @@ API Preguntas
 Important Interfaces::
 
 
-[role="arc42help"]
-****
-Insert your explanations of black boxes from level 1:
+EN DESARROLLO.
 
-If you use tabular form you will only describe your black boxes with name and
-responsibility according to the following schema:
 
-[cols="1,2" options="header"]
+==== <Interfaz Gráfica>
+[options="header",cols="1,2"]
 |===
-| **Name** | **Responsibility**
-| _<black box 1>_ | _<Text>_
-| _<black box 2>_ | _<Text>_
-|===
-
-
-
-If you use a list of black box descriptions then you fill in a separate black box template for every important building block .
-Its headline is the name of the black box.
-****
-
-
-==== <Interfaz Grafica>
-
-[role="arc42help"]
-****
-Here you describe <black box 1>
-according the the following black box template:
-
-* Purpose/Responsibility
-* Interface(s), when they are not extracted as separate paragraphs. This interfaces may include qualities and performance characteristics.
-* (Optional) Quality-/Performance characteristics of the black box, e.g.availability, run time behavior, ....
-* (Optional) directory/file location
-* (Optional) Fulfilled requirements (if you need traceability to requirements).
-* (Optional) Open issues/problems/risks
-
-****
-
-_<Purpose/Responsibility>_
-La Interfaz de Usuario (UI) - Black Box 1 es responsable de proporcionar una interfaz interactiva y amigable para los usuarios finales. Sirve como el punto principal de interacción entre la aplicación y los usuarios, y facilita  la experiencia general del usuario.
-_<Interface(s)>_
-Interfaz de Entrada del Usuario: Acepta la entrada del usuario a través de varios controles, como botones, formularios y campos de entrada.
+|Purpose/Responsibility
+|La Interfaz de Usuario (UI) - Black Box 1 es responsable de proporcionar una interfaz interactiva y amigable para los usuarios finales. Sirve como el punto principal de interacción entre la aplicación y los usuarios, y facilita la experiencia general del usuario.
+|Interface(s)
+|Interfaz de Entrada del Usuario: Acepta la entrada del usuario a través de varios controles, como botones, formularios y campos de entrada.
 Interfaz de Visualización: Renderiza y muestra información al usuario, incluyendo datos, mensajes y elementos visuales.
-_<Quality/Performance Characteristics>_
-Capacidad de Respuesta: La UI debe responder de manera rápida a las interacciones del usuario para garantizar una experiencia fluida y eficiente.
+|Quality/Performance Characteristics
+|Capacidad de Respuesta: La UI debe responder de manera rápida a las interacciones del usuario para garantizar una experiencia fluida y eficiente.
 Accesibilidad: Adhiere a los estándares de accesibilidad para proporcionar una experiencia inclusiva para los usuarios.
+|===
 
 
 
-==== <Loggin>
+=== <Loggin>
 _<Purpose/Responsibility>_
 
-Su función principal es permitir el acceso a los usuarios a la aplicacion , y guardar los resultados de estos.
+Su función principal es permitir el acceso a los usuarios a la aplicación , y guardar los resultados de estos.
 
 _<black box template>_
+EN DESARROLLO.
 
 ==== <Api de preguntas>
 _<Purpose/Responsibility>_
-Su proposito es proporcionar preguntas de manera dinamica al usuario.
+Su propósito es proporcionar preguntas de manera dinámica al usuario.
 
 
 _<black box template>_
 
-==== <Logica de negocio >
+==== <Lógica de negocio >
 _<Purpose/Responsibility>_
-Se encargara de gestionar toda la programacion necesaria de cara a la logica 
+Se encargará de gestionar toda la programación necesaria de cara a la lógica. 
 
 ==== <Base de datos>
 _<Purpose/Responsibility>_
-Dara almacenamiento al sistema de manera persistente y a los records de los usuarios.
+Dará almacenamiento al sistema de manera persistente y a los récords de los usuarios.
 
 
 === Level 2
 
-[role="arc42help"]
-****
-Here you can specify the inner structure of (some) building blocks from level 1 as white boxes.
-
-You have to decide which building blocks of your system are important enough to justify such a detailed description.
-Please prefer relevance over completeness. Specify important, surprising, risky, complex or volatile building blocks.
-Leave out normal, simple, boring or standardized parts of your system
-****
-
 ==== White Box _<Interfaz de usuario>_
 
-[role="arc42help"]
-****
-...describes the internal structure of _building block 1_.
-****
-
 _<white box Interfaz Usuario>_
-image::uiLevel2.png[]
+
+En desarollo.
+
 ==== White Box _<Login>_
 
-image::loginLevel2.png[]
+En desarollo.
 
-
-
-...
 
 ==== White Box _<Api preguntas>_
-
 
 En desarollo
 
 ==== White Box _<Logica de negocio >_
 
-image::bdLevel2.png[]
+En desarollo
 
 
-
-=== Level 3
-
-[role="arc42help"]
-****
-Here you can specify the inner structure of (some) building blocks from level 2 as white boxes.
-
-When you need more detailed levels of your architecture please copy this
-part of arc42 for additional levels.
-****
+=== Level 3 En desarrollo.
 
 
 ==== White Box <_building block x.1_>
 
-[role="arc42help"]
-****
-Specifies the internal structure of _building block x.1_.
-****
 
 
 _<white box template>_
