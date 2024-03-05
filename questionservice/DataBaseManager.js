@@ -87,14 +87,11 @@ async connect() {
       for (const answer of answers) {
         if (!answer.correct) {
           const [distractorResult] = await this.connection.execute(
-            'INSERT INTO Distractor (distractor) VALUES (?)',
-            [answer.answer]
+            'INSERT INTO Distractor (distractor,id_categoria) VALUES (?,?)',
+            [answer.answer, categoryId]
           );
 
-          await this.connection.execute(
-            'INSERT INTO DistractorPregunta (id_pregunta, id_distractor, tipo) VALUES (?, ?, ?)',
-            [questionResult.insertId, distractorResult.insertId, 'incorrect']
-          );
+         
         }
       }
 
