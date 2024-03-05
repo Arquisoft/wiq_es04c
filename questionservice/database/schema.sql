@@ -1,12 +1,13 @@
 -- schema.sql
-DROP TABLE IF EXISTS distractores;
-DROP TABLE IF EXISTS preguntas;
-DROP TABLE IF EXISTS categorias;
-
+DROP TABLE IF EXISTS DistractorPregunta;
+DROP TABLE IF EXISTS Distractor;
+DROP TABLE IF EXISTS Pregunta;
+DROP TABLE IF EXISTS Categoria;
 CREATE TABLE Categoria (
-    id_categoria INT PRIMARY KEY,
-    nombre_categoria VARCHAR(255) UNIQUE NOT NULL 
+    id_categoria int PRIMARY KEY ,
+    nombre_categoria VARCHAR(255) UNIQUE NOT NULL
 );
+ALTER TABLE Categoria MODIFY id_categoria int AUTO_INCREMENT;
 
 CREATE TABLE Pregunta (
     id_pregunta INT PRIMARY KEY,
@@ -15,11 +16,13 @@ CREATE TABLE Pregunta (
     id_categoria INT,
     FOREIGN KEY (id_categoria) REFERENCES Categoria(id_categoria)
 );
+ALTER TABLE Pregunta MODIFY id_pregunta int AUTO_INCREMENT;
 
 CREATE TABLE Distractor (
-    id_distractor INT PRIMARY KEY,
+    id_distractor INT AUTO_INCREMENT PRIMARY KEY,
     distractor VARCHAR(255) UNIQUE NOT NULL 
 );
+ALTER TABLE Distractor MODIFY id_distractor int AUTO_INCREMENT;
 
 CREATE TABLE DistractorPregunta (
     id_pregunta INT,
