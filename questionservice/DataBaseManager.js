@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 // Rest of your code...
 
 const dbConfig = {
-  host:  process.env.DB_HOST || 'questionservice-mysql-defaultASW',
+  host:  process.env.DB_HOST || 'localhost',
   user:  process.env.DB_USER || 'bidoff',
   password:  process.env.DB_PASSWORD || 'wiq04',
   database: process.env.DB_NAME || 'questions_db',
@@ -47,15 +47,17 @@ async connect() {
    async validateQuestionData(question, correctAnswer, distractors, questionType) {
     // Aqui se haran validaciones mas adelante en el 1 protopipo ns que poner 
   }
+  //recibe el objeto de la api 
+  async addQuestion(questionAndAnswer) {
 
-  async addQuestion(question, correctAnswer, distractors, questionType,questionCategory) {
     try {
-      
+
       // Comenzamos la transacción para que si da errores se vuelva atrás
       await this.connect();
       await this.connection.beginTransaction();
       //PRIMERO COMPRUEBAS SI ESTAS CREANDO UNA CATEGORIA O SI YA EXISTE
       const categoryId = await this.ensureCategoryExists(questionCategory);
+  
       // Insertar la pregunta
       const [questionResult] = await this.connection.execute(
         'INSERT INTO Pregunta (pregunta, respuesta_correcta, id_categoria) VALUES (?, ?, ?)',

@@ -16,25 +16,10 @@ app.post('/getquestion', async (req, res) => {
 
         //la insertamos en bd 
         if (questionAndAnswer) {
-            // console.log("empiza la depuracion");
-            const correctAnswer = questionAndAnswer.answers.find(answer => answer.correct).answer;
-            //console.log(correctAnswer);
-
-            // Obtener los distractores (todas las respuestas excepto la correcta)
-            const distractors = questionAndAnswer.answers.filter(answer => answer.answer !== correctAnswer).map(answer => answer.answer);
-            //console.log("distractores"+distractors);
-            //console.log("preguntas"+questionAndAnswer.question);
-            //console.log("tipo"+questionAndAnswer.questionType);
-            //console.log("categoria"+questionAndAnswer.questionCategory);
-
+           // const correctAnswer = questionAndAnswer.answers.find(answer => answer.correct).answer;
+            //const distractors = questionAndAnswer.answers.filter(answer => answer.answer !== correctAnswer).map(answer => answer.answer);
             try {
-                await questionService.addQuestion(
-                    questionAndAnswer.question,
-                    correctAnswer,
-                    distractors,
-                    questionAndAnswer.questionType,
-                    questionAndAnswer.questionCategory
-                );
+                await questionService.addQuestion(questionAndAnswer);
             } catch (error) {
                 console.log("Error adding question to BD: " + error);
             }
@@ -49,6 +34,18 @@ app.post('/getquestion', async (req, res) => {
         res.status(500).json({ error: "Internal server error when generating the question" });
     }
 });
+
+
+app.post('/generatequestions', async (req, res) => {
+    try {
+      // Guardar la pregunta
+      await dbManager.addQuestion(req.body);
+      res.status(200).json({status: 'OK'});
+    } catch (error) {
+      console.error('Error adding question:', error.message);
+      res.status(500).json({status: 'Error', message: 'Could not save question'});
+    }
+  });
 
 app.listen(port, () => {
     console.log(`Server listening on http://localhost:${port}`);

@@ -9,14 +9,14 @@ const templates = [
         const fakeAnswers = fakeCities.map(city => ({ answer: city, correct: false }));
         const answers = [correctAnswer, ...fakeAnswers];
         const type = "capital";//representa porque estas preguntando
-        const cateogria="Geografía";
+        const categoria="Geografía";
         // Mezclamos las respuestas para que la posición de la correcta sea aleatoria
         const shuffledAnswers = shuffleArray(answers);
 
         return {
             question: `¿Cuál es la capital de ${country.name}?`,
             answers: shuffledAnswers,
-           questionCategory: cateogria,
+            questionCategory: categoria,
             questionType:type
         };
     },

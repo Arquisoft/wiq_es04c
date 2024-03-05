@@ -16,6 +16,9 @@ const Game = () => {
     const [snackbarOpen, setSnackbarOpen] = useState(false);
     const [snackbarMessage, setSnackbarMessage] = useState('');
     const [snackbarSeverity, setSnackbarSeverity] = useState('success');
+    const [category, setCategory] = useState('');//depuracion 
+    const [type, setType] = useState('');//depuracion
+
     const handleSnackbarClose = (event, reason) => {
         if (reason === 'clickaway') {
             return;
@@ -46,6 +49,9 @@ const Game = () => {
             setQuestion(response.data.question);
             setAnswers(response.data.answers);
             setLoadingMessage('');
+            setCategory(response.data.questionCategory); // Nueva línea
+            setType(response.data.questionType); // Nueva línea
+
             // setQuestion(exampleData.question);
             // setAnswers(exampleData.answers);
         } catch (error) {
@@ -84,6 +90,16 @@ const Game = () => {
                     </Button>
                 </div>
             ))}
+
+                   {/* ... */}
+        {category && (
+            <Typography variant="subtitle1">Category: {category}</Typography>
+        )}
+        {type && (
+            <Typography variant="subtitle1">Type: {type}</Typography>
+        )}
+        {/* ... */}
+
             <Snackbar
                 open={snackbarOpen}
                 autoHideDuration={3000}

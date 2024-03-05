@@ -13,9 +13,9 @@ services:
   # Servicio de MySQL no se mete en el release te bajas la ultima imagen 
   questionservice-mysql:
     image: mysql:latest
-    container_name: questionservice-mysql-${teamname:-defaultASW}
+    container_name: questionservice-mysql-${teamname:-wiq_es04c}
     environment:
-      DB_HOST: questionservice-mysql-defaultASW
+      DB_HOST: questionservice-mysql-wiq_es04c
       DB_USER: bidoff
       DB_PASSWORD: wiq04
       DB_NAME: questions_db
