@@ -15,10 +15,10 @@ services:
     image: mysql:latest
     container_name: questionservice-mysql-${teamname:-wiq_es04c}
     environment:
-      DB_HOST: questionservice-mysql-wiq_es04c
-      DB_USER: bidoff
-      DB_PASSWORD: wiq04
-      DB_NAME: questions_db
+      MYSQL_USER: bidof
+      MYSQL_PASSWORD: admin
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: questions_db
       DB_PORT: 3306
     ports:
       - "3306:3306"
@@ -31,8 +31,6 @@ services:
       - mynetwork
     expose:
       - "3306"
-
-
 
   authservice:
     container_name: authservice-${teamname:-wiq_es04c}
@@ -90,6 +88,9 @@ services:
       - "8003:8003"
     networks:
       - mynetwork
+    environment:
+      DB_HOST: questionservice-mysql
+
 
   webapp:
     container_name: webapp-${teamname:-wiq_es04c}

@@ -39,11 +39,11 @@ app.post('/getquestion', async (req, res) => {
 app.post('/generatequestions', async (req, res) => {
     try {
       // Guardar la pregunta
-      await dbManager.addQuestion(req.body);
-      res.status(200).json({status: 'OK'});
+      //await dbManager.addQuestion(req.body);
+      //res.status(200).json({status: 'OK'});
     } catch (error) {
-      console.error('Error adding question:', error.message);
-      res.status(500).json({status: 'Error', message: 'Could not save question'});
+      //console.error('Error adding question:', error.message);
+      //res.status(500).json({status: 'Error', message: 'Could not save question'});
     }
   });
 

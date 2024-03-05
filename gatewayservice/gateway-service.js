@@ -2,7 +2,6 @@ const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
 const promBundle = require('express-prom-bundle');
-const DatabaseManager = require('../questionservice/DataBaseManager');
 const app = express();
 const port = 8000;
 
@@ -57,12 +56,7 @@ app.get('/getquestion', async(req,res)=> {
 
 app.get('/generateQuestions', async(req,res)=> {
   try{
-    // Redirige la solicitud al servicio de generación de preguntas sin enviar un cuerpo de solicitud.
-    const response = await axios.post(`${generateServiceURL}/generatequestions`);
-
-
-      // Devuelve la respuesta del servicio de generación de preguntas al cliente original.
-      res.json(response.data);
+   
   } catch(error) {
     res.status(error.response.status).json({ error: error.response.data.error });
   }

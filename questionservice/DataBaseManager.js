@@ -10,9 +10,9 @@ app.use(bodyParser.json());
 // Rest of your code...
 
 const dbConfig = {
-  host:  process.env.DB_HOST || 'localhost',
-  user:  process.env.DB_USER || 'bidoff',
-  password:  process.env.DB_PASSWORD || 'wiq04',
+  host:  process.env.DB_HOST || 'questionservice-mysql-wiq_es04c',
+  user:  process.env.DB_USER || 'root',
+  password:  process.env.DB_PASSWORD || 'admin',
   database: process.env.DB_NAME || 'questions_db',
   port: process.env.DB_PORT || 3306
 };
@@ -43,80 +43,77 @@ async connect() {
       console.error('Error disconnecting from the database:', error.message);
     }
   }
-   // Método auxiliar para las comprobaciones
-   async validateQuestionData(question, correctAnswer, distractors, questionType) {
-    // Aqui se haran validaciones mas adelante en el 1 protopipo ns que poner 
-  }
-  //recibe el objeto de la api 
-  async addQuestion(questionAndAnswer) {
-
-    try {
-
-      // Comenzamos la transacción para que si da errores se vuelva atrás
-      await this.connect();
-      await this.connection.beginTransaction();
-      //PRIMERO COMPRUEBAS SI ESTAS CREANDO UNA CATEGORIA O SI YA EXISTE
-      const categoryId = await this.ensureCategoryExists(questionCategory);
-  
-      // Insertar la pregunta
-      const [questionResult] = await this.connection.execute(
-        'INSERT INTO Pregunta (pregunta, respuesta_correcta, id_categoria) VALUES (?, ?, ?)',
-        [question, correctAnswer, categoryId]
-      );
-  
-      const questionId = questionResult.insertId;
-  
-      // Insertar los distractores
-      //agregada la clausula ignore para que en caso de que existan no se aborte la transaccion 
-
-      for (const distractor of distractors) {
-        await this.connection.execute(
-          'INSERT IGNORE INTO Distractor (distractor) VALUES (?)',
-          [distractor]
-        );
-  
-        // Obtener el ID del distractor recién insertado
-        const [distractorResult] = await this.connection.execute(
-          'SELECT id_distractor FROM Distractor WHERE distractor = ?',
-          [distractor]
-        );
-        const distractorId = distractorResult[0].id_distractor;
-  
-        // Relacionar el distractor con la pregunta en la tabla de asociación
-        await this.connection.execute(
-          'INSERT INTO DistractorPregunta (id_pregunta, id_distractor, tipo) VALUES (?, ?, ?)',
-          [questionId, distractorId, questionType]
-        );
-      }
-  
-      // Hacer commit para confirmar la transacción
-      await this.connection.commit();
-  
-      console.log('Question added successfully. ID:', questionId);
-    } catch (error) {
-      // Si hay un error, realizar rollback para deshacer la transacción
-      await this.connection.rollback();
-      await this.disconnect();
-      console.error('Error adding question:', error.message);
-    }
-  }
-  //COMPRUEBA SI EXISTE LA CATEGORIA 
   async ensureCategoryExists(categoryName) {
-    // Verificar si la categoría existe, y si no, insertarla
-    const [categoryResult] = await this.connection.execute(
-      'INSERT IGNORE INTO Categoria (nombre_categoria) VALUES (?)',
+    // Comprobar si la categoría ya existe
+    const [rows] = await this.connection.execute(
+      'SELECT id_categoria FROM Categoria WHERE nombre_categoria = ?',
       [categoryName]
     );
-  
-    // Obtener o establecer el ID de la categoría
-    return categoryResult.insertId || (
-      await this.connection.execute(
-        'SELECT id_categoria FROM Categoria WHERE nombre_categoria = ?',
+
+    if (rows.length > 0) {
+      // Si la categoría ya existe, devolver su ID
+      return rows[0].id_categoria;
+    } else {
+      // Si la categoría no existe, crearla y devolver su ID
+      const [result] = await this.connection.execute(
+        'INSERT INTO Categoria (nombre_categoria) VALUES (?)',
         [categoryName]
-      )
-    )[0].id_categoria;
+      );
+
+      return result.insertId;
+    }
   }
-  
+
+  async addQuestion(question) {
+    try {
+      await this.connect();
+
+      const { question: questionText, answers, questionCategory, questionType } = question;
+
+      // Comenzamos la transacción para que si da errores se vuelva atrás
+      await this.connection.beginTransaction();
+
+      //PRIMERO COMPRUEBAS SI ESTAS CREANDO UNA CATEGORIA O SI YA EXISTE
+      const categoryId = await this.ensureCategoryExists(questionCategory);
+
+      // Insertar la pregunta
+      const correctAnswer = answers.find(answer => answer.correct).answer;
+      const [questionResult] = await this.connection.execute(
+        'INSERT INTO Pregunta (pregunta, respuesta_correcta, id_categoria) VALUES (?, ?, ?)',
+        [questionText, correctAnswer, categoryId]
+      );
+
+      // Insertar los distractores
+      for (const answer of answers) {
+        if (!answer.correct) {
+          const [distractorResult] = await this.connection.execute(
+            'INSERT INTO Distractor (distractor) VALUES (?)',
+            [answer.answer]
+          );
+
+          await this.connection.execute(
+            'INSERT INTO DistractorPregunta (id_pregunta, id_distractor, tipo) VALUES (?, ?, ?)',
+            [questionResult.insertId, distractorResult.insertId, 'incorrect']
+          );
+        }
+      }
+
+      // Si todo ha ido bien, confirmar la transacción
+      await this.connection.commit();
+
+    } catch (error) {
+      // Si algo ha ido mal, revertir la transacción
+      await this.connection.rollback();
+
+      console.error('Error adding question:', error.message);
+      throw error;
+    } finally {
+      // Desconectar de la base de datos
+      await this.disconnect();
+    }
+  }
 }
+  
+
 module.exports = DatabaseManager;
 
