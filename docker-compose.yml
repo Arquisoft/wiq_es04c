@@ -1,7 +1,7 @@
 version: '3'
 services:
   mongodb:
-    container_name: mongodb-${teamname:-wiq_0}
+    container_name: mongodb-${teamname:-wiq_es04c}
     image: mongo
     profiles: ["dev", "prod"]
     volumes:
@@ -10,15 +10,16 @@ services:
       - "27017:27017"
     networks:
       - mynetwork
-  # Servicio de MySQL
+  # Servicio de MySQL no se mete en el release te bajas la ultima imagen 
   questionservice-mysql:
     image: mysql:latest
     container_name: questionservice-mysql-${teamname:-defaultASW}
-    environment: 
-      MYSQL_ROOT_PASSWORD: wiq04ADM  # Contraseña para el usuario root
-      MYSQL_USER: bidoff  # Nuevo usuario
-      MYSQL_PASSWORD: wiq04  # Contraseña del nuevo usuario
-      MYSQL_DATABASE: questions_db  # Nombre de la base de datos
+    environment:
+      DB_HOST: questionservice-mysql-defaultASW
+      DB_USER: bidoff
+      DB_PASSWORD: wiq04
+      DB_NAME: questions_db
+      DB_PORT: 3306
     ports:
       - "3306:3306"
     volumes:
@@ -34,8 +35,8 @@ services:
 
 
   authservice:
-    container_name: authservice-${teamname:-wiq_0}
-    image: ghcr.io/arquisoft/${teamname:-wiq_0}/authservice:latest
+    container_name: authservice-${teamname:-wiq_es04c}
+    image: ghcr.io/arquisoft/${teamname:-wiq_es04c}/authservice:latest
     profiles: ["dev", "prod"]
     build: ./users/authservice
     depends_on:
@@ -48,8 +49,8 @@ services:
       MONGODB_URI: mongodb://mongodb:27017/userdb
 
   userservice:
-    container_name: userservice-${teamname:-wiq_0}
-    image: ghcr.io/arquisoft/${teamname:-wiq_0}/userservice:latest
+    container_name: userservice-${teamname:-wiq_es04c}
+    image: ghcr.io/arquisoft/${teamname:-wiq_es04c}/userservice:latest
     profiles: ["dev", "prod"]
     build: ./users/userservice
     depends_on:
@@ -62,8 +63,8 @@ services:
       MONGODB_URI: mongodb://mongodb:27017/userdb
 
   gatewayservice:
-    container_name: gatewayservice-${teamname:-wiq_0}
-    image: ghcr.io/arquisoft/${teamname:-wiq_0}/gatewayservice:latest
+    container_name: gatewayservice-${teamname:-wiq_es04c}
+    image: ghcr.io/arquisoft/${teamname:-wiq_es04c}/gatewayservice:latest
     profiles: ["dev", "prod"]
     build: ./gatewayservice
     depends_on:
@@ -81,7 +82,7 @@ services:
 
 
   questionservice:
-    container_name: questionservice-${teamname:-wiq_0}
+    container_name: questionservice-${teamname:-wiq_es04c}
     build: ./questionservice
     depends_on:
       - questionservice-mysql
@@ -91,8 +92,8 @@ services:
       - mynetwork
 
   webapp:
-    container_name: webapp-${teamname:-wiq_0}
-    image: ghcr.io/arquisoft/${teamname:-wiq_0}/webapp:latest
+    container_name: webapp-${teamname:-wiq_es04c}
+    image: ghcr.io/arquisoft/${teamname:-wiq_es04c}/webapp:latest
     profiles: ["dev", "prod"]
     build: ./webapp
     depends_on:
@@ -104,7 +105,7 @@ services:
 
   prometheus:
     image: prom/prometheus
-    container_name: prometheus-${teamname:-wiq_0}
+    container_name: prometheus-${teamname:-wiq_es04c}
     profiles: ["dev"]
     networks:
       - mynetwork
@@ -118,7 +119,7 @@ services:
       
   grafana:
     image: grafana/grafana
-    container_name: grafana-${teamname:-wiq_0}
+    container_name: grafana-${teamname:-wiq_es04c}
     profiles: ["dev"]
     networks:
       - mynetwork

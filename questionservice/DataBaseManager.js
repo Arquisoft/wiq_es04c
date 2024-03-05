@@ -1,13 +1,20 @@
-require('dotenv').config();//usado apra que al crear el .env te lo saque del entorno de docker las variables 
-
 const mysql = require('mysql2/promise');
+const express = require('express');
+const bodyParser = require('body-parser'); 
+const app = express();
+const port = 3306;
+
+// Middleware to parse JSON in request body
+app.use(bodyParser.json());
+
+// Rest of your code...
 
 const dbConfig = {
-  host:  'localhost:3306',
-  user:  'bidoff',
-  password:  'wiq04',
-  database: 'questions_db',
- 
+  host:  process.env.DB_HOST || 'questionservice-mysql-defaultASW',
+  user:  process.env.DB_USER || 'bidoff',
+  password:  process.env.DB_PASSWORD || 'wiq04',
+  database: process.env.DB_NAME || 'questions_db',
+  port: process.env.DB_PORT || 3306
 };
 
 //clae encargada de agregar datos a la bd 
