@@ -1,18 +1,22 @@
 .start-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Esto hace que el botón esté centrado verticalmente en la pantalla */
-  
-    /* Estilos del botón */
-    .button {
-      font-size: 20px; /* Ajusta el tamaño de la fuente según sea necesario */
-      padding: 10px 20px; /* Ajusta el padding según sea necesario */
-      background-color: green;
-      color: white;
-      border: none;
-      border-radius: 5px; /* Ajusta el border-radius según sea necesario */
-      cursor: pointer;
-      text-decoration: none; /* Esto elimina el subrayado del texto del botón */
-    }
-  }
+  /* Establece el tamaño del botón */
+  font-size: 2em; /* Ajusta el tamaño de la fuente según sea necesario */
+  padding: 20px 40px; /* Ajusta el padding según sea necesario */
+
+  /* Centra el botón en el medio de la pantalla */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* Establece el color de fondo y el color de la letra */
+  background-color: green;
+  color: white;
+
+  /* Establece el estilo del borde */
+  border: none;
+  border-radius: 5px; /* Ajusta el border-radius según sea necesario */
+
+  /* Establece el estilo del cursor */
+  cursor: pointer;
+}
