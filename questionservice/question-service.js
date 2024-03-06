@@ -18,6 +18,7 @@ app.post('/getquestion', async (req, res) => {
     
         const questionAndAnswer = await questionService.getGameQuestions(); // Obtenemos el json de pregunta y sus respuestas
         //const questionAndAnswer = await getQuestionTemplate(); // Obtenemos el json de pregunta y sus respuestas
+        console.log(questionAndAnswer); // Imprime questionAndAnswer en la consola
 
         res.json(questionAndAnswer); //Devolvemos a la gateway el json
     }catch(error){

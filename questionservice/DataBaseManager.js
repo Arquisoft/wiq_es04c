@@ -131,19 +131,19 @@ async connect() {
         'SELECT distractor FROM Distractor WHERE id_pregunta = ?',
         [questionId]
       );
-        
+      const respuestaArray = [
+          { answer: correctAnswer, correct: true },
+          ...distractors.map(distractor => ({ answer: distractor.distractor, correct: false }))
+        ];
       // Obtén la categoría de la pregunta
       const [category] = await this.connection.execute(
       'SELECT nombre_categoria FROM Categoria WHERE id_categoria = ?',
       [question[0].id_categoria]
       );
-
+        
        return {
         question: question[0].pregunta,
-        respuesta: [
-          { answer: correctAnswer, correct: true },
-          ...distractors.map(distractor => ({ answer: distractor.distractor, correct: false }))
-        ],
+        answers:respuestaArray,
         questionCategory: category[0].nombre_categoria
       };
   
