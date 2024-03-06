@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -32,7 +33,6 @@ root.render(
       </Router>
 
       <CssBaseline />
-     
 
       <App />
       <Footer />
