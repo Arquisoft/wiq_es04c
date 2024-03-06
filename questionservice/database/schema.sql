@@ -24,4 +24,7 @@ CREATE TABLE Distractor (
     FOREIGN KEY (id_categoria) REFERENCES Categoria(id_categoria)
 );
 ALTER TABLE Distractor MODIFY id_distractor int AUTO_INCREMENT;
+ALTER TABLE Categoria CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE Pregunta CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE Distractor CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 

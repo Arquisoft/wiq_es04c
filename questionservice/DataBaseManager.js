@@ -14,7 +14,8 @@ const dbConfig = {
   user:  process.env.DB_USER || 'root',
   password:  process.env.DB_PASSWORD || 'admin',
   database: process.env.DB_NAME || 'questions_db',
-  port: process.env.DB_PORT || 3306
+  port: process.env.DB_PORT || 3306,
+  charset : 'utf8mb4'
 };
 
 //clae encargada de agregar datos a la bd 
@@ -87,7 +88,7 @@ async connect() {
       for (const answer of answers) {
         if (!answer.correct) {
           const [distractorResult] = await this.connection.execute(
-            'INSERT INTO Distractor (distractor,id_categoria) VALUES (?,?)',
+            'INSERT  INTO Distractor (distractor,id_categoria) VALUES (?,?)',
             [answer.answer, categoryId]
           );
 
