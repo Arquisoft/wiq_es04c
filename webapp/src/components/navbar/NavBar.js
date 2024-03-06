@@ -1,6 +1,6 @@
 // En /src/components/Navbar.js
 import React from 'react';
-import '../styles/Navbar.css'; // Importa tu archivo de estilos si es necesario
+import './Navbar.css'; // Importa tu archivo de estilos si es necesario
 
 const Navbar = () => (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
