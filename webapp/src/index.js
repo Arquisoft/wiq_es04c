@@ -11,8 +11,8 @@ import { AuthProvider } from './components/authcontext';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
-
-
+import StartButton from './components/StartButton';
+import Game from './components/game/Game';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -27,15 +27,27 @@ root.render(
       </Typography>
       <Typography component="h2" variant="h5" align="center" sx={{ marginTop: 2 }}>wiq_es04c</Typography>
         <Routes>
+          <Route path="/" element={<StartButton isLoggedIn={true} />} />
           <Route path="/addUser" element={<AddUser />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/game" element={<Game />} />
         </Routes>
+
+
+
+
+
+
       </Router>
 
       <CssBaseline />
 
-      <App />
-      <Footer />
+  
+
+      
+     
+        
+    
     </AuthProvider>
   </React.StrictMode>
 );

@@ -1,13 +1,14 @@
- import React, { useState,useContext } from 'react';
+ import React, { useState } from 'react';
+import AddUser from './components/AddUser';
+import Login from './components/Login';
+import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 import Game from './components/game/Game';
-import { AuthContext } from './components/authcontext'; // Importa AuthContext
-
+import progressBar from './components/game/progressBar';
 function App() {
   const [showLogin, setShowLogin] = useState(true);
-   //sacar el valor para ver si esta logeado o no 
-   const { isLoggedIn, username } = useContext(AuthContext); // Obtiene username del contexto
 
   const handleToggleView = () => {
     setShowLogin(!showLogin);
@@ -15,13 +16,9 @@ function App() {
 
   return (
     <Container component="main" maxWidth="xs">
-    
-    <Router> <Routes>
-        {isLoggedIn ? <Route path="/game" element={<Game />} /> : null}
-        {/* Tus otras rutas aquí */}
-      </Routes>
-    </Router>
-     
+      
+        <Game> <progressBar></progressBar></Game>
+      
 
       {/*showLogin ? <Login /> : <AddUser />
       <Typography component="div" align="center" sx={{ marginTop: 2 }}>
