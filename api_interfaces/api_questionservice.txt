@@ -10,6 +10,5 @@ const example_data = {question: 'pregunta ejemplo', respuesta: [
     {answer: 'respuesta incorrecta1', correct: false},
     {answer: 'respuesta incorrecta2', correct: false},
     {answer: 'respuesta incorrecta3', correct: false}],
-    questionCategory: 'geografia',
-    questionType:'capital'
-};
+    questionCategory: 'geografia'
+    };

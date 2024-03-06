@@ -5,6 +5,7 @@
     "dotenv": "^16.4.5",
     "mysql": "^2.18.1",
     "mysql2": "^3.9.2",
+    "node-cron": "^3.0.3",
     "react-bootstrap": "^2.10.1"
   }
 }

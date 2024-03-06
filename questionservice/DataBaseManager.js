@@ -112,6 +112,50 @@ async connect() {
       await this.disconnect();
     }
   }
+  async getGameQuestions() {
+    try {
+      await this.connect();
+  
+      // Obtén una pregunta aleatoria
+      const [question] = await this.connection.execute(
+        'SELECT * FROM Pregunta ORDER BY RAND() LIMIT 1'
+      );
+  
+      const questionId = question[0].id_pregunta;
+  
+      // Obtén la respuesta correcta para esa pregunta
+      const correctAnswer = question[0].respuesta_correcta;
+  
+      // Obtén los distractores para esa pregunta
+      const [distractors] = await this.connection.execute(
+        'SELECT distractor FROM Distractor WHERE id_pregunta = ?',
+        [questionId]
+      );
+        
+      // Obtén la categoría de la pregunta
+      const [category] = await this.connection.execute(
+      'SELECT nombre_categoria FROM Categoria WHERE id_categoria = ?',
+      [question[0].id_categoria]
+      );
+
+       return {
+        question: question[0].pregunta,
+        respuesta: [
+          { answer: correctAnswer, correct: true },
+          ...distractors.map(distractor => ({ answer: distractor.distractor, correct: false }))
+        ],
+        questionCategory: category[0].nombre_categoria
+      };
+  
+    } catch (error) {
+      console.error('Error getting game questions:', error.message);
+      throw error;
+    } finally {
+      // Desconectar de la base de datos
+      await this.disconnect();
+    }
+  }
+
 }
   
 
