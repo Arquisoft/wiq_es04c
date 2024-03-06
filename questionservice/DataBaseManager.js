@@ -90,8 +90,8 @@ async connect() {
       for (const answer of answers) {
         if (!answer.correct) {
           const [distractorResult] = await this.connection.execute(
-            'INSERT IGNORE INTO Distractor (distractor,id_categoria) VALUES (?,?)',
-            [answer.answer, categoryId]
+            'INSERT  INTO Distractor (distractor,id_categoria,id_pregunta) VALUES (?,?,?)',
+            [answer.answer, categoryId,questionResult.insertId]
           );
 
          

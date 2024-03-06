@@ -19,9 +19,11 @@ ALTER TABLE Pregunta MODIFY id_pregunta int AUTO_INCREMENT;
 
 CREATE TABLE Distractor (
     id_distractor INT PRIMARY KEY,
-    distractor VARCHAR(255) UNIQUE NOT NULL,
+    distractor VARCHAR(255) NOT NULL,
     id_categoria INT,
-    FOREIGN KEY (id_categoria) REFERENCES Categoria(id_categoria)
+    id_pregunta INT NOT NULL,
+    FOREIGN KEY (id_categoria) REFERENCES Categoria(id_categoria),
+    FOREIGN KEY (id_pregunta) REFERENCES Pregunta(id_pregunta)
 );
 ALTER TABLE Distractor MODIFY id_distractor int AUTO_INCREMENT;
 ALTER TABLE Categoria CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
