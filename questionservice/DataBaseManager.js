@@ -4,10 +4,10 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3306;
 
+
 // Middleware to parse JSON in request body
 app.use(bodyParser.json());
 
-// Rest of your code...
 
 const dbConfig = {
   host:  process.env.DB_HOST || 'questionservice-mysql-wiq_es04c',
@@ -25,6 +25,8 @@ class DatabaseManager {
       this.connection = null;
       
     }
+
+    
 
 
 async connect() {
@@ -88,7 +90,7 @@ async connect() {
       for (const answer of answers) {
         if (!answer.correct) {
           const [distractorResult] = await this.connection.execute(
-            'INSERT  INTO Distractor (distractor,id_categoria) VALUES (?,?)',
+            'INSERT IGNORE INTO Distractor (distractor,id_categoria) VALUES (?,?)',
             [answer.answer, categoryId]
           );
 
