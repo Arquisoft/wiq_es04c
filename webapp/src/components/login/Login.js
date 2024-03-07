@@ -2,8 +2,8 @@
 import React, { useContext, useState ,useEffect} from 'react';
 import axios from 'axios';
 import { Container, Typography, TextField, Button, Snackbar } from '@mui/material';
-import Game from './game/Game.js';
-import { AuthContext } from './authcontext';
+import Game from '../game/Game';
+import { AuthContext } from '../authcontext';
 const Login = () => {
   //hacer que el navbar guarde el contexo de si estas loggeado o no 
   //ademas metes en localStorage que es como una cookie , el usuario para poder sacar sus datos en historial etc 

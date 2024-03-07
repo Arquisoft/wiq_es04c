@@ -1,12 +1,6 @@
  import React, { useState } from 'react';
-import AddUser from './components/adduser/AddUser';
-import Login from './components/login/Login';
-import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 import Game from './components/game/Game';
-import progressBar from './components/game/progressBar';
 function App() {
   const [showLogin, setShowLogin] = useState(true);
 

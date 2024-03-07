@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, Typography, Button, Box, Paper, Snackbar } from '@mui/material';
 import MuiAlert from '@mui/material/Alert';
-import exampleData from './example_data.js';
 
 // Define el endpoint de la API, utilizando una variable de entorno o un valor predeterminado.
 const apiEndpoint = process.env.REACT_APP_API_ENDPOINT || 'http://localhost:8000';
