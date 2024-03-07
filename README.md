@@ -1,5 +1,10 @@
 # wiq_es04c
 
+No hacer secciones nivel 0 (con solo un '=') porque no compila.
+Ejemplo: no poner '= Requisitos de Calidad', sino '== Requisitos de Calidad'
+No quitar el [[section-x]] del principio de un .adoc, porque si no no sale numerado.
+Ejemplo: 12_glossary.adoc -> no quitar [[section-glossary]]
+
 [![Deploy on release](https://github.com/Arquisoft/wiq_es04c/actions/workflows/release.yml/badge.svg)](https://github.com/Arquisoft/wiq_es04c/actions/workflows/release.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Arquisoft_wiq_es04c&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Arquisoft_wiq_es04c)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Arquisoft_wiq_es04c&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Arquisoft_wiq_es04c)

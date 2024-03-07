@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, Typography, TextField, Button, Snackbar } from '@mui/material';
 
-const apiEndpoint = process.env.REACT_APP_API_ENDPOINT || 'http://localhost:8000';
+const apiEndpoint = process.env.API_URI || 'http://localhost:8000';
 
 const AddUser = () => {
   const [username, setUsername] = useState('');
@@ -13,7 +13,6 @@ const AddUser = () => {
 
   const addUser = async () => {
     try {
-      // Esto manda una petición post adduser al gateway, que se lo reenvía a userservice
       await axios.post(`${apiEndpoint}/adduser`, { username, password });
       setOpenSnackbar(true);
     } catch (error) {

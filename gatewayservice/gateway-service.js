@@ -2,7 +2,6 @@ const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
 const promBundle = require('express-prom-bundle');
-
 const app = express();
 const port = 8000;
 
@@ -42,21 +41,31 @@ app.post('/adduser', async (req, res) => {
   }
 });
 
-app.post('/generatequestion', async(req,res)=> {
+app.get('/getquestion', async(req,res)=> {
   try{
     // Redirige la solicitud al servicio de generación de preguntas sin enviar un cuerpo de solicitud.
-    const response = await axios.post(`${generateServiceURL}/generatequestion`);
+    const response = await axios.post(`${generateServiceURL}/getquestion`);
 
     // Devuelve la respuesta del servicio de generación de preguntas al cliente original.
     res.json(response.data);
 
   } catch(error) {
-    res.status(error.response.status).json({ error: error.response.data.error });
+    if (error.response) {
+      res.status(error.response.status).json({ error: error.response.data.error });
+    } else {
+      res.status(500).json({ error: 'An unexpected error occurred' });
+    }
   }
 });
 
-
-
+app.get('/generateQuestions', async(req,res)=> {
+  try{
+   
+  } catch(error) {
+    res.status(error.response.status).json({ error: error.response.data.error });
+  }
+    
+});
 // Start the gateway service
 const server = app.listen(port, () => {
   console.log(`Gateway Service listening at http://localhost:${port}`);

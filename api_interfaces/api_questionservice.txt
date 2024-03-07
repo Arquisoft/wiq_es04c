@@ -1,0 +1,14 @@
+petición HTTP GET getquestion
+devuelve json -> {question: string, answers: answer[]}
+
+-------------------------------------------
+answer: {answer: string, correct: boolean}
+
+EJEMPLO
+const example_data = {question: 'pregunta ejemplo', respuesta: [
+    {answer: 'respuesta correcta', correct: true},
+    {answer: 'respuesta incorrecta1', correct: false},
+    {answer: 'respuesta incorrecta2', correct: false},
+    {answer: 'respuesta incorrecta3', correct: false}],
+    questionCategory: 'geografia'
+    };

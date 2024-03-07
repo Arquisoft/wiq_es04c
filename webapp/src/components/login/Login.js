@@ -1,9 +1,17 @@
 // src/components/Login.js
-import React, { useState } from 'react';
+import React, { useContext, useState ,useEffect} from 'react';
 import axios from 'axios';
 import { Container, Typography, TextField, Button, Snackbar } from '@mui/material';
-
+import Game from './game/Game.js';
+import { AuthContext } from './authcontext';
 const Login = () => {
+  //hacer que el navbar guarde el contexo de si estas loggeado o no 
+  //ademas metes en localStorage que es como una cookie , el usuario para poder sacar sus datos en historial etc 
+  const{handleLogin}=useContext(AuthContext);
+
+
+
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -11,19 +19,26 @@ const Login = () => {
   const [createdAt, setCreatedAt] = useState('');
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
-  const apiEndpoint = process.env.REACT_APP_API_ENDPOINT || 'http://localhost:8000';
+  const apiEndpoint = process.env.API_URI ||'http://localhost:8000';
+
+  useEffect(() => {
+    if (loginSuccess) {
+      handleLogin();
+      localStorage.setItem('username', username);
+
+    }
+  }, [loginSuccess,username]); // Este efecto se ejecutará cada vez que loginSuccess cambie
+
 
   const loginUser = async () => {
     try {
-      // Esto manda una petición post login al gateway, que se lo reenvía a authservice
       const response = await axios.post(`${apiEndpoint}/login`, { username, password });
 
       // Extract data from the response
-      const userCreatedAt = response.data.createdAt;
+      const { createdAt: userCreatedAt } = response.data;
 
       setCreatedAt(userCreatedAt);
       setLoginSuccess(true);
-
       setOpenSnackbar(true);
     } catch (error) {
       setError(error.response.data.error);
@@ -44,6 +59,7 @@ const Login = () => {
           <Typography component="p" variant="body1" sx={{ textAlign: 'center', marginTop: 2 }}>
             Your account was created on {new Date(createdAt).toLocaleDateString()}.
           </Typography>
+          <Game></Game>
         </div>
       ) : (
         <div>
