@@ -84,7 +84,7 @@ services:
 
   questionservice:
     container_name: questionservice-${teamname:-wiq_es04c}
-    build: ./questionservice
+    build: questionservice
     depends_on:
       - questionservice-mysql
     ports:
