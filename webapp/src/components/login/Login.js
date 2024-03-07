@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, Typography, TextField, Button, Snackbar } from '@mui/material';
-import Game from './game/Game.js';
+import Game from '../game/Game.js';
 
 const Login = () => {
   const [username, setUsername] = useState('');

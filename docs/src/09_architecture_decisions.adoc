@@ -2,6 +2,6 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-design-decisions]]
 == Decisiones de Arquitectura 🗣️
-Los enlaces proporcionan las decisiones de aquitectura via GitHub.
+Los enlaces proporcionan las decisiones de arquitectura via GitHub.
 
 * https://github.com/Arquisoft/wiq_es04c/wiki/ADR-1-‐-Diseño-de-BD-para-Generación-de-Preguntas[ADR 01] ‐ Diseño de BD para Generación de Preguntas

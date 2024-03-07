@@ -10,23 +10,11 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 EN DESARROLLO.
 
-[role="arc42help"]
-****
-Describe (usually in a combination of diagrams, tables, and text):
-
-* distribution of a system to multiple locations, environments, computers, processors, .., as well as physical connections between them
-* important justifications or motivations for this deployment structure
-* quality and/or performance features of this infrastructure
-* mapping of software artifacts to elements of this infrastructure
-
-For multiple environments or alternative deployments please copy and adapt this section of arc42 for all relevant environments.
-****
-
 _**<Overview Diagram>**_ 🎀
 
 EN DESARROLLO.
 
-Motivation:: 🤩
+Motivation 🤩:: 
 
 1. Disponibilidad: Se busca una aplicación que sea capaz de prestar servicio de manera continuada, con resistencia a fallos.
 2. Eficiencia: Se busca una aplicación que ofreza un rendimiento óptimo para la generación de preguntas desde dispositivos con pocas capacidades.
@@ -34,7 +22,7 @@ Motivation:: 🤩
 
 
 
-Quality and/or Performance Features:: 🎉
+Quality and/or Performance Features 🎉:: 
 
 1.Rendimiento: Se busca que la aplicación tenga un rendimiento óptimo en dispositivos móviles y tablets.
 2.Adaptabilidad: La aplicación tiene que ser adaptable en diferentes dispositivos para así poder garantizar su uso.
@@ -44,34 +32,16 @@ Quality and/or Performance Features:: 🎉
 
 EN DESARROLLO.
 
-Mapping of Building Blocks to Infrastructure:: 📜
+Mapping of Building Blocks to Infrastructure 📜:: 
 
 EN DESARROLLO.
-_<description of the mapping>_
 
 
 === Infrastructure Level 2 ☝️
-
-[role="arc42help"]
-****
-Here you can include the internal structure of (some) infrastructure elements from level 1.
-
-Please copy the structure from level 1 for each selected element.
-****
 
 EN DESARROLLO.
 
 
 ==== _<Infrastructure Element 1>_
 
-_<diagram + explanation>_
-
-==== _<Infrastructure Element 2>_
-
-_<diagram + explanation>_
-
-...
-
-==== _<Infrastructure Element n>_
-
-_<diagram + explanation>_
+EN DESARROLLO.
