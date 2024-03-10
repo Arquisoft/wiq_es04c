@@ -1,6 +1,6 @@
 
 [[section-technical-risks]]
-== Risks and Technical Debts 🚀
+== Riesgos y Deuda Técnina 🚀
 
 [width="100%",options="header",cols="^,^"]
 |======================
@@ -14,4 +14,11 @@
 | Distribución desigual del trabajo | Una asignación desequilibrada puede sobrecargar a algunos miembros mientras deja a otros con menos responsabilidades.
 | Reducción del tamaño del equipo | La salida inesperada de miembros puede desafiar la continuidad y el avance del proyecto, requiriendo adaptaciones rápidas y eficientes.
 
+|======================
+
+[width="100%",options="header",cols="^,^"]
+|======================
+| Deuda Técnina | Descripción
+| Uso del proyecto base creado por los profesores | Para no tener que realizar la creacion del proyecto hemos decidido usar el proyecto ya creado. Esto implica tener que revisar codigo ya creado y entender su funcionamiento, asi como ampliarlo con codigo propio, dando lugar a errores y perdidas de tiempo. Tambien requiere tener que aprender tecnologias nuevas y como usarlas.
+| Uso de React | El uso del framework nos puede facilitar el desarrolo en algunas etapas, pero nos lo puede complicar al no estar familiarizados con esta tecnologia y todas sus características.
 |======================

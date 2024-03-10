@@ -3,7 +3,7 @@ const wikiCall = require("./wikiCall");
 //Selecionar un resultado de las consultas aleatorio
 const randomElement = (items) => items[Math.floor(Math.random() * items.length)];
 
-class wikiQuery {
+class WikiQuery {
     
     static async getRandomCountryAndCity() {
         const query = `
@@ -52,4 +52,4 @@ class wikiQuery {
 
 }
 
-module.exports = wikiQuery
+module.exports = WikiQuery

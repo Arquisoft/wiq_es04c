@@ -2,7 +2,8 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-architecture-constraints]]
 == Restricciones de arquitectura ⛔
-.Restricciones
+
+Restricciones
 [options="header",cols="1,2"]
 |===
 |Restricción|Descripción

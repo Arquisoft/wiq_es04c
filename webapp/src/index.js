@@ -9,7 +9,7 @@ import { AuthProvider } from './components/authcontext';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
-import StartButton from './components/StartButton';
+import StartButton from './components/startbutton/StartButton';
 import Game from './components/game/Game';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

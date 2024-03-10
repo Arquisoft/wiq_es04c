@@ -1,21 +1,29 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Navbar from './Navbar';
+import { AuthProvider } from '../authcontext';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 describe('Navbar Component', () => {
   test('renders Navbar with correct content and links', () => {
     // Renderizar el componente
-    render(<Navbar />);
+    render(
+      <AuthProvider>
+        <Router>
+          <Navbar />
+        </Router>
+      </AuthProvider>
+    );
 
     // Verificar que el logo esté presente
     const logo = screen.getByAltText('Logo');
     expect(logo).toBeInTheDocument();
-    expect(logo).toHaveAttribute('src', '/LogoSaberYganar.png');
+    expect(logo).toHaveAttribute('src', 'LogoSaberYganar.png');
 
     // Verificar que los enlaces de registro e inicio de sesión estén presentes con los íconos correctos
     const registerLink = screen.getByRole('link', { name: /Registrarse/i });
     expect(registerLink).toBeInTheDocument();
-    expect(registerLink).toHaveAttribute('href', '/signup');
+    expect(registerLink).toHaveAttribute('href', '/addUser');
 
     const loginLink = screen.getByRole('link', { name: /Iniciar sesión/i });
     expect(loginLink).toBeInTheDocument();

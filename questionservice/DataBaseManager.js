@@ -98,7 +98,7 @@ async connect() {
         }
       }
 
-      // Si todo ha ido bien, confirmar la transacción
+      // Si ha ido bien, confirmar la transacción
       await this.connection.commit();
 
     } catch (error) {
