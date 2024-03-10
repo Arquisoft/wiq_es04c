@@ -23,6 +23,9 @@ app.post('/getquestion', async (req, res) => {
         res.json(questionAndAnswer); //Devolvemos a la gateway el json
     }catch(error){
         console.log("Error getting question from BD: " + error);
+        await scheduler.addQuestion();
+        const questionAndAnswer = await questionService.getGameQuestions();
+        res.json(questionAndAnswer); //Devolvemos a la gateway el json
     }
         /*
     try {

@@ -9,18 +9,21 @@ class Scheduler {
     this.dbManager = new DataBaseManager();
   }
 
+  async addQuestion() {
+    try {
+      const templates = await getQuestionTemplate(); // Obtenemos el json de pregunta y sus respuestas
+      await this.dbManager.addQuestion(templates);
+      success = true;
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   start() {
     cron.schedule('*/30 * * * *', async () => {
       let success = false;
       while (!success) {
-        try {
-          const templates = await getQuestionTemplate(); // Obtenemos el json de pregunta y sus respuestas
-          await this.dbManager.addQuestion(templates);
-          success = true;
-        } catch (error) {
-          console.error(error);
-        }
+        this.addQuestion();
       }
     });
   }
