@@ -29,16 +29,12 @@ unos test para asegurar el correcto despliegue del proyecto.
 Decisiones de cómo llegar a las metas principales (En desarrollo):
 [options="header",cols="1,2"]
 |===
-|Usabilidad
-|
-|Privacidad
-|
-|Mantenibilidad
-|
-|Eficiciencia
-|
-|Fiabilidad
-|
+| Decision | Como llegar
+| Usabilidad | La aplicacion seguira los principios basicos de usabilidad y estos seran testeados en diferentes escenarios.
+| Mantenibilidad | El sistema sera mantenible gracias a la mantenibilidad de sus subsistemas. 
+| Eficiciencia | Para que la aplicacion sea rapida se usaran la base de datos y no se tendran que generar datos en caliente que pueden perjudicar a los tiempo de carga.
+| Fiabilidad | Todos los datos mostrados seran correctos y para esta comprobacion se usara la base de datos de Wikidata y sus entidades e ID's asociados. 
+| Privacidad | Los datos de los usuarios seran privados y no seran accesibles a ningun usuario. 
 
 |===
 
@@ -87,9 +83,3 @@ Se han creado el mismo número de Issues como apartados de la documentación hay
 
 En cuanto al despliegue de la aplicación se van a arreglar los errores que salen en los test al intentar desplegarla, ya que se han cambiado
 algunos valores predefinidos, por lo que los test también predefinidos fallarán.
-
-.Further Information
-
-See https://docs.arc42.org/section-4/[Solution Strategy] in the arc42 documentation.
-
-****
