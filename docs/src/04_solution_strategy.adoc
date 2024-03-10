@@ -3,7 +3,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-solution-strategy]]
 == Estrategia de Solución 📚
 
-Decisiones tecnológicas 💻
+=== Decisiones tecnológicas 💻
 
 Hemos decidido realizar la parte de Front-End con React y la parte de Back-End con la estructura de los microservicios. 
 El despliegue se realizará a través de una máquina virtual de Azure, con ayuda de Docker y GitHub Actions.
@@ -40,7 +40,7 @@ Decisiones de cómo llegar a las metas principales (En desarrollo):
 
 
 
-Decisiones organizativas 👥
+=== Decisiones organizativas 👥
 
 En la primera semana nos hemos dividido en dos equipos con el objetivo de tocar todas las partes del proyecto. La estructura de los equipos es la siguiente:
 
