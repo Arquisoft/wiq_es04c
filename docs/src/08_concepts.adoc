@@ -17,16 +17,16 @@ El usuario será capaz de interactuar con una aplicación web, donde se podrá r
 
 === Seguridad 🔒
 
-_<explanation>_
+En Desarrollo.
 
 === Arquitectura y Patrones de Diseño 📒
 
-_<explanation>_
+En Desarrollo.
 
 === Desarrollo ⚙️
 
-_<explanation>_
+En Desarrollo.
 
 === Operaciones 🔢
 
-_<explanation>_
+En Desarrollo.
