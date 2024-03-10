@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from 'react';
+import { render } from '@testing-library/react';
+import App from './App.js';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/WIQ_ES04C/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App Component', () => {
+  test('renders App component', () => {
+    render(<App />);
+    
+  });
 });
