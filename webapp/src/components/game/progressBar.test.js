@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, act, fireEvent, screen } from '@testing-library/react';
-import ProgressBar from './ProgressBar';
+import ProgressBar from './progressBar';
 
 jest.useFakeTimers();
 
