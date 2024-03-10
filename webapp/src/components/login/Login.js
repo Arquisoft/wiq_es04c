@@ -2,7 +2,7 @@
 import React, { useContext, useState ,useEffect} from 'react';
 import axios from 'axios';
 import { Container, Typography, TextField, Button, Snackbar } from '@mui/material';
-import Game from '../game/Game.js';
+import Game from '../game/Game';
 import { AuthContext } from '../authcontext';
 const Login = () => {
   //hacer que el navbar guarde el contexo de si estas loggeado o no 
@@ -27,7 +27,7 @@ const Login = () => {
       localStorage.setItem('username', username);
 
     }
-  }, [loginSuccess,username]); // Este efecto se ejecutará cada vez que loginSuccess cambie
+  }, [loginSuccess,username, handleLogin]); // Este efecto se ejecutará cada vez que loginSuccess cambie
 
 
   const loginUser = async () => {

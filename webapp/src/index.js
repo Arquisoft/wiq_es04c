@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Footer from './components/footer/Footer.js';
 import Navbar from './components/navbar/NavBar.js';
 import AddUser from './components/adduser/AddUser.js';
 import Login from './components/login/Login.js';
