@@ -7,7 +7,7 @@ import { AuthContext } from '../authcontext';
 const Login = () => {
   //hacer que el navbar guarde el contexo de si estas loggeado o no 
   //ademas metes en localStorage que es como una cookie , el usuario para poder sacar sus datos en historial etc 
-  const[handleLogin]=useContext(AuthContext);
+  const{handleLogin}=useContext(AuthContext);
 
 
 
