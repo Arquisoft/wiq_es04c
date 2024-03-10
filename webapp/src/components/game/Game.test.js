@@ -16,7 +16,8 @@ describe('Game Component', () => {
                     { answer: 'Zamora', correct: false },
                     { answer: 'Galicia', correct: false}
                 ],
-                questionCategory: 'Geography'
+                questionCategory: 'Geography',
+                questionType: 'Multiple Choice'
             }
         });
     });
@@ -36,12 +37,14 @@ describe('Game Component', () => {
         const { getByText, getByRole } = render(<Game />);
         const generateButton = getByText('Generate Question');
         fireEvent.click(generateButton);
-        await waitFor(() => expect(getByText('What is 2 + 2?')).toBeInTheDocument());
-        expect(getByText('3')).toBeInTheDocument();
-        expect(getByText('4')).toBeInTheDocument();
-        expect(getByText('5')).toBeInTheDocument();
+        await waitFor(() => expect(getByText('¿Cuál es la capital de Asturias?')).toBeInTheDocument());
+        expect(getByText('Santander')).toBeInTheDocument();
+        expect(getByText('Oviedo')).toBeInTheDocument();
+        expect(getByText('Zamora')).toBeInTheDocument();
+        expect(getByText('Galicia')).toBeInTheDocument();
     });
 
+    
     it('displays category and type after fetching', async () => {
         const { getByText } = render(<Game />);
         const generateButton = getByText('Generate Question');
@@ -69,4 +72,5 @@ describe('Game Component', () => {
         fireEvent.click(incorrectAnswerButton);
         await waitFor(() => expect(getByText('Respuesta incorrecta')).toBeInTheDocument());
     });
+    
 });
