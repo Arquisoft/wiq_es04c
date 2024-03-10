@@ -15,3 +15,9 @@
 | Reducción del tamaño del equipo | La salida inesperada de miembros puede desafiar la continuidad y el avance del proyecto, requiriendo adaptaciones rápidas y eficientes.
 
 |======================
+
+|======================
+| Deuda Tecnica | Descripción
+| Uso del proyecto base creado por los profesores | Para no tener que realizar la creacion del proyecto hemos decidido usar el proyecto ya creado. Esto implica tener que revisar codigo ya creado y entender su funcionamiento, asi como ampliarlo con codigo propio, dando lugar a errores y perdidas de tiempo. Tambien requiere tener que aprender tecnologias nuevas y como usarlas.
+
+|======================

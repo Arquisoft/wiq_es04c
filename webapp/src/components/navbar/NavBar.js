@@ -37,10 +37,10 @@ const Navbar = () => {
             <>
             <Dropdown as={Nav.Item}>
               <Dropdown.Toggle as={Nav.Link}>
-                <i className="fas fa-user"></i> // Icono de usuario
+                <i className="fas fa-user"></i> (// Icono de usuario)
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Dropdown.Item disabled>{username}</Dropdown.Item> // Nombre de usuario como texto no editable
+                <Dropdown.Item disabled>{username}</Dropdown.Item> (// Nombre de usuario como texto no editable)
                 <Dropdown.Item href="/logout">Logout</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
