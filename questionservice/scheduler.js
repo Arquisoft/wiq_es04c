@@ -5,6 +5,9 @@ const DataBaseManager = require('./DataBaseManager'); // Asegúrate de que la ru
 const getQuestionTemplate = require('./questionTemplates');
 
 class Scheduler {
+
+  success;
+
   constructor() {
     this.dbManager = new DataBaseManager();
   }
@@ -13,7 +16,7 @@ class Scheduler {
     try {
       const templates = await getQuestionTemplate(); // Obtenemos el json de pregunta y sus respuestas
       await this.dbManager.addQuestion(templates);
-      success = true;
+      this.success = true;
     } catch (error) {
       console.error(error);
     }
@@ -21,8 +24,8 @@ class Scheduler {
 
   start() {
     cron.schedule('*/30 * * * *', async () => {
-      let success = false;
-      while (!success) {
+      this.success = false;
+      while (!this.success) {
         this.addQuestion();
       }
     });
