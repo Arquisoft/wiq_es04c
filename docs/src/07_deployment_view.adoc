@@ -3,7 +3,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-deployment-view]]
 
 
-== Deployment View 👀
+== Vista de Despliegue 👀
 
 
 === Infrastructure Level 1 ☝️

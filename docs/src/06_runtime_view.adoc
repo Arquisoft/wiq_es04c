@@ -1,7 +1,7 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-runtime-view]]
-== Runtime View 📽️
+== Vista de Ejecución 📽️
 
 
 === <Runtime Scenario 1> 1️⃣

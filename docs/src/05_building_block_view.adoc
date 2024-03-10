@@ -3,7 +3,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-building-block-view]]
 
 
-=== Building Block View  EN desarollo 🗳️
+=== Vista de Bloque de Construcción  (EN desarollo) 🗳️
 image::Building Block View.jpg["Building Block View"]
 
 

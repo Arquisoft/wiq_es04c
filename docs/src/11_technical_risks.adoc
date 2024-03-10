@@ -1,6 +1,6 @@
 
 [[section-technical-risks]]
-== Risks and Technical Debts 🚀
+== Riesgos y Deuda Técnina 🚀
 
 [width="100%",options="header",cols="^,^"]
 |======================
@@ -17,7 +17,7 @@
 |======================
 
 |======================
-| Deuda Tecnica | Descripción
+| Deuda Técnina | Descripción
 | Uso del proyecto base creado por los profesores | Para no tener que realizar la creacion del proyecto hemos decidido usar el proyecto ya creado. Esto implica tener que revisar codigo ya creado y entender su funcionamiento, asi como ampliarlo con codigo propio, dando lugar a errores y perdidas de tiempo. Tambien requiere tener que aprender tecnologias nuevas y como usarlas.
 
 |======================
