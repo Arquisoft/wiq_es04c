@@ -1,7 +1,7 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-system-scope-and-context]]
-== System Scope and Context 💭
+== Alcance del sistema y Contexto 💭
 
 === Contexto de negocio 💰
 image::Diagrama de contexto de negocio.jpg["Diagrama de contexto de negocio"]
@@ -10,7 +10,7 @@ En esta tabla se muestra el contexto de negocio de la aplicación. Las entradas 
 |===
 |Agente externo|Entradas|Salidas
 |Usuario|Datos registro, datos login, respuesta a cada pregunta|Preguntas, histórico
-|Wikidata|Ítems(elementos) de Wikidata|Petición a la API de Wikidata
+|Wikidata|Items (elementos) de Wikidata|Petición a la API de Wikidata
 |===
 
 === Contexto técnico 🔧

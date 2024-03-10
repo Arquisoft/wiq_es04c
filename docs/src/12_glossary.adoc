@@ -1,12 +1,13 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-glossary]]
-== Glossary ⁉️
+== Glosario ⁉️
 
 
 [cols="e,2e" options="header"]
 |===
-|Term |Definition
+|Término 
+|Definicion
 
 |React
 |Biblioteca de Javascript que se encarga en la creación de interfaces de usuario de una manera fácil. Es eficiente y se puede incorporar
@@ -21,17 +22,14 @@ y soporta la concurrencia.
 (en nuestro caso Wikidata). Son rápidos, sencillos a la hora de su desarrollo y autonómos cuando estos están en ejecución.
 
 |API
-|O también Application Programming Interface, es un intermediario que ayuda a las diferentes aplicaciones del proyecto a posibilitar la comunicación
+|También llamado Application Programming Interface, es un intermediario que ayuda a las diferentes aplicaciones del proyecto a posibilitar la comunicación
 entre ellas. Favorece a la eficiencia y agilidad del funcionamiento de dichas aplicaciones.
 
 |MongoDB
-|Es uno de los tantos tipos de bases de datos, como MariaDB. Usa NoSQL, soporta múltiples lenguajes de programación y también soporta su funcionamiento en 
-gran variedad de sistemas operativos. Algo a tener en cuenta es que MongoDB realiza el guardado de datos de una forma distinta a la de las bases de datos de 
-tipo relacional, con tablas de datos, este lo guarda en archivos BSON, que es un derivado de JSON.
+|Es uno de los tantos tipos de bases de datos, como MariaDB. Usa NoSQL, soporta múltiples lenguajes de programación y también soporta su funcionamiento en gran variedad de sistemas operativos. Algo a tener en cuenta es que MongoDB realiza el guardado de datos de una forma distinta a la de las bases de datos de tipo relacional, con tablas de datos, este lo guarda en archivos BSON, que es un derivado de JSON.
 
 |BSON
-|O Binary JSON, son los archivos que usa la base de datos MongoDB para almacenar los datos de una manera más ágil y sencilla que con las tablas. Una 
-curiosidad de este tipo de archivo es que no tiene un tipo de MIME definido, mientras que JSON sí que lo tiene.
+|Conocido como Binary JSON, son los archivos que usa la base de datos MongoDB para almacenar los datos de una manera más ágil y sencilla que con las tablas. Una curiosidad de este tipo de archivo es que no tiene un tipo de MIME definido, mientras que JSON sí que lo tiene.
 
 |Mongoose
 |Biblioteca que es encargada de crear una conexión con la base de datos MongoDB con el entorno de Node.js. Hace que el acceso y creación de los datos de MongoDB sea más fácil de realizar que con MongoDB en sí.
@@ -40,6 +38,8 @@ curiosidad de este tipo de archivo es que no tiene un tipo de MIME definido, mie
 |Aplicación que realiza el despliegue de cualquier aplicación en formato de contenedores, similares a los contenedores que tienen los barcos. Es open-source y permite que el proceso de desplegar una aplicación sea bastante más fácil y ordenado. 
 
 |GitHub Actions
-|Plataforma que ayuda a automatizar los proyectos, haciendo posible el despliegue de estos desde el mismo Github. Soporta una gran variedad de lenguajes de 
-programación y sistemas operativos.
+|Plataforma que ayuda a automatizar los proyectos, haciendo posible el despliegue de estos desde el mismo Github. Soporta una gran variedad de lenguajes de programación y sistemas operativos.
+
+|MySql
+|Es un sistema de gestión de bases de datos relacional de código abierto ampliamente utilizado que se destaca por su velocidad, confiabilidad y facilidad de uso. Permite a los usuarios almacenar, organizar y recuperar datos de manera eficiente a través de consultas estructuradas utilizando el lenguaje estándar de SQL. Es compatible con una variedad de plataformas y se utiliza en una amplia gama de aplicaciones.
 |===

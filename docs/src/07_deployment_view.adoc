@@ -3,36 +3,32 @@ ifndef::imagesdir[:imagesdir: ../images]
 [[section-deployment-view]]
 
 
-== Deployment View 👀
+== Vista de Despliegue 👀
 
 
-=== Infrastructure Level 1 ☝️
-
-EN DESARROLLO.
-
-_**<Overview Diagram>**_ 🎀
+=== Infraestructura Nivel 1 ☝️
 
 EN DESARROLLO.
 
-Motivation 🤩:: 
+==== Diagrama de Vista General 🎀
+
+EN DESARROLLO.
+
+==== Motivacion 🤩 
 
 1. Disponibilidad: Se busca una aplicación que sea capaz de prestar servicio de manera continuada, con resistencia a fallos.
 2. Eficiencia: Se busca una aplicación que ofreza un rendimiento óptimo para la generación de preguntas desde dispositivos con pocas capacidades.
 3. Cumplimiento de Requisitos Regulatorios: El uso de Wikidata como fuente de datos en nuestra aplicación está respaldado por la necesidad de cumplir con requisitos regulatorios y normativos específicos. Esta elección se basa en las siguientes consideraciones:
-
-
-
-Quality and/or Performance Features 🎉:: 
-
-1.Rendimiento: Se busca que la aplicación tenga un rendimiento óptimo en dispositivos móviles y tablets.
-2.Adaptabilidad: La aplicación tiene que ser adaptable en diferentes dispositivos para así poder garantizar su uso.
+ * Caracteristicas de Calidad y/o Rendimiento:
+    ** Rendimiento: Se busca que la aplicación tenga un rendimiento óptimo en dispositivos móviles y tablets.
+    ** Adaptabilidad: La aplicación tiene que ser adaptable en diferentes dispositivos para así poder garantizar su uso.
 
 
 
 
 EN DESARROLLO.
 
-Mapping of Building Blocks to Infrastructure 📜:: 
+==== Mapeado de Bloques de Construccion a Infraestructura 📜:: 
 
 EN DESARROLLO.
 
@@ -42,6 +38,6 @@ EN DESARROLLO.
 EN DESARROLLO.
 
 
-==== _<Infrastructure Element 1>_
+==== Elemento 1 de insfraestructura
 
 EN DESARROLLO.

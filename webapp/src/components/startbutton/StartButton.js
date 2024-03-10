@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { AuthContext } from './authcontext'; // Cambia AuthProvider a AuthContext
-import '../styles/startButton.css'
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../authcontext'; // Cambia AuthProvider a AuthContext
+import './startButton.css'
 const StartButton = () => {
   const { isLoggedIn } = useContext(AuthContext);
   const navigate = useNavigate();

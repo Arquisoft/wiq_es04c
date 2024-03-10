@@ -27,7 +27,7 @@ const Login = () => {
       localStorage.setItem('username', username);
 
     }
-  }, [loginSuccess,username]); // Este efecto se ejecutará cada vez que loginSuccess cambie
+  }, [loginSuccess,username, handleLogin]); // Este efecto se ejecutará cada vez que loginSuccess cambie
 
 
   const loginUser = async () => {

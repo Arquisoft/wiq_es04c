@@ -51,8 +51,6 @@ const Game = () => {
             setCategory(response.data.questionCategory); // Nueva línea
             setType(response.data.questionType); // Nueva línea
 
-            // setQuestion(exampleData.question);
-            // setAnswers(exampleData.answers);
         } catch (error) {
             // Manejo básico de errores: imprime el error en la consola.
             console.error('Error fetching question and answers', error);
@@ -78,7 +76,8 @@ const Game = () => {
                     <Typography variant="body1">{question}</Typography>
                 </Paper>
             )}
-            {answers && answers.map((answer, index) => (
+
+            { answers?.map((answer, index) => (
                 <div key={index} style={{ marginTop: '10px' }}>
                     <Button
                         variant="contained"
