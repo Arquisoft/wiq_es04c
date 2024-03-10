@@ -4,55 +4,32 @@ ifndef::imagesdir[:imagesdir: ../images]
 == Vista de Ejecución 📽️
 
 
-=== <Runtime Scenario 1> 1️⃣
+=== Escenario de Ejecucion1️⃣
 
 [plantuml,"Sequence diagram",png]
-----
-actor usuario
-actor system
-actor juego
-database bbdd as "bbdd"
-usuario -> system: inicio sesión
-system --> usuario: pedir nombre/contraseña
-usuario -> system: dar nombre/contraseña
-system -> bbdd: verificar usuario
-bbdd --> system: verificación correcta
-system --> usuario: inicio sesión correcto
-usuario -> system: acceder al juego
-system -> juego: iniciar juego
-juego --> system: generar pregunta/respuestas
-system --> usuario: mostrar pregunta/respuestas
-usuario -> system: responder
-system -> juego: verificar respuesta
-juego --> system: respuesta correcta
-system --> usuario: correcta
-system -> juego: generar siguiente pregunta/respuestas
-----
+
+image::Diagrama de secuencia plantuml.png["Diagrama de secuencia plantuml"]
 
 Diagrama de secuencia con plantuml (se contempla sólo el uso correcto de la aplicación)
 
 
-=== <Runtime Scenario 2> 2️⃣
+=== Escenario de Ejecucion2️⃣
 
- -> Diagrama de secuencia                                                                                                          
- -> Descripción: diagrama de los usos básicos en la aplicación, como inicio de sesión, empezar a jugar y contestar las preguntas.  
- -> Aspectos notables:                                                                                                             
-    - El usuario tiene que estar autentificado en la aplicación para poder entrar al juego.                                        
-    - Los usuarios estarán en una base de datos para recoger los datos de manera más sencilla.                                     
-    - En el diagrama se pone la opción de respuesta correcta, pero si fuera incorrecta también se seguiría jugando.                
+*** Diagrama de secuencia                                   
+    ** Descripción: diagrama de los usos básicos en la aplicación, como inicio de sesión, empezar a jugar y contestar las preguntas.
+    ** Aspectos notables:                                    
+        * El usuario tiene que estar autentificado en la aplicación para poder entrar al juego.                                        
+        * Los usuarios estarán en una base de datos para recoger los datos de manera más sencilla.                                     
+        * En el diagrama se pone la opción de respuesta correcta, pero si fuera incorrecta también se seguiría jugando.                
 
 image::Digrama de secuencia Juego de preguntas.jpg["Diagrama de secuencia"]
 
-=== <Runtime Scenario 3> 3️⃣
+=== Escenario de Ejecucion3️⃣
 
- -> Diagrama de casos de uso                                                                                                        
- -> Descripción: diagrama básico de los distintos casos de uso que hay en el proyecto                                               
- -> Aspectos notables:                                                                                                              
-    - El caso de uso de iniciar sesión del usuario está relacionado con el caso de uso de autentificar sesión del sistema,          
-    - ya que para que el usuario pueda iniciar sesión debe de estar autentificado.                                                  
-    - Lo mismo ocurre con el caso de uso de contestar preguntas del usuario con el caso de uso de verificar respuestas del sistema, 
-    - ya que para que el usuario pueda contestar preguntas, el sistema primero debe de verificar si dicha respuesta es correcta     
-    - o no para pasar a la siguiente pregunta.                                                                                      
-
+*** Diagrama de casos de uso: 
+    ** Descripción: diagrama básico de los distintos casos de uso que hay en el proyecto
+    ** Aspectos notables:                   
+        * El caso de uso de iniciar sesión del usuario está relacionado con el caso de uso de autentificar sesión del sistema, ya que para que el usuario pueda iniciar sesión debe de estar autentificado.
+        * Lo mismo ocurre con el caso de uso de contestar preguntas del usuario con el caso de uso de verificar respuestas del sistema, ya que para que el usuario pueda contestar preguntas, el sistema primero debe de verificar si dicha respuesta es correcta o no para pasar a la siguiente pregunta.                                                          
 
 image::Diagrama de casos de uso para el juego de palabras.jpg["Diagrama de caso de uso"]
