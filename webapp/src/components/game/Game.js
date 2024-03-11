@@ -1,5 +1,5 @@
 // Importa React, useState para manejar el estado, axios para hacer solicitudes HTTP, y componentes de Material UI para la interfaz.
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import axios from 'axios';
 import { Container, Typography, Button, Snackbar,Grid,Box } from '@mui/material';
 import MuiAlert from '@mui/material/Alert';
@@ -9,9 +9,12 @@ const apiEndpoint = process.env.REACT_APP_API_URI || 'http://localhost:8000';
 
 const Game = () => {
 
+    useEffect(() => {
+        fetchQuestionAndAnswers();
+      }, []); // Pasar un array vacío como segundo argumento para que `useEffect` se ejecute solo una vez al montar el componente.
     
-  const buttonColors = ['#ff0000', '#00008b', '#0000ff', '#00ff00'];
-
+    
+    const buttonColors = ['#3D348B', '#7678ED', '#F35B04', '#172A3A'];
     const [question, setQuestion] = useState('');
     const [answers, setAnswers] = useState([]);
     const [loadingMessage, setLoadingMessage] = useState('');
@@ -65,9 +68,11 @@ const Game = () => {
                 <Typography variant="h1" sx={{fontSize: '5em'}}>{question}</Typography>
             )}
             <Box sx={{ mb: 2 }}>
-                <Button variant="contained" color="primary" onClick={fetchQuestionAndAnswers}>
+                {/*por si se quieren pedir a mano pero son automaticas a partir de ahora 
+                <Button variant="contained" color="primary" onClick={fetchQuestionAndAnswers} hidden>
                     Generate Question
                 </Button>
+                */  }
             </Box>
             {loadingMessage && (<Typography variant="h2">{loadingMessage}</Typography>)}
             {/* Muestra la pregunta y las respuesta si existen */}
