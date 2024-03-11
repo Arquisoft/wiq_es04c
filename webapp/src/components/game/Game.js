@@ -1,14 +1,16 @@
 // Importa React, useState para manejar el estado, axios para hacer solicitudes HTTP, y componentes de Material UI para la interfaz.
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Container, Typography, Button, Box, Paper, Snackbar } from '@mui/material';
+import { Container, Typography, Button, Snackbar,Grid,Box } from '@mui/material';
 import MuiAlert from '@mui/material/Alert';
 
 // Define el endpoint de la API, utilizando una variable de entorno o un valor predeterminado.
-const apiEndpoint =  process.env.REACT_APP_API_URI || 'http://localhost:8000';
-
+const apiEndpoint = process.env.REACT_APP_API_ENDPOINT || 'http://localhost:8000';
 
 const Game = () => {
+
+    
+  const buttonColors = ['#ff0000', '#ffff00', '#0000ff', '#00ff00'];
 
     const [question, setQuestion] = useState('');
     const [answers, setAnswers] = useState([]);
@@ -16,8 +18,7 @@ const Game = () => {
     const [snackbarOpen, setSnackbarOpen] = useState(false);
     const [snackbarMessage, setSnackbarMessage] = useState('');
     const [snackbarSeverity, setSnackbarSeverity] = useState('success');
-    const [category, setCategory] = useState('');//depuracion 
-    const [type, setType] = useState('');//depuracion
+
 
     const handleSnackbarClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -49,8 +50,7 @@ const Game = () => {
             setQuestion(response.data.question);
             setAnswers(response.data.answers);
             setLoadingMessage('');
-            setCategory(response.data.questionCategory); // Nueva línea
-            setType(response.data.questionType); // Nueva línea
+          
 
         } catch (error) {
             // Manejo básico de errores: imprime el error en la consola.
@@ -61,9 +61,9 @@ const Game = () => {
     // Renderiza el componente.
     return (
         <Container component="main" maxWidth="sm" sx={{ mt: 4 }}>
-            <Typography component="h1" variant="h5" gutterBottom>
-                Generate Question and Answers
-            </Typography>
+             {question && (
+                <Typography variant="h1">{question}</Typography>
+            )}
             <Box sx={{ mb: 2 }}>
                 <Button variant="contained" color="primary" onClick={fetchQuestionAndAnswers}>
                     Generate Question
@@ -71,32 +71,23 @@ const Game = () => {
             </Box>
             {loadingMessage && (<Typography variant="h2">{loadingMessage}</Typography>)}
             {/* Muestra la pregunta y las respuesta si existen */}
-            {question && (
-                <Paper elevation={3} sx={{ p: 2, mb: 2 }}>
-                    <Typography variant="subtitle1">Question:</Typography>
-                    <Typography variant="body1">{question}</Typography>
-                </Paper>
-            )}
 
-            { answers?.map((answer, index) => (
-                <div key={index} style={{ marginTop: '10px' }}>
+
+            <Grid container spacing={3}>
+                {answers?.map((answer, index) => (
+                <Grid item xs={6} key={index}>
                     <Button
-                        variant="contained"
-                        color="primary"
-                        onClick={() => handleAnswerButtonClick(answer.correct)}
+                    variant="contained"
+                    style={{ backgroundColor: buttonColors[index % 4], color: '#ffffff' }}
+                    onClick={() => handleAnswerButtonClick(answer.correct)}
                     >
-                        {answer.answer}
+                    {answer.answer}
                     </Button>
-                </div>
-            ))}
+                </Grid>
+                ))}
+            </Grid>
 
-                   {/* ... */}
-        {category && (
-            <Typography variant="subtitle1">Category: {category}</Typography>
-        )}
-        {type && (
-            <Typography variant="subtitle1">Type: {type}</Typography>
-        )}
+ 
         {/* ... */}
 
             <Snackbar

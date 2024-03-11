@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@mui/system": "^5.15.12",
     "bootstrap": "^5.3.3",
     "cron": "^3.1.6",
     "dotenv": "^16.4.5",
