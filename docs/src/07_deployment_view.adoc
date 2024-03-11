@@ -6,7 +6,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 == Vista de Despliegue 👀
 
 
-=== Infraestructura Nivel 1 ☝️
+=== Nivel de Infraestructura 1 ☝️
 
 EN DESARROLLO.
 
@@ -28,12 +28,12 @@ EN DESARROLLO.
 
 EN DESARROLLO.
 
-==== Mapeado de Bloques de Construccion a Infraestructura 📜:: 
+==== Mapeado de Bloques de Construccion a Infraestructura 📜
 
 EN DESARROLLO.
 
 
-=== Infrastructure Level 2 ☝️
+=== Nivel de Infraestructura 2 ☝️
 
 EN DESARROLLO.
 
