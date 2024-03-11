@@ -6,6 +6,9 @@ const StartButton = () => {
   const { isLoggedIn } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  console.log(isLoggedIn); // Log the value of isLoggedIn
+
+
   const handleClick = () => {
     navigate(isLoggedIn ? "/game" : "/login");
   };
