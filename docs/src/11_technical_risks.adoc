@@ -2,7 +2,8 @@
 [[section-technical-risks]]
 == Riesgos y Deuda Técnina 🚀
 
-[width="100%",options="header",cols="^,^"]
+=== Riesgos
+[options="header",cols="1,2"]
 |======================
 | Riesgo | Descripción
 | Tiempo de entrega | Estamos limitados por el plazo de entrega y también por el tiempo que dedicaremos a trabajar en otras asignaturas.
@@ -13,12 +14,15 @@
 | Comunicación deficiente entre miembros | Las diferencias y desacuerdos pueden obstaculizar la colaboración efectiva, esencial para el éxito del equipo. 
 | Distribución desigual del trabajo | Una asignación desequilibrada puede sobrecargar a algunos miembros mientras deja a otros con menos responsabilidades.
 | Reducción del tamaño del equipo | La salida inesperada de miembros puede desafiar la continuidad y el avance del proyecto, requiriendo adaptaciones rápidas y eficientes.
-
+|Incumplimiento de normas|Si el proyecto no cumple con las regulaciones o estándares de seguridad pertinentes, podría enfrentar sanciones legales o multas.
 |======================
 
-[width="100%",options="header",cols="^,^"]
+=== Deuda Tecnica
+[options="header",cols="1,2"]
 |======================
 | Deuda Técnina | Descripción
 | Uso del proyecto base creado por los profesores | Para no tener que realizar la creacion del proyecto hemos decidido usar el proyecto ya creado. Esto implica tener que revisar codigo ya creado y entender su funcionamiento, asi como ampliarlo con codigo propio, dando lugar a errores y perdidas de tiempo. Tambien requiere tener que aprender tecnologias nuevas y como usarlas.
 | Uso de React | El uso del framework nos puede facilitar el desarrolo en algunas etapas, pero nos lo puede complicar al no estar familiarizados con esta tecnologia y todas sus características.
+|Dependencias desactualizadas|Usar versiones obsoletas de bibliotecas, frameworks o plataformas puede resultar en vulnerabilidades de seguridad o limitaciones de rendimiento que deben abordarse en el futuro.
+|Falta de pruebas automatizada| A medida que avanza el proyecto la falta de pruebas pude hacer que se acumule deuda tecnica al no poder realizarse cambios de manera rapida y eficaz sin, ya que no se podran probar de manera inmediata.
 |======================
