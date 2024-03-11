@@ -51,15 +51,14 @@ jobs:
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@v5
       env:
-        DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
-        DEPLOY_PORT: 8000
+        REACT_APP_API_URI: http://${{ secrets.DEPLOY_HOST }}:8000
       with:
           name: arquisoft/wiq_es04c/webapp
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           workdir: webapp
-          buildargs: DEPLOY_HOST,DEPLOY_PORT
+          buildargs: REACT_APP_API_URI
   docker-push-questionservice:
             name: Push question service Docker Image to GitHub Packages
             runs-on: ubuntu-latest

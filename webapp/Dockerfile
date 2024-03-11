@@ -6,11 +6,12 @@ WORKDIR /app
 #Install the dependencies
 RUN npm install
 
-#tomar los valores de las variables de entorno del buildargs
-ARG DEPLOY_HOST
-ARG DEPLOY_PORT
+# Take the values of the environment variables from the buildargs
+ARG REACT_APP_API_URI
 
-ENV API_URI=http://${DEPLOY_HOST}:${DEPLOY_PORT}
+# Set the environment variable
+ENV REACT_APP_API_URI=$REACT_APP_API_URI
+
 
 #Create an optimized version of the webapp
 RUN npm run build
