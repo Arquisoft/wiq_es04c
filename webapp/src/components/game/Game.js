@@ -5,7 +5,7 @@ import { Container, Typography, Button, Snackbar,Grid,Box } from '@mui/material'
 import MuiAlert from '@mui/material/Alert';
 
 // Define el endpoint de la API, utilizando una variable de entorno o un valor predeterminado.
-const apiEndpoint = process.env.REACT_APP_API_ENDPOINT || 'http://localhost:8000';
+const apiEndpoint = process.env.REACT_APP_API_URI || 'http://localhost:8000';
 
 const Game = () => {
 
