@@ -4,9 +4,11 @@ import axios from 'axios';
 import { Container, Typography, TextField, Button, Snackbar } from '@mui/material';
 import Game from '../game/Game';
 import { AuthContext } from '../authcontext';
+
 const Login = () => {
   //hacer que el navbar guarde el contexo de si estas loggeado o no 
   //ademas metes en localStorage que es como una cookie , el usuario para poder sacar sus datos en historial etc 
+
   const{handleLogin}=useContext(AuthContext);
 
 
@@ -19,12 +21,16 @@ const Login = () => {
   const [createdAt, setCreatedAt] = useState('');
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
+
   const apiEndpoint = process.env.REACT_APP_API_URI ||'http://localhost:8000';
 
   useEffect(() => {
     if (loginSuccess) {
       handleLogin();
       localStorage.setItem('username', username);
+      //REDIRIJIR A LA PAG PRINCIPAL 
+      window.location.assign('/');
+
 
     }
   }, [loginSuccess,username, handleLogin]); // Este efecto se ejecutará cada vez que loginSuccess cambie
