@@ -6,8 +6,11 @@ WORKDIR /app
 #Install the dependencies
 RUN npm install
 
-ARG API_URI="http://localhost:8000"
-ENV REACT_APP_API_ENDPOINT=$API_URI
+# Take API_URI as a build argument
+ARG API_URI
+
+# Set API_URI as an environment variable
+ENV API_URI=$API_URI
 
 #Create an optimized version of the webapp
 RUN npm run build
