@@ -32,6 +32,7 @@ const Login = () => {
 
   const loginUser = async () => {
     try {
+      console.log("ApiEndpoint al hacer login es: "+apiEndpoint)
       const response = await axios.post(`${apiEndpoint}/login`, { username, password });
 
       // Extract data from the response

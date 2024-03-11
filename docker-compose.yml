@@ -103,7 +103,9 @@ services:
     depends_on:
       - gatewayservice
     ports:
-      - "3000:3000" 
+      - "3000:3000"
+    environment:
+      - API_URI=${API_URI}
 
   prometheus:
     image: prom/prometheus
