@@ -12,6 +12,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 |Git|Conflictos al realizar trabajo por separado por parte de mas de um miembro sobre un mismo recurso.
 |GitHub|La falta de experiencia puede conducir a problemas en la gestion del proyecto asi como en su despliegue y lo que ello conlleva.
 |Integración continua/despliegue continuo (CI/CD)|Restricciones en la configuración de pipelines de CI/CD para automatizar las pruebas, compilaciones y despliegues de la aplicación en el servidor Docker, lo que podría afectar la velocidad y la frecuencia de las entregas de nuevas características o correcciones de errores.
+|Maquina Virtual Azure|Esta plataforma impone limites a la cantidad de recursos que podemos usar con la licencia de estudiantes, por lo que debemos ir con cuidado de cuando tenemos la maquina encendida para no agotar el credito.
 |===
 
 
