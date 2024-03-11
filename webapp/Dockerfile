@@ -6,11 +6,11 @@ WORKDIR /app
 #Install the dependencies
 RUN npm install
 
-# Take API_URI as a build argument
-ARG API_URI
+#tomar los valores de las variables de entorno del buildargs
+ARG DEPLOY_HOST
+ARG DEPLOY_PORT
 
-# Set API_URI as an environment variable
-ENV API_URI=$API_URI
+ENV API_URI=http://${DEPLOY_HOST}:${DEPLOY_PORT}
 
 #Create an optimized version of the webapp
 RUN npm run build
