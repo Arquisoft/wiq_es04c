@@ -40,7 +40,7 @@ const Login = () => {
       console.log(loginSuccess); // Log the value of isLoggedIn after login
 
     }
-  }, [loginSuccess,username, handleLogin]); // Este efecto se ejecutará cada vez que loginSuccess cambie
+  }, [loginSuccess,username, handleLogin,navigate]); // Este efecto se ejecutará cada vez que loginSuccess cambie
 
 
   const loginUser = async () => {
