@@ -21,8 +21,7 @@ services:
       MYSQL_DATABASE: questions_db
       MYSQL_CHARSET: utf8mb4
       MYSQL_COLLATION: utf8mb4_unicode_ci
-      DB_PORT: 3306
-      
+      DB_PORT: 3306      
     ports:
       - "3306:3306"
     volumes:
@@ -37,7 +36,7 @@ services:
 
   authservice:
     container_name: authservice-${teamname:-wiq_es04c}
-    image: ghcr.io/arquisoft/${teamname:-wiq_es04c}/authservice:latest
+    image: ghcr.io/arquisoft/wiq_es04c/authservice:latest
     profiles: ["dev", "prod"]
     build: ./users/authservice
     depends_on:
@@ -51,7 +50,7 @@ services:
 
   userservice:
     container_name: userservice-${teamname:-wiq_es04c}
-    image: ghcr.io/arquisoft/${teamname:-wiq_es04c}/userservice:latest
+    image: ghcr.io/arquisoft/wiq_es04c/userservice:latest
     profiles: ["dev", "prod"]
     build: ./users/userservice
     depends_on:
@@ -65,7 +64,7 @@ services:
 
   gatewayservice:
     container_name: gatewayservice-${teamname:-wiq_es04c}
-    image: ghcr.io/arquisoft/${teamname:-wiq_es04c}/gatewayservice:latest
+    image: ghcr.io/arquisoft/wiq_es04c/gatewayservice:latest
     profiles: ["dev", "prod"]
     build: ./gatewayservice
     depends_on:
@@ -81,10 +80,9 @@ services:
       AUTH_SERVICE_URL: http://authservice:8002
       USER_SERVICE_URL: http://userservice:8001
 
-
   questionservice:
     container_name: questionservice-${teamname:-wiq_es04c}
-    image: ghcr.io/arquisoft/${teamname:-wiq_es04c}/questionservice:latest
+    image: ghcr.io/arquisoft/wiq_es04c/questionservice:latest
     profiles: ["dev", "prod"]
     build: ./questionservice
     depends_on:
@@ -99,15 +97,13 @@ services:
 
   webapp:
     container_name: webapp-${teamname:-wiq_es04c}
-    image: ghcr.io/arquisoft/${teamname:-wiq_es04c}/webapp:latest
+    image: ghcr.io/arquisoft/wiq_es04c/webapp:latest
     profiles: ["dev", "prod"]
     build: ./webapp
     depends_on:
       - gatewayservice
     ports:
-      - "3000:3000"
-    environment:
-      - API_URI=${API_URI}
+      - "3000:3000" 
 
   prometheus:
     image: prom/prometheus
