@@ -10,7 +10,7 @@ const apiEndpoint = process.env.REACT_APP_API_ENDPOINT || 'http://localhost:8000
 const Game = () => {
 
     
-  const buttonColors = ['#ff0000', '#ffff00', '#0000ff', '#00ff00'];
+  const buttonColors = ['#ff0000', '#00008b', '#0000ff', '#00ff00'];
 
     const [question, setQuestion] = useState('');
     const [answers, setAnswers] = useState([]);
@@ -60,9 +60,9 @@ const Game = () => {
 
     // Renderiza el componente.
     return (
-        <Container component="main" maxWidth="sm" sx={{ mt: 4 }}>
+        <Container component="main" sx={{ mt: 4 ,flexGrow: 1}}>
              {question && (
-                <Typography variant="h1">{question}</Typography>
+                <Typography variant="h1" sx={{fontSize: '5em'}}>{question}</Typography>
             )}
             <Box sx={{ mb: 2 }}>
                 <Button variant="contained" color="primary" onClick={fetchQuestionAndAnswers}>
@@ -78,7 +78,12 @@ const Game = () => {
                 <Grid item xs={6} key={index}>
                     <Button
                     variant="contained"
-                    style={{ backgroundColor: buttonColors[index % 4], color: '#ffffff' }}
+                    fullWidth
+                    style={{ 
+                        backgroundColor: buttonColors[index % 4], color: '#ffffff', 
+                        padding:'0.8em',
+                        fontSize:'1.5em',    
+                    }}
                     onClick={() => handleAnswerButtonClick(answer.correct)}
                     >
                     {answer.answer}
