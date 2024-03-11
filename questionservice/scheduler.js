@@ -26,7 +26,8 @@ class Scheduler {
     cron.schedule('*/30 * * * *', async () => {
       this.success = false;
       while (!this.success) {
-        this.addQuestion();
+        //ojo como es asincrono si no lo pones el bucle se sigue ejecutando y petas la pila de javasycrpit y cae el contendor 
+        await this.addQuestion();
       }
     });
   }
