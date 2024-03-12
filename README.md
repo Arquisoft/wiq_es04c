@@ -2,9 +2,16 @@
 
 Enlace: http://20.0.114.254:3000
 
-No hacer secciones nivel 0 (con solo un '=') porque no compila.
-Ejemplo: no poner '= Requisitos de Calidad', sino '== Requisitos de Calidad'
-No quitar el [[section-x]] del principio de un .adoc, porque si no no sale numerado.
+## Participantes
+
+El proyecto `wiq_es04c` es el resultado del trabajo en equipo de los siguientes participantes:
+
+- **Zohaib Akhtar Kausar** ([@Verzidee](https://github.com/Verzidee)) 
+- **Sara Lamuño Garcia** ([@Etihw32](https://github.com/Etihw32))
+- **Yago Navajas González** ([@yagonavajas](https://github.com/yagonavajas))
+- **Santiago López Laso** ([@Santiago21112001](https://github.com/Santiago21112001))
+- **David Alvarez Diaz** ([@bidof](https://github.com/bidof))
+
 Ejemplo: 12_glossary.adoc -> no quitar [[section-glossary]]
 
 [![Deploy on release](https://github.com/Arquisoft/wiq_es04c/actions/workflows/release.yml/badge.svg)](https://github.com/Arquisoft/wiq_es04c/actions/workflows/release.yml)
@@ -63,15 +70,7 @@ Other options include using the container services that most cloud services prov
 
 We are going to use the first approach, creating a virtual machine in a cloud service and after installing docker and docker-compose, deploy our containers there using GitHub Actions and SSH.
 
-## Participantes
 
-El proyecto `wiq_es04c` es el resultado del trabajo en equipo de los siguientes participantes:
-
-- **Zohaib Akhtar Kausar** ([@Verzidee](https://github.com/Verzidee)) 
-- **Sara Lamuño Garcia** ([@Etihw32](https://github.com/Etihw32))
-- **Yago Navajas González** ([@yagonavajas](https://github.com/yagonavajas))
-- **Santiago López Laso** ([@Santiago21112001](https://github.com/Santiago21112001))
-- **David Alvarez Diaz** ([@bidof](https://github.com/bidof))
 
 
 
