@@ -12,8 +12,6 @@ El proyecto `wiq_es04c` es el resultado del trabajo en equipo de los siguientes 
 - **Santiago López Laso** ([@Santiago21112001](https://github.com/Santiago21112001))
 - **David Alvarez Diaz** ([@bidof](https://github.com/bidof))
 
-Ejemplo: 12_glossary.adoc -> no quitar [[section-glossary]]
-
 [![Deploy on release](https://github.com/Arquisoft/wiq_es04c/actions/workflows/release.yml/badge.svg)](https://github.com/Arquisoft/wiq_es04c/actions/workflows/release.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Arquisoft_wiq_es04c&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Arquisoft_wiq_es04c)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Arquisoft_wiq_es04c&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Arquisoft_wiq_es04c)
