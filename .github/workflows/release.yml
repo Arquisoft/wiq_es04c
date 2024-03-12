@@ -146,4 +146,4 @@ jobs:
           wget https://raw.githubusercontent.com/arquisoft/wiq_es04c/master/.env -O .env
           wget https://raw.githubusercontent.com/arquisoft/wiq_es04c/master/questionservice/database/schema.sql -O schema.sql
           docker compose --profile prod down
-          docker compose --profile prod up -d
+          docker compose --profile prod up -d --pull always
