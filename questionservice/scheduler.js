@@ -21,13 +21,26 @@ class Scheduler {
       console.error(error);
     }
   }
-
+  
   start() {
-    cron.schedule('*/30 * * * *', async () => {
+    cron.schedule('*/15 * * * *', async () => {
+      
+      try {
+        await this.addQuestion();
+      } catch (error) {
+          console.error('Failed to add question:', error);
+          // Aquí podrías implementar una lógica para manejar el error, como reintentar después de un tiempo,
+          // enviar una alerta, etc.
+      }
+      
+      
+      /* version con errores 
       this.success = false;
       while (!this.success) {
-        this.addQuestion();
+        //ojo como es asincrono si no lo pones el bucle se sigue ejecutando y petas la pila de javasycrpit y cae el contendor 
+        await this.addQuestion();
       }
+      */
     });
   }
 }
