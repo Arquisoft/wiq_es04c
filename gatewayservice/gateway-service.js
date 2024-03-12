@@ -2,7 +2,6 @@ const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
 const promBundle = require('express-prom-bundle');
-
 const app = express();
 const port = 8000;
 
@@ -51,11 +50,22 @@ app.get('/getquestion', async(req,res)=> {
     res.json(response.data);
 
   } catch(error) {
-    res.status(error.response.status).json({ error: error.response.data.error });
+    if (error.response) {
+      res.status(error.response.status).json({ error: error.response.data.error });
+    } else {
+      res.status(500).json({ error: 'An unexpected error occurred' });
+    }
   }
 });
 
-
+app.get('/generateQuestions', async(req,res)=> {
+  try{
+   
+  } catch(error) {
+    res.status(error.response.status).json({ error: error.response.data.error });
+  }
+    
+});
 // Start the gateway service
 const server = app.listen(port, () => {
   console.log(`Gateway Service listening at http://localhost:${port}`);

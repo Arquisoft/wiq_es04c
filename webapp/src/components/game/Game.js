@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, Typography, Button, Box, Paper, Snackbar } from '@mui/material';
 import MuiAlert from '@mui/material/Alert';
-import exampleData from './example_data.js';
 
 // Define el endpoint de la API, utilizando una variable de entorno o un valor predeterminado.
 const apiEndpoint = process.env.REACT_APP_API_ENDPOINT || 'http://localhost:8000';
@@ -16,6 +15,9 @@ const Game = () => {
     const [snackbarOpen, setSnackbarOpen] = useState(false);
     const [snackbarMessage, setSnackbarMessage] = useState('');
     const [snackbarSeverity, setSnackbarSeverity] = useState('success');
+    const [category, setCategory] = useState('');//depuracion 
+    const [type, setType] = useState('');//depuracion
+
     const handleSnackbarClose = (event, reason) => {
         if (reason === 'clickaway') {
             return;
@@ -46,8 +48,9 @@ const Game = () => {
             setQuestion(response.data.question);
             setAnswers(response.data.answers);
             setLoadingMessage('');
-            // setQuestion(exampleData.question);
-            // setAnswers(exampleData.answers);
+            setCategory(response.data.questionCategory); // Nueva línea
+            setType(response.data.questionType); // Nueva línea
+
         } catch (error) {
             // Manejo básico de errores: imprime el error en la consola.
             console.error('Error fetching question and answers', error);
@@ -73,7 +76,8 @@ const Game = () => {
                     <Typography variant="body1">{question}</Typography>
                 </Paper>
             )}
-            {answers && answers.map((answer, index) => (
+
+            { answers?.map((answer, index) => (
                 <div key={index} style={{ marginTop: '10px' }}>
                     <Button
                         variant="contained"
@@ -84,6 +88,16 @@ const Game = () => {
                     </Button>
                 </div>
             ))}
+
+                   {/* ... */}
+        {category && (
+            <Typography variant="subtitle1">Category: {category}</Typography>
+        )}
+        {type && (
+            <Typography variant="subtitle1">Type: {type}</Typography>
+        )}
+        {/* ... */}
+
             <Snackbar
                 open={snackbarOpen}
                 autoHideDuration={3000}

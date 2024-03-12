@@ -6,27 +6,31 @@
   "scripts": {
     "start": "node question-Service.js",
     "test": "jest"
-},
-"repository": {
+  },
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/arquisoft/wiq_0.git"
-},
-"author": "",
-"license": "ISC",
-"bugs": {
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
     "url": "https://github.com/arquisoft/wiq_0/issues"
-},
-"homepage": "https://github.com/arquisoft/wiq_0#readme",
-"dependencies": {
+  },
+  "homepage": "https://github.com/arquisoft/wiq_0#readme",
+  "dependencies": {
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.0.4"
-},
-"devDependencies": {
+    "mongoose": "^8.0.4",
+    "mysql2": "^3.9.2",
+    "node-cron": "^3.0.0"
+
+  },
+  "devDependencies": {
     "jest": "^29.7.0",
     "mongodb-memory-server": "^9.1.5",
     "supertest": "^6.3.4"
-}
+  }
 }

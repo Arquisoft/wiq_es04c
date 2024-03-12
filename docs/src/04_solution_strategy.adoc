@@ -1,24 +1,16 @@
 ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-solution-strategy]]
-== Solution Strategy 📚
+== Estrategia de Solución 📚
 
-Decisiones tecnológicas 💻
-
-Hemos decidido realizar la parte de Front-End con React y la parte de Back-End con la estructura de los microservicios. 
-El despliegue se realizará a través de una máquina virtual de Azure, con ayuda de Docker y GitHub Actions.
+=== Decisiones tecnológicas 💻
 
 [options="header",cols="1,2"]
 |===
-|Aplicación
-|Breve explicación
-|React
-|Biblioteca de JavaScript que nos servirá para realizar las interfaces de usuario necesarias para el Front-End.
-|Microservicios
-|Aquí es donde se unirá el uso de la API (Application Programming Interface) de WikiData, la cual nos sacará los datos para las preguntas y las respuestas
-de la aplicación con el proyecto en sí.
-|Azure
-|Plataforma para la creación de la máquina virtual que servirá para desplegar la aplicación.
+|Aplicación|Breve explicación
+|React / JS|Biblioteca de JavaScript que nos servirá para realizar las interfaces de usuario necesarias para el Front-End. Esto nos indica que el lenguaje principal usado en el proyecto es JavaScript.
+|Microservicios|Se usaran microservicios diferentes para los diferentes componentes del proyecto como la generacion de preguntas o el registro de usuarios en el sistema. 
+|Azure|Para el alojamiemto de la pagina web se usara una maquina virtual Azure con el credito de estudiante proporcionado
 |Docker
 |Encargado de dividir el contenido del proyecto en diversos contenedores (en nuestro caso 4) y sea más fácil de manipular el contenido de dicho proyecto.
 |GitHub Actions
@@ -29,67 +21,29 @@ unos test para asegurar el correcto despliegue del proyecto.
 Decisiones de cómo llegar a las metas principales (En desarrollo):
 [options="header",cols="1,2"]
 |===
-|Usabilidad
-|
-|Privacidad
-|
-|Mantenibilidad
-|
-|Eficiciencia
-|
-|Fiabilidad
-|
+| Decision | Como llegar
+| Usabilidad | La aplicacion seguira los principios basicos de usabilidad y estos seran testeados en diferentes escenarios.
+| Mantenibilidad | El sistema sera mantenible gracias a la mantenibilidad de sus subsistemas. 
+| Eficiciencia | Para que la aplicacion sea rapida se usaran la base de datos y no se tendran que generar datos en caliente que pueden perjudicar a los tiempo de carga.
+| Fiabilidad | Todos los datos mostrados seran correctos y para esta comprobacion se usara la base de datos de Wikidata y sus entidades e ID's asociados. 
+| Privacidad | Los datos de los usuarios seran privados y no seran accesibles a ningun usuario. 
 
 |===
 
+=== Decisiones organizativas 👥
 
-
-Decisiones organizativas 👥
-
-En la primera semana nos hemos dividido en dos equipos con el objetivo de tocar todas las partes del proyecto. La estructura de los equipos es la siguiente:
+El equipo estara dividido en 2 grupos. Los equipos son de documentación y de desarrollo. Los miembros de los grupos podran ir cambiando de rol si el proyecto asi lo necesita. Esta es la distribucion inicial.
 
 [options="header",cols="1,2"]
 |===
-|Equipo
-|Miembros
-|Equipo documentación
-|     Sara Lamuño García -> UO283706@uniovi.es 
-     Yago Navajas Gonzalez -> UO287746@uniovi.es
-|Equipo desarrollo del proyecto
-|     David Álvarez Díaz -> UO283196@uniovi.es
-     Zohaib Akhtar Kausar -> UO291060@uniovi.es
-     Santiago Lopez Laso -> UO277369@uniovi.es
+|Equipo|Miembros
+|Equipo documentación|Sara Lamuño García -> UO283706@uniovi.es + 
+Yago Navajas Gonzalez -> UO287746@uniovi.es
+|Equipo desarrollo del proyecto|David Álvarez Díaz -> UO283196@uniovi.es +
+Zohaib Akhtar Kausar -> UO291060@uniovi.es + 
+Santiago Lopez Laso -> UO277369@uniovi.es
 |===
 
 La realización de las actas de las reuniones diarias se le ha asignado la tarea a Sara Lamuño García.
 
-En las siguientes semanas habrá rotación o cambio de miembros en ambos equipos.
-
-En la segunda semana hemos decidido ponernos de manera más profunda con la documentación, asignando diferentes apartados de esta a cada miembro del equipo:
-
-[options="header",cols="1,2"]
-|===
-| Miembro
-| Documentación
-| Sara Lamuño García
-| 4, 6, 12
-| Yago Navajas Gonzalez
-| 1, 8, 9
-| David Álvarez Díaz
-| 5, 7
-| Zohaib Akhtar Kausar
-| 10, 11
-| Santiago Lopez Laso
-| 2, 3
-|===
-
-Se han creado el mismo número de Issues como apartados de la documentación hay para asignarla a cada miembro.
-
-En cuanto al despliegue de la aplicación se van a arreglar los errores que salen en los test al intentar desplegarla, ya que se han cambiado
-algunos valores predefinidos, por lo que los test también predefinidos fallarán.
-
-.Further Information
-
-See https://docs.arc42.org/section-4/[Solution Strategy] in the arc42 documentation.
-
-****
+La división se ha realizado considerando la experiencia y los conocimientos previos de los integrantes del grupo. De esta manera, el trabajo se puede distribuir de manera realista y los integrantes podrán aportar de manera equitativa al proyecto. Todos los miembros comprenderán cómo funcionan las diferentes partes del proyecto; sin embargo, no todos tendrán las habilidades necesarias para realizar todas las tareas. Por lo tanto, esta es la forma más equilibrada de organizar al equipo.

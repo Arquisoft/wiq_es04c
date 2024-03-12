@@ -28,10 +28,10 @@ La aplicación tendrá su base para las preguntas y las respuestas en Wikidata, 
 |===
 | Prioridad | Objetivo | Descripción
 | 1 | Usabilidad | Todos los usuarios deben poder usar la aplicación sin tener en cuenta sus limitaciones.
-| 2 | Privacidad |  Los datos sensibles de los usuarios deben estar restringidos al mismo usuario.
-| 3 | Mantenibilidad | El código y documentación de la aplicación ha de estar conformado de tal forma que sea factible hacer cambios y ampliaciones en la aplicación.
-| 4 | Eficiciencia | Los tiempos entre operaciones han de ser asumibles.
-| 5 | Fiabilidad | Los datos usados en la aplicación deben ser los correctos.
+| 2 | Mantenibilidad | El código y documentación de la aplicación ha de estar conformado de tal forma que sea factible hacer cambios y ampliaciones en la aplicación.
+| 3 | Eficiciencia | Los tiempos entre operaciones han de ser asumibles.
+| 4 | Fiabilidad | Los datos usados en la aplicación deben ser los correctos.
+| 5 | Privacidad |  Los datos sensibles de los usuarios deben estar restringidos al mismo usuario.
 |===
 
 
