@@ -1,9 +1,16 @@
 # wiq_es04c
 
-No hacer secciones nivel 0 (con solo un '=') porque no compila.
-Ejemplo: no poner '= Requisitos de Calidad', sino '== Requisitos de Calidad'
-No quitar el [[section-x]] del principio de un .adoc, porque si no no sale numerado.
-Ejemplo: 12_glossary.adoc -> no quitar [[section-glossary]]
+Enlace: http://20.0.114.254:3000
+
+## Participantes
+
+El proyecto `wiq_es04c` es el resultado del trabajo en equipo de los siguientes participantes:
+
+- **Zohaib Akhtar Kausar** ([@Verzidee](https://github.com/Verzidee)) 
+- **Sara Lamuño Garcia** ([@Etihw32](https://github.com/Etihw32))
+- **Yago Navajas González** ([@yagonavajas](https://github.com/yagonavajas))
+- **Santiago López Laso** ([@Santiago21112001](https://github.com/Santiago21112001))
+- **David Alvarez Diaz** ([@bidof](https://github.com/bidof))
 
 [![Deploy on release](https://github.com/Arquisoft/wiq_es04c/actions/workflows/release.yml/badge.svg)](https://github.com/Arquisoft/wiq_es04c/actions/workflows/release.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Arquisoft_wiq_es04c&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Arquisoft_wiq_es04c)
@@ -17,6 +24,7 @@ This repo is a basic application composed of several components.
 - **User service**. Express service that handles the insertion of new users in the system.
 - **Auth service**. Express service that handles the authentication of users.
 - **Webapp**. React web application that uses the gateway service to allow basic login and new user features.
+- **Question service**
 
 Both the user and auth service share a Mongo database that is accessed with mongoose.
 
@@ -60,15 +68,7 @@ Other options include using the container services that most cloud services prov
 
 We are going to use the first approach, creating a virtual machine in a cloud service and after installing docker and docker-compose, deploy our containers there using GitHub Actions and SSH.
 
-## Participantes
 
-El proyecto `wiq_es04c` es el resultado del trabajo en equipo de los siguientes participantes:
-
-- **Zohaib Akhtar Kausar** ([@Verzidee](https://github.com/Verzidee)) 
-- **Sara Lamuño Garcia** ([@Etihw32](https://github.com/Etihw32))
-- **Yago Navajas González** ([@yagonavajas](https://github.com/yagonavajas))
-- **Santiago López Laso** ([@Santiago21112001](https://github.com/Santiago21112001))
-- **David Alvarez Diaz** ([@bidof](https://github.com/bidof))
 
 
 

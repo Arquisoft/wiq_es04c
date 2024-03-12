@@ -4,9 +4,15 @@ import axios from 'axios';
 import { Container, Typography, TextField, Button, Snackbar } from '@mui/material';
 import Game from '../game/Game';
 import { AuthContext } from '../authcontext';
+
+import { useNavigate } from 'react-router-dom';
+
 const Login = () => {
   //hacer que el navbar guarde el contexo de si estas loggeado o no 
   //ademas metes en localStorage que es como una cookie , el usuario para poder sacar sus datos en historial etc 
+
+  const navigate = useNavigate();
+
   const{handleLogin}=useContext(AuthContext);
 
 
@@ -19,15 +25,22 @@ const Login = () => {
   const [createdAt, setCreatedAt] = useState('');
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
-  const apiEndpoint = process.env.API_URI ||'http://localhost:8000';
+
+  const apiEndpoint = process.env.REACT_APP_API_URI ||'http://localhost:8000';
 
   useEffect(() => {
     if (loginSuccess) {
       handleLogin();
       localStorage.setItem('username', username);
+    
+
+      //REDIRIJIR A LA PAG PRINCIPAL 
+    
+       navigate('/');
+      console.log(loginSuccess); // Log the value of isLoggedIn after login
 
     }
-  }, [loginSuccess,username, handleLogin]); // Este efecto se ejecutará cada vez que loginSuccess cambie
+  }, [loginSuccess,username, handleLogin,navigate]); // Este efecto se ejecutará cada vez que loginSuccess cambie
 
 
   const loginUser = async () => {
@@ -39,6 +52,8 @@ const Login = () => {
 
       setCreatedAt(userCreatedAt);
       setLoginSuccess(true);
+    
+
       setOpenSnackbar(true);
     } catch (error) {
       setError(error.response.data.error);
