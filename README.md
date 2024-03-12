@@ -1,5 +1,7 @@
 # wiq_es04c
 
+Enlace: http://20.0.114.254:3000
+
 No hacer secciones nivel 0 (con solo un '=') porque no compila.
 Ejemplo: no poner '= Requisitos de Calidad', sino '== Requisitos de Calidad'
 No quitar el [[section-x]] del principio de un .adoc, porque si no no sale numerado.
