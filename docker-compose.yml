@@ -28,7 +28,7 @@ services:
       - mysql-data:/var/lib/mysql
       #montar en el directorio de mysql el archivo schema que esta en questionservice/database para que lo tenga el contendor y lo pueda ejecutar 
       #create_db es true  
-      - ./questionservice/database/:/docker-entrypoint-initdb.d
+      - questionservice/database/:/docker-entrypoint-initdb.d
     networks:
       - mynetwork
     expose:
