@@ -48,13 +48,11 @@ const Game = () => {
     // Función para llamar al questionservice y obtener la pregunta y las respuestas
     const fetchQuestionAndAnswers = async () => {
         try {
-            const response = await axios.get(`${apiEndpoint}/getquestion`);
+            const response = await axios.get(apiEndpoint+'/getquestion');
             // Almacena la pregunta y las respuestas en los estado.
             setQuestion(response.data.question);
             setAnswers(response.data.answers);
             setLoadingMessage('');
-          
-
         } catch (error) {
             // Manejo básico de errores: imprime el error en la consola.
             console.error('Error fetching question and answers', error);

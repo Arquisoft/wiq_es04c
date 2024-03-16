@@ -1,80 +1,65 @@
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react';
-import axios from 'axios'; // Mockear axios
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import axios from 'axios';
+import MockAdapter from 'axios-mock-adapter';
+import { act } from 'react-dom/test-utils';
+import { apiEndpoint } from '../../../apiEndpoint';
 import Game from './Game';
 
-jest.mock('axios');
-it('renders without crashing', () => {
-    expect(true).toBe(true);
-});
-/*
+const mockAxios = new MockAdapter(axios);
+const mockResponse = {
+    question: '¿Cuál es la capital de Asturias?',
+    answers: [
+        { answer: 'Santander', correct: false },
+        { answer: 'Oviedo', correct: true },
+        { answer: 'Zamora', correct: false },
+        { answer: 'Galicia', correct: false }
+    ]
+};
 describe('Game Component', () => {
     beforeEach(() => {
-        axios.get.mockResolvedValue({
-            data: {
-                question: '¿Cuál es la capital de Asturias?',
-                answers: [
-                    { answer: 'Santander', correct: false },
-                    { answer: 'Oviedo', correct: true },
-                    { answer: 'Zamora', correct: false },
-                    { answer: 'Galicia', correct: false}
-                ],
-                questionCategory: 'Geography',
-                questionType: 'Multiple Choice'
-            }
-        });
+        mockAxios.reset();
     });
 
-    it('renders without crashing', () => {
+    it('should render without crashing', () => {
         render(<Game />);
     });
 
-    it('fetches question and answers when "Generate Question" button is clicked', async () => {
-        const { getByText } = render(<Game />);
-        const generateButton = getByText('Generate Question');
-        fireEvent.click(generateButton);
-        await waitFor(() => expect(axios.get).toHaveBeenCalledTimes(1));
-    });
+    it('fetches question and answers on component mount', async () => {
+        mockAxios.onGet(apiEndpoint+'/getquestion').reply(200, mockResponse);
 
-    it('displays question and answers after fetching', async () => {
-        const { getByText, getByRole } = render(<Game />);
-        const generateButton = getByText('Generate Question');
-        fireEvent.click(generateButton);
-        await waitFor(() => expect(getByText('¿Cuál es la capital de Asturias?')).toBeInTheDocument());
-        expect(getByText('Santander')).toBeInTheDocument();
-        expect(getByText('Oviedo')).toBeInTheDocument();
-        expect(getByText('Zamora')).toBeInTheDocument();
-        expect(getByText('Galicia')).toBeInTheDocument();
+        await act(async () => {
+            render(<Game />);
+        });
+        expect(screen.getByText(mockResponse.question)).toBeInTheDocument();
+        for (const element of mockResponse.answers) {
+            expect(screen.getByText(element.answer)).toBeInTheDocument();
+        }
     });
-
     
-    it('displays category and type after fetching', async () => {
-        const { getByText } = render(<Game />);
-        const generateButton = getByText('Generate Question');
-        fireEvent.click(generateButton);
-        await waitFor(() => expect(getByText('Category: Geography')).toBeInTheDocument());
-        expect(getByText('Type: Multiple Choice')).toBeInTheDocument();
-    });
+    it('displays correct snackbar when an answer is selected', async () => {
+        mockAxios.onGet(apiEndpoint+'/getquestion').reply(200, mockResponse);
+        await act(async () => {
+            render(<Game />);
+        });
 
-    it('displays success snackbar when correct answer is selected', async () => {
-        const { getByText } = render(<Game />);
-        const generateButton = getByText('Generate Question');
-        fireEvent.click(generateButton);
-        await waitFor(() => expect(getByText('¿Cuál es la capital de Asturias?')).toBeInTheDocument());
-        const correctAnswerButton = getByText('Oviedo');
-        fireEvent.click(correctAnswerButton);
-        await waitFor(() => expect(getByText('Respuesta correcta')).toBeInTheDocument());
+        const correctAnswerButton = screen.getByText('Oviedo')
+        act(() => {
+            fireEvent.click(correctAnswerButton);
+        });
+        expect(screen.getByText('Respuesta correcta')).toBeInTheDocument();
     });
 
     it('displays error snackbar when incorrect answer is selected', async () => {
-        const { getByText } = render(<Game />);
-        const generateButton = getByText('Generate Question');
-        fireEvent.click(generateButton);
-        await waitFor(() => expect(getByText('¿Cuál es la capital de Asturias?')).toBeInTheDocument());
-        const incorrectAnswerButton = getByText('Santander');
-        fireEvent.click(incorrectAnswerButton);
-        await waitFor(() => expect(getByText('Respuesta incorrecta')).toBeInTheDocument());
+        mockAxios.onGet(apiEndpoint+'/getquestion').reply(200, mockResponse);
+        await act(async () => {
+            render(<Game />);
+        });
+
+        const incorrectAnswerButton = screen.getByText('Santander')
+        act(() => {
+            fireEvent.click(incorrectAnswerButton);
+        });
+        expect(screen.getByText('Respuesta incorrecta')).toBeInTheDocument();
     });
-    
 });
-*/
