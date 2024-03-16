@@ -44,7 +44,7 @@ La aplicación tendrá su base para las preguntas y las respuestas en Wikidata, 
 David Álvarez Díaz -> UO283196@uniovi.es +
 Zohaib Akhtar Kausar -> UO291060@uniovi.es +
 Sara Lamuño García -> UO283706@uniovi.es +
-Santiago Lopez Laso -> UO277369@uniovi.es | Los estudiantes que llevarán a cabo el desarrollo de la aplicación. Serán los encargados de la arquitectura, la documentación y la codificación.
+Santiago Lopez Laso | Los estudiantes que llevarán a cabo el desarrollo de la aplicación. Serán los encargados de la arquitectura, la documentación y la codificación.
 | Profesores | Jose Emilio Labra Gayo | Supervisores de los avances y encargados de evaluar la aplicación final y el desarrollo de la misma.
 | Usuario | Jugador de la aplicación | Personas que puedan interactuar tanto con el registro de usuarios como con el juego en sí y pueda completar correctamente una partida.
 | HappySw | Empresa responsable | Empresa contratada, cuyo trabajo sera el desarrollo del juego de la mano del equipo de desarrollo.

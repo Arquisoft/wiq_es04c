@@ -41,7 +41,7 @@ El equipo estara dividido en 2 grupos. Los equipos son de documentación y de de
 Yago Navajas Gonzalez -> UO287746@uniovi.es
 |Equipo desarrollo del proyecto|David Álvarez Díaz -> UO283196@uniovi.es +
 Zohaib Akhtar Kausar -> UO291060@uniovi.es + 
-Santiago Lopez Laso -> UO277369@uniovi.es
+Santiago Lopez Laso
 |===
 
 La realización de las actas de las reuniones diarias se le ha asignado la tarea a Sara Lamuño García.
