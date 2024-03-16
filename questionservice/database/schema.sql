@@ -1,4 +1,5 @@
--- schema.sql
+ï»¿-- Este script sÃ³lo se ejecuta cuando no hay un volumen de mysql creado ya.
+-- Borra el contendor mysql y su volumen si cambias este script.
 DROP TABLE IF EXISTS Distractor;
 DROP TABLE IF EXISTS Pregunta;
 DROP TABLE IF EXISTS Categoria;
@@ -30,3 +31,9 @@ ALTER TABLE Categoria CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_c
 ALTER TABLE Pregunta CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ALTER TABLE Distractor CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+-- Datos iniciales
+INSERT INTO Categoria (nombre_categoria) VALUES ('Geografía');
+INSERT INTO Pregunta (pregunta, respuesta_correcta, id_categoria) VALUES ('¿Cuál es la capital de Asturias?', 'Oviedo', 1);
+INSERT  INTO Distractor (distractor,id_categoria,id_pregunta) VALUES ('Gibraltar',1,1);
+INSERT  INTO Distractor (distractor,id_categoria,id_pregunta) VALUES ('Bilbao',1,1);
+INSERT  INTO Distractor (distractor,id_categoria,id_pregunta) VALUES ('Madrid',1,1);
