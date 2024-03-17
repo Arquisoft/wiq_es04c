@@ -6,6 +6,7 @@ import Game from '../game/Game';
 import { AuthContext } from '../authcontext';
 
 import { useNavigate } from 'react-router-dom';
+import { apiEndpoint } from '../../../apiEndpoint';
 
 const Login = () => {
   //hacer que el navbar guarde el contexo de si estas loggeado o no 
@@ -15,18 +16,12 @@ const Login = () => {
 
   const{handleLogin}=useContext(AuthContext);
 
-
-
-
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loginSuccess, setLoginSuccess] = useState(false);
   const [createdAt, setCreatedAt] = useState('');
   const [openSnackbar, setOpenSnackbar] = useState(false);
-
-
-  const apiEndpoint = process.env.REACT_APP_API_URI ||'http://localhost:8000';
 
   useEffect(() => {
     if (loginSuccess) {
@@ -36,11 +31,10 @@ const Login = () => {
 
       //REDIRIJIR A LA PAG PRINCIPAL 
     
-       navigate('/');
-      console.log(loginSuccess); // Log the value of isLoggedIn after login
+      navigate('/');
 
     }
-  }, [loginSuccess,username, handleLogin,navigate]); // Este efecto se ejecutará cada vez que loginSuccess cambie
+  }, [loginSuccess]); // Este efecto se ejecutará cada vez que loginSuccess cambie
 
 
   const loginUser = async () => {

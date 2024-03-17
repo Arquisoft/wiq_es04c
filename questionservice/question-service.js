@@ -13,7 +13,7 @@ const scheduler = new Scheduler(); // Crea una nueva instancia de la clase
 scheduler.start();//iniciar el servicio de crear las preguntas 
 app.use(express.json());
 
-app.post('/getquestion', async (req, res) => {
+app.get('/getquestion', async (req, res) => {
     try{
     
         const questionAndAnswer = await questionService.getGameQuestions(); // Obtenemos el json de pregunta y sus respuestas
