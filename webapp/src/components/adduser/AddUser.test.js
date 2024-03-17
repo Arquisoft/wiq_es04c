@@ -3,9 +3,10 @@ import { render, fireEvent, screen, waitFor } from '@testing-library/react';
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 import AddUser from './AddUser';
-import { apiEndpoint } from '../../../apiEndpoint';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const mockAxios = new MockAdapter(axios);
+const apiEndpoint = process.env.REACT_APP_API_URI ||'http://localhost:8000';
 
 it('should add user successfully', () => {
   expect(true).toBe(true);
@@ -17,14 +18,18 @@ describe('AddUser component', () => {
   });
 
   it('should add user successfully', async () => {
-    render(<AddUser />);
+    render(
+      <Router>
+        <AddUser />
+      </Router>
+    );
 
     const usernameInput = screen.getByLabelText(/Username/i);
     const passwordInput = screen.getByLabelText(/Password/i);
     const addUserButton = screen.getByRole('button', { name: /Add User/i });
 
     // Mock the axios.post request to simulate a successful response
-    mockAxios.onPost(apiEndpoint+'/adduser').reply(200);
+    mockAxios.onPost(apiEndpoint + '/adduser').reply(200);
 
     // Simulate user input
     fireEvent.change(usernameInput, { target: { value: 'testUser' } });
@@ -40,14 +45,18 @@ describe('AddUser component', () => {
   });
 
   it('should handle error when adding user', async () => {
-    render(<AddUser />);
+    render(
+      <Router>
+        <AddUser />
+      </Router>
+    );
 
     const usernameInput = screen.getByLabelText(/Username/i);
     const passwordInput = screen.getByLabelText(/Password/i);
     const addUserButton = screen.getByRole('button', { name: /Add User/i });
 
     // Mock the axios.post request to simulate an error response
-    mockAxios.onPost(apiEndpoint+'/adduser').reply(500, { error: 'Internal Server Error' });
+    mockAxios.onPost(apiEndpoint + '/adduser').reply(500, { error: 'Internal Server Error' });
 
     // Simulate user input
     fireEvent.change(usernameInput, { target: { value: 'testUser' } });

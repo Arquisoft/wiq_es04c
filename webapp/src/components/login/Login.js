@@ -6,7 +6,7 @@ import Game from '../game/Game';
 import { AuthContext } from '../authcontext';
 
 import { useNavigate } from 'react-router-dom';
-import { apiEndpoint } from '../../../apiEndpoint';
+import { apiEndpoint } from '../../apiEndpoint';
 
 const Login = () => {
   //hacer que el navbar guarde el contexo de si estas loggeado o no 
@@ -29,7 +29,7 @@ const Login = () => {
       localStorage.setItem('username', username);
     
 
-      //REDIRIJIR A LA PAG PRINCIPAL 
+      //REDIRIGIR A LA PAG PRINCIPAL 
     
       navigate('/');
 

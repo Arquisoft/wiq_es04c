@@ -14,7 +14,7 @@ const StartButton = () => {
   };
 
   return (
-    <button onClick={handleClick} className="start-button">
+    <button onClick={handleClick} className="start-button" data-testid="start-button">
       Start Game
     </button>
   );
