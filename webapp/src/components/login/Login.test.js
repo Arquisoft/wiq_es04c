@@ -5,8 +5,7 @@ import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 import Login from './Login';
 import { AuthProvider } from '../authcontext';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from '../navbar/NavBar';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const mockAxios = new MockAdapter(axios);
 
