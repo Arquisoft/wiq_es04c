@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 //Prometheus configuration
-const metricsMiddleware = promBundle({includeMethod: true});
+const metricsMiddleware = promBundle({ includeMethod: true });
 app.use(metricsMiddleware);
 
 // Health check endpoint
@@ -24,7 +24,7 @@ app.get('/health', (_req, res) => {
 app.post('/login', async (req, res) => {
   try {
     // Forward the login request to the authentication service
-    const authResponse = await axios.post(authServiceUrl+'/login', req.body);
+    const authResponse = await axios.post(authServiceUrl + '/login', req.body);
     res.json(authResponse.data);
   } catch (error) {
     res.status(error.response.status).json({ error: error.response.data.error });
@@ -34,22 +34,22 @@ app.post('/login', async (req, res) => {
 app.post('/adduser', async (req, res) => {
   try {
     // Forward the add user request to the user service
-    const userResponse = await axios.post(userServiceUrl+'/adduser', req.body);
+    const userResponse = await axios.post(userServiceUrl + '/adduser', req.body);
     res.json(userResponse.data);
   } catch (error) {
     res.status(error.response.status).json({ error: error.response.data.error });
   }
 });
 
-app.get('/getquestion', async(req,res)=> {
-  try{
+app.get('/getquestion', async (req, res) => {
+  try {
     // Redirige la solicitud al servicio de generación de preguntas sin enviar un cuerpo de solicitud.
     const response = await axios.get(`${generateServiceURL}/getquestion`);
 
     // Devuelve la respuesta del servicio de generación de preguntas al cliente original.
     res.json(response.data);
 
-  } catch(error) {
+  } catch (error) {
     if (error.response) {
       res.status(error.response.status).json({ error: error.response.data.error });
     } else {
@@ -58,13 +58,15 @@ app.get('/getquestion', async(req,res)=> {
   }
 });
 
-app.get('/generateQuestions', async(req,res)=> {
-  try{
-   
-  } catch(error) {
+app.get('/generatequestions', async (req, res) => {
+  try {
+    // Redirige la solicitud al servicio de generación de preguntas sin enviar un cuerpo de solicitud.
+    await axios.get(`${generateServiceURL}/generatequestions`);
+    res.json({ status: 'OK' });
+  } catch (error) {
     res.status(error.response.status).json({ error: error.response.data.error });
   }
-    
+
 });
 // Start the gateway service
 const server = app.listen(port, () => {

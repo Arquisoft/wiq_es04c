@@ -1,6 +1,6 @@
 const mysql = require('mysql2/promise');
 const express = require('express');
-const bodyParser = require('body-parser'); 
+const bodyParser = require('body-parser');
 const app = express();
 const port = 3306;
 
@@ -10,26 +10,26 @@ app.use(bodyParser.json());
 
 
 const dbConfig = {
-  host:  process.env.DB_HOST || 'questionservice-mysql-wiq_es04c',
-  user:  process.env.DB_USER || 'root',
-  password:  process.env.DB_PASSWORD || 'admin',
+  host: process.env.DB_HOST || 'questionservice-mysql-wiq_es04c',
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PASSWORD || 'admin',
   database: process.env.DB_NAME || 'questions_db',
   port: process.env.DB_PORT || 3306,
-  charset : 'utf8mb4'
+  charset: 'utf8mb4'
 };
 
 //clae encargada de agregar datos a la bd 
 class DatabaseManager {
   config = dbConfig
-    constructor() {
-      this.connection = null;
-      
-    }
+  constructor() {
+    this.connection = null;
 
-    
+  }
 
 
-async connect() {
+
+
+  async connect() {
     try {
       console.log(this.config)
       this.connection = await mysql.createConnection(this.config);
@@ -67,11 +67,17 @@ async connect() {
     }
   }
 
+  async addQuestions(questions) {
+    for (const element of questions) {
+      await this.addQuestion(element);
+    }
+  }
+
   async addQuestion(question) {
     try {
       await this.connect();
 
-      const { question: questionText, answers, questionCategory, questionType } = question;
+      const { question: questionText, answers, questionCategory } = question;
 
       // Comenzamos la transacción para que si da errores se vuelva atrás
       await this.connection.beginTransaction();
@@ -89,12 +95,12 @@ async connect() {
       // Insertar los distractores
       for (const answer of answers) {
         if (!answer.correct) {
-          const [distractorResult] = await this.connection.execute(
+          await this.connection.execute(
             'INSERT  INTO Distractor (distractor,id_categoria,id_pregunta) VALUES (?,?,?)',
-            [answer.answer, categoryId,questionResult.insertId]
+            [answer.answer, categoryId, questionResult.insertId]
           );
 
-         
+
         }
       }
 
@@ -115,38 +121,38 @@ async connect() {
   async getGameQuestions() {
     try {
       await this.connect();
-  
+
       // Obtén una pregunta aleatoria
       const [question] = await this.connection.execute(
         'SELECT * FROM Pregunta ORDER BY RAND() LIMIT 1'
       );
-  
+
       const questionId = question[0].id_pregunta;
-  
+
       // Obtén la respuesta correcta para esa pregunta
       const correctAnswer = question[0].respuesta_correcta;
-  
+
       // Obtén los distractores para esa pregunta
       const [distractors] = await this.connection.execute(
         'SELECT distractor FROM Distractor WHERE id_pregunta = ?',
         [questionId]
       );
       const respuestaArray = [
-          { answer: correctAnswer, correct: true },
-          ...distractors.map(distractor => ({ answer: distractor.distractor, correct: false }))
-        ];
+        { answer: correctAnswer, correct: true },
+        ...distractors.map(distractor => ({ answer: distractor.distractor, correct: false }))
+      ];
       // Obtén la categoría de la pregunta
       const [category] = await this.connection.execute(
-      'SELECT nombre_categoria FROM Categoria WHERE id_categoria = ?',
-      [question[0].id_categoria]
+        'SELECT nombre_categoria FROM Categoria WHERE id_categoria = ?',
+        [question[0].id_categoria]
       );
-        
-       return {
+
+      return {
         question: question[0].pregunta,
-        answers:respuestaArray,
+        answers: respuestaArray,
         questionCategory: category[0].nombre_categoria
       };
-  
+
     } catch (error) {
       console.error('Error getting game questions:', error.message);
       throw error;
@@ -157,7 +163,7 @@ async connect() {
   }
 
 }
-  
+
 
 module.exports = DatabaseManager;
 

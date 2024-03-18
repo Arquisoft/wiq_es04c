@@ -2,7 +2,8 @@
 //llamado desde el question-service.js
 const cron = require('node-cron');
 const DataBaseManager = require('./DataBaseManager'); // Asegúrate de que la ruta sea correcta
-const getQuestionTemplate = require('./questionTemplates');
+const templates = require('./templates.json')
+const WikiQuery = require('./wikiUtils/wikiQuery');
 
 class Scheduler {
 
@@ -14,8 +15,8 @@ class Scheduler {
 
   async addQuestion() {
     try {
-      const templates = await getQuestionTemplate(); // Obtenemos el json de pregunta y sus respuestas
-      await this.dbManager.addQuestion(templates);
+      const questions = await WikiQuery.getQuestions(templates.capital_of, 1);
+      await this.dbManager.addQuestion(questions[0]);
       this.success = true;
     } catch (error) {
       console.error(error);
@@ -31,6 +32,7 @@ class Scheduler {
           console.error('Failed to add question:', error);
           // Aquí podrías implementar una lógica para manejar el error, como reintentar después de un tiempo,
           // enviar una alerta, etc.
+          console.log("Will try again later");
       }
       
       
